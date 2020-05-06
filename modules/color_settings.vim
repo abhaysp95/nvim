@@ -78,7 +78,7 @@ let ayucolor="light"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme material
+colorscheme onedark
 set go=a
 
 " enable when onedark is set to colorscheme <<<
@@ -118,10 +118,10 @@ hi Comment cterm=italic gui=italic
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 
-hi CursorLineNr guifg='#f78c6c' guibg=255 gui=bold,italic
-hi StatusLine guifg='#f78c6c' guibg=255 gui=bold,italic
-hi TabLine guifg='#546e7a' guibg=255
-hi TabLineSel guifg='#f78c6c' guibg=255 gui=bold,italic
+hi CursorLineNr guifg='#e5c07b' guibg=255 gui=bold,italic
+hi StatusLine guifg='#e5c07b' guibg=255 gui=bold,italic
+hi TabLine guifg='#455263' guibg=255
+hi TabLineSel guifg='#e5c07b' guibg=255 gui=bold,italic
 hi TabLineFill guibg=255
 
 " these changes colors to white for syntax <<<
