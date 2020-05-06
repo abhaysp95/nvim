@@ -93,39 +93,42 @@ set go=a
 
 
 " highlight settings <<<
-highlight Identifiers gui=bold,italic cterm=bold,italic
-highlight Constant gui=bold,italic cterm=bold,italic
-highlight Statement gui=bold,italic cterm=bold,italic
+hi Identifiers gui=bold,italic cterm=bold,italic
+hi Constant gui=bold,italic cterm=bold,italic
+hi Statement gui=bold,italic cterm=bold,italic
 hi SignColumn ctermbg=255 guibg=255 gui=bold
 hi CursorLine guibg=255' cterm=underline gui=underline
-highlight htmlArg cterm=bold,italic gui=bold,italic
-highlight Type gui=bold,italic cterm=bold,italic
-highlight Structure gui=bold,italic cterm=bold,italic
-highlight Typedef gui=bold,italic cterm=bold,italic
-highlight Keyword gui=bold,italic cterm=bold,italic
-" highlight Conditional gui=bold,italic cterm=bold,italic
-" highlight Repeat gui=bold,italic cterm=bold,italic
-highlight Label gui=bold,italic cterm=bold,italic
-highlight Character gui=bold,italic cterm=bold,italic
+hi htmlArg cterm=bold,italic gui=bold,italic
+hi Type gui=bold,italic cterm=bold,italic
+hi Structure gui=bold,italic cterm=bold,italic
+hi Typedef gui=bold,italic cterm=bold,italic
+hi Keyword gui=bold,italic cterm=bold,italic
+hi Label gui=bold,italic cterm=bold,italic
+hi Character gui=bold,italic cterm=bold,italic
 
-" highlight Boolean gui=bold cterm=bold
-highlight Function gui=bold cterm=bold
-" highlight SpecialChar gui=bold cterm=bold
-highlight PreProc gui=bold cterm=bold
-highlight Special gui=bold cterm=bold
-highlight SpecialComment gui=bold cterm=bold
+hi Function gui=bold cterm=bold
+hi PreProc gui=bold cterm=bold
+hi Special gui=bold cterm=bold
+hi SpecialComment gui=bold cterm=bold
 
-highlight Underlined gui=underline cterm=underline
+hi Underlined gui=underline cterm=underline
 
-highlight String gui=italic cterm=italic
-highlight Comment cterm=italic gui=italic
-highlight Visual cterm=reverse ctermbg=NONE
-highlight htmlItalic gui=italic cterm=italic
+hi String gui=italic cterm=italic
+hi Comment cterm=italic gui=italic
+hi Visual cterm=reverse ctermbg=NONE
+hi htmlItalic gui=italic cterm=italic
 
 hi CursorLineNr guifg='#f78c6c' guibg=255 gui=bold,italic
 hi StatusLine guifg='#f78c6c' guibg=255 gui=bold,italic
+hi TabLine guifg='#546e7a' guibg=255
+hi TabLineSel guifg='#f78c6c' guibg=255 gui=bold,italic
+hi TabLineFill guibg=255
 
 " these changes colors to white for syntax <<<
+" hi Conditional gui=bold,italic cterm=bold,italic
+" hi Repeat gui=bold,italic cterm=bold,italic
+" hi Boolean gui=bold cterm=bold
+" hi SpecialChar gui=bold cterm=bold
 " highlight Delimiter gui=bold cterm=bold
 " highlight Todo gui=bold cterm=bold
 " hi CursorColumn guibg='#444267'
