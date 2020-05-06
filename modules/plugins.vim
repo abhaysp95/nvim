@@ -30,6 +30,7 @@ Plug 'gcmt/wildfire.vim'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " Theme / Interface
+Plug 'ap/vim-buftabline'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'drewtempelmeyer/palenight.vim'
