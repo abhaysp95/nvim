@@ -16,6 +16,7 @@ Here, are the main ones:
 
 ### One Dark(2020-05-06)
 Started using [One Dark](https://github.com/joshdick/onedark.vim) colorscheme.
+![One Dark](sshots/onedark.png)
 
 ### Material(2020-05-02)
 
