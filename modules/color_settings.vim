@@ -97,7 +97,7 @@ hi Identifiers gui=bold,italic cterm=bold,italic
 hi Constant gui=bold,italic cterm=bold,italic
 hi Statement gui=bold,italic cterm=bold,italic
 hi SignColumn ctermbg=255 guibg=255 gui=bold
-hi CursorLine guibg=255' cterm=underline gui=underline
+hi CursorLine guibg='#35434d'
 hi htmlArg cterm=bold,italic gui=bold,italic
 hi Type gui=bold,italic cterm=bold,italic
 hi Structure gui=bold,italic cterm=bold,italic
@@ -118,15 +118,15 @@ hi Comment cterm=italic gui=italic
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 
-hi CursorLineNr guifg='#e5c07b' guibg=255 gui=bold,italic
-hi StatusLine guifg='#e5c07b' guibg=255 gui=bold,italic
-hi TabLine guifg='#455263' guibg=255
-hi TabLineSel guifg='#e5c07b' guibg=255 gui=bold,italic
-hi TabLineFill guibg=255
+" hi CursorLineNr guifg='#e5c07b' guibg=255 gui=bold,italic
+" hi StatusLine guifg='#e5c07b' guibg=255 gui=bold,italic
+" hi TabLine guifg='#455263' guibg=255
+" hi TabLineSel guifg='#e5c07b' guibg=255 gui=bold,italic
+" hi TabLineFill guibg=255
 
 " these changes colors to white for syntax <<<
-" hi Conditional gui=bold,italic cterm=bold,italic
-" hi Repeat gui=bold,italic cterm=bold,italic
+hi Conditional gui=bold,italic cterm=bold,italic
+hi Repeat gui=bold,italic cterm=bold,italic
 " hi Boolean gui=bold cterm=bold
 " hi SpecialChar gui=bold cterm=bold
 " highlight Delimiter gui=bold cterm=bold
