@@ -65,7 +65,7 @@ inoremap <M-m> <Esc>/<++><Enter>"_c4l
 " some custom snipptes <<<
 " autocmd FileType html inoremap ;i <em></em><Space><++><Esc>FeT>i
 " autocmd FileType html inoremap ;b <b></b><Space><++><Esc>FbT>i
-autocmd FileType c inoremap ;c // <++> <<<<CR><++>()<Space>{<CR><++><CR>}<CR>// >>><CR><CR><++><Esc>7kI
+autocmd FileType c inoremap ;c // <++><CR><++>()<Space>{<CR><++><CR>}<CR><CR><++><Esc>6kI
 autocmd FileType markdown inoremap ;c <!---<Space><Space>--><CR><CR><++><Esc>2kf<Space>a
 autocmd FileType html inoremap ;c <!---<Space><Space>--><CR><CR><++><Esc>2kf<Space>a
 autocmd FileType markdown inoremap ;sh ```sh<CR>```<CR><CR><++><Esc>2kO<C-i>
