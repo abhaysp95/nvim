@@ -204,7 +204,8 @@ let g:rooter_change_directory_for_non_project_files = 'current'
 
 " ------ vim-slime ---- "
 let g:slime_target = "x11"
-" let g:slime_config = {"jobid": b:terminal_job_id}
+" if using target as neovim then use command
+" `:echo b:terminal_job_id` to get jobid of terminal
 
 
 """""""""""""""""""""""""""
