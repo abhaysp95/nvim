@@ -1,8 +1,8 @@
-" returns hex value from current colorscheme
+" returns hex value from current colorscheme, not in use
 let fgcolor=synIDattr(synIDtrans(hlID("Normal")), "fg", "gui")
 let bgcolor=synIDattr(synIDtrans(hlID("Normal")), "bg", "gui")
 
-" :h mode() to see all modes
+"              :h mode() to see all modes
 let g:currentmode={
     \ 'n'      : 'Norm ',
     \ 'no'     : 'N·Operator Pending ',
@@ -25,60 +25,67 @@ let g:currentmode={
     \ 't'      : 'Terminal '
     \}
 
-" Automatically change the statusline color depending on mode
+function! GetMode() range
+	let l:M = visualmode()
+	echo l:M
+endfunction
+
+" Change statusline color
 function! ChangeStatuslineColor()
-  if (mode() =~# '\v(n|no)')
-    exe 'hi! StatusLine ctermfg=008'
-  elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block ' || get(g:currentmode, mode(), '') ==# 't')
-    exe 'hi! StatusLine ctermfg=005'
-  elseif (mode() ==# 'i')
-    exe 'hi! StatusLine ctermfg=004'
-  else
-    exe 'hi! StatusLine ctermfg=006'
-  endif
-  return ''
+	if (mode() =~# '\v(n|no)')
+		exe 'hi! StatusLine ctermfg=008'
+	elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block ' || get(g:currentmode, mode(), '') ==# 't')
+		exe 'hi! StatusLine ctermfg=005'
+	elseif (mode() ==# 'i')
+		exe 'hi! StatusLine ctermfg=004'
+	else
+		exe 'hi! StatusLine ctermfg=006'
+	endif
+	return ''
 endfunction
 " Find out current buffer's size and output it.
 function! FileSize()
-  let bytes = getfsize(expand('%:p'))
-  if (bytes >= 1024)
-    let kbytes = bytes / 1024
-  endif
-  if (exists('kbytes') && kbytes >= 1000)
-    let mbytes = kbytes / 1000
-  endif
-  if bytes <= 0
-    return '0'
-  endif
-  if (exists('mbytes'))
-    return mbytes . 'MB '
-  elseif (exists('kbytes'))
-    return kbytes . 'KB '
-  else
-    return bytes . 'B '
-  endif
+	let bytes = getfsize(expand('%:p'))
+	if (bytes >= 1024)
+		let kbytes = bytes / 1024
+	endif
+	if (exists('kbytes') && kbytes >= 1000)
+		let mbytes = kbytes / 1000
+	endif
+	if bytes <= 0
+		return '0'
+	endif
+	if (exists('mbytes'))
+		return mbytes . 'MB '
+	elseif (exists('kbytes'))
+		return kbytes . 'KB '
+	else
+		return bytes . 'B '
+	endif
 endfunction
 function! ReadOnly()
-  if &readonly || !&modifiable
-    return ''
-  else
-    return ''
+	if &readonly || !&modifiable
+		return ''
+	else
+		return ''
+	endif
 endfunction
 function! GitInfo()
-  let git = fugitive#head()
-  if git != ''
-    return ' '.fugitive#head()
-  else
-    return ''
+	let git = fugitive#head()
+	if git != ''
+		return ' '.fugitive#head()
+	else
+		return ''
+	endif
 endfunction
 
 
 " GIT STATUS -> VIM-SIGNIFY
 function! s:sy_stats_wrapper()
-  let [added, modified, removed] = sy#repo#get_stats()
-  let symbols = ['+', '-', '~']
-  let stats = [added, removed, modified]  " reorder
-  let statline = ''
+	let [added, modified, removed] = sy#repo#get_stats()
+	let symbols = ['+', '-', '~']
+	let stats = [added, removed, modified]  " reorder
+	let statline = ''
 
   for i in range(3)
 	if stats[i] > 0
@@ -88,13 +95,13 @@ function! s:sy_stats_wrapper()
 
   if !empty(statline)
 	let statline = printf('[%s]', statline[:-2])
-  endif
+endif
 
-  return statline
+return statline
 endfunction
 
 function! Git_Status()
-  return s:sy_stats_wrapper()
+	return s:sy_stats_wrapper()
 endfunction
 
 " ALE_WARNING
@@ -113,23 +120,23 @@ endfunction
 
 set laststatus=2
 set statusline=
+" set statusline+=%{mode(1)}
 set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
 set statusline+=%0*\ %{toupper(g:currentmode[mode()])}   " Current mode
 set statusline+=%8*\ [%n]                                " buffernr
 set statusline+=%8*\ %{GitInfo()}                        " Git Branch name
-" vim-signify
-set statusline+=\ %{Git_Status()}
+set statusline+=\ %{Git_Status()}  " vim - signify
 set statusline+=%8*\ %<%F\ %{ReadOnly()}\ %m\ %w\        " File+path
 set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}             " Syntastic errors
 set statusline+=%*
 set statusline+=%9*\ %=                                  " Space
 set statusline+=%8*\ %y\                                 " FileType
-set statusline+=%7*\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\ " Encoding & Fileformat
+" set statusline+=%7*\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\  " Encoding & Fileformat
 set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
+set statusline+=\ %b:0x%-3B " value of character under cursor
 set statusline+=%0*\ %2p%%\ \ %l:%L\ %2c\                 " Rownumber/total (%)
-set statusline+=\ %b:0x%B " value of character under cursor
 set statusline+=\ %{LinterStatus()}  " ale linting
+
 
 hi User1 ctermfg=007
 hi User2 ctermfg=008
