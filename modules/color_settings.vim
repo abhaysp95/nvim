@@ -70,10 +70,6 @@ let g:deepspace_italics = 1
 " let g:neodark#backgroud = '#202020'
 let g:neodark#use_256color = 1
 
-" tomasr/molokai dark
-let g:molokai_orignal = 1
-" let g:rehash256 = 1
-
 " other colorschemes <<<
 let g:palenight_terminal_italics=1
 let g:spacegray_underline_search = 1
@@ -101,7 +97,7 @@ hi Identifiers gui=bold,italic cterm=bold,italic
 hi Constant gui=bold,italic cterm=bold,italic
 hi Statement gui=bold,italic cterm=bold,italic
 hi SignColumn ctermbg=255 guibg=255 gui=bold
-hi CursorLine guibg='#403D3D'
+hi CursorLine guibg='#272930'
 hi htmlArg cterm=bold,italic gui=bold,italic
 hi Type gui=bold,italic cterm=bold,italic
 hi Structure gui=bold,italic cterm=bold,italic
