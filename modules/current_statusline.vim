@@ -8,7 +8,7 @@ let g:currentmode={
     \ 'no'     : 'N·Operator Pending ',
     \ 'v'      : 'Vis ',
     \ 'V'      : 'V·Line ',
-    \ '\<C-V>' : 'V·Block ',
+    \ ''     : 'V·Block ',
     \ 's'      : 'Select ',
     \ 'S'      : 'S·Line ',
     \ '\<C-S>' : 'S·Block ',
@@ -25,24 +25,35 @@ let g:currentmode={
     \ 't'      : 'Terminal '
     \}
 
-function! GetMode() range
-	let l:M = visualmode()
-	echo l:M
-endfunction
 
-" Change statusline color
-function! ChangeStatuslineColor()
-	if (mode() =~# '\v(n|no)')
-		exe 'hi! StatusLine ctermfg=008'
-	elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block ' || get(g:currentmode, mode(), '') ==# 't')
-		exe 'hi! StatusLine ctermfg=005'
-	elseif (mode() ==# 'i')
-		exe 'hi! StatusLine ctermfg=004'
-	else
-		exe 'hi! StatusLine ctermfg=006'
-	endif
-	return ''
-endfunction
+" highlight User1 cterm=None gui=None ctermfg=007 guifg=fgcolor
+" highlight User2 cterm=None gui=None ctermfg=008 guifg=bgcolor
+" highlight User3 cterm=None gui=None ctermfg=008 guifg=bgcolor
+" highlight User4 cterm=None gui=None ctermfg=008 guifg=bgcolor
+" highlight User5 cterm=None gui=None ctermfg=008 guifg=bgcolor
+" highlight User7 cterm=None gui=None ctermfg=008 guifg=bgcolor
+" highlight User8 cterm=None gui=None ctermfg=008 guifg=bgcolor
+" highlight User9 cterm=None gui=None ctermfg=007 guifg=fgcolor
+
+" " Automatically change the statusline color depending on mode
+" function! ChangeStatuslineColor()
+"   if (mode() =~# '\v(n|no)')
+"     " exe 'hi! StatusLine ctermfg=008 guifg=fgcolor gui=None cterm=None'
+" 	exe 'hi! StatusLine gui=Bold'
+"   elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block' || get(g:currentmode, mode(), '') ==# 't')
+"     " exe 'hi! StatusLine ctermfg=005 guifg=#00ff00 guibg=#282828 gui=None cterm=None'
+" 	exe 'hi! StatusLine gui=Bold'
+"   elseif (mode() ==# 'i')
+"     " exe 'hi! StatusLine ctermfg=004 guifg=#6CBCE8 guibg=#181818 gui=None cterm=None'
+" 	exe 'hi! StatusLine gui=Bold'
+"   else
+"     " exe 'hi! StatusLine ctermfg=006 guifg=orange guibg=#484848 gui=None cterm=None'
+" 	exe 'hi! StatusLine gui=Bold'
+"   endif
+"
+"   return ''
+" endfunction
+
 " Find out current buffer's size and output it.
 function! FileSize()
 	let bytes = getfsize(expand('%:p'))
@@ -120,8 +131,6 @@ endfunction
 
 set laststatus=2
 set statusline=
-" set statusline+=%{mode(1)}
-set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
 set statusline+=%0*\ %{toupper(g:currentmode[mode()])}   " Current mode
 set statusline+=%8*\ [%n]                                " buffernr
 set statusline+=%8*\ %{GitInfo()}                        " Git Branch name
@@ -131,18 +140,13 @@ set statusline+=%#warningmsg#
 set statusline+=%*
 set statusline+=%9*\ %=                                  " Space
 set statusline+=%8*\ %y\                                 " FileType
-" set statusline+=%7*\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\  " Encoding & Fileformat
 set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
 set statusline+=\ %b:0x%-3B " value of character under cursor
 set statusline+=%0*\ %2p%%\ \ %l:%L\ %2c\                 " Rownumber/total (%)
 set statusline+=\ %{LinterStatus()}  " ale linting
 
-
-hi User1 ctermfg=007
-hi User2 ctermfg=008
-hi User3 ctermfg=008
-hi User4 ctermfg=008
-hi User5 ctermfg=008
-hi User7 ctermfg=008
-hi User8 ctermfg=008
-hi User9 ctermfg=007
+" set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
+" set statusline+=%{mode(1)}
+" set statusline+= %!MyStatusLine()
+" set statusline+=%{ModeCurrent()}               " Changing the statusline color
+" set statusline+=%7*\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\  " Encoding & Fileformat
