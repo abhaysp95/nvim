@@ -15,14 +15,14 @@ let g:currentmode={
     \ 'i'      : 'Ins ',
     \ 'R'      : 'Rep ',
     \ 'Rv'     : 'V·Replace ',
-    \ 'c'      : 'Command ',
+    \ 'c'      : 'Cmd ',
     \ 'cv'     : 'Vim Ex ',
     \ 'ce'     : 'Ex ',
-    \ 'r'      : 'Prompt ',
+    \ 'r'      : 'Prmpt ',
     \ 'rm'     : 'More ',
-    \ 'r?'     : 'Confirm ',
+    \ 'r?'     : 'Cnfrm ',
     \ '!'      : 'Shell ',
-    \ 't'      : 'Terminal '
+    \ 't'      : 'Term '
     \}
 
 
