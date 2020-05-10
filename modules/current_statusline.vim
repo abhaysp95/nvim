@@ -78,7 +78,7 @@ function! ReadOnly()
 	if &readonly || !&modifiable
 		return ''
 	else
-		return ''
+		return ''
 	endif
 endfunction
 function! GitInfo()
@@ -122,8 +122,8 @@ function! LinterStatus() abort
 	let l:all_errors = l:counts.error + l:counts.style_error
 	let l:all_non_errors = l:counts.total - l:all_errors
 
-	 return l:counts.total == 0 ? 'OK ' : printf(
-			\   '%dw %de ',
+	 return l:counts.total == 0 ? ' ' : printf(
+			\   '%d  %d  ',
 			\   all_non_errors,
 			\   all_errors
 			\)
