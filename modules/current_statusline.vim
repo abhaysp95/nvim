@@ -141,11 +141,11 @@ set statusline+=%*
 set statusline+=%9*\ %=                                  " Space
 set statusline+=%8*\ %y\                                 " FileType
 set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
-set statusline+=\ %b:0x%-3B " value of character under cursor
-set statusline+=%0*\ %2p%%\ \ %l:%L\ %2c\                 " Rownumber/total (%)
+set statusline+=%0*\ %2p%%\ \ %l:%L\ {%c}\                 " Rownumber/total (%)
 set statusline+=\ %{LinterStatus()}  " ale linting
 
 " set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
+" set statusline+=\ %b:0x%-3B " value of character under cursor
 " set statusline+=%{mode(1)}
 " set statusline+= %!MyStatusLine()
 " set statusline+=%{ModeCurrent()}               " Changing the statusline color
