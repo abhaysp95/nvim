@@ -78,7 +78,7 @@ let ayucolor="light"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme onedark
+colorscheme molokai
 set go=a
 
 " enable when onedark is set to colorscheme <<<
@@ -97,7 +97,7 @@ hi Identifiers gui=bold,italic cterm=bold,italic
 hi Constant gui=bold,italic cterm=bold,italic
 hi Statement gui=bold,italic cterm=bold,italic
 hi SignColumn ctermbg=255 guibg=255 gui=bold
-hi CursorLine guibg='#35434d'
+hi CursorLine guibg='#403D3D'
 hi htmlArg cterm=bold,italic gui=bold,italic
 hi Type gui=bold,italic cterm=bold,italic
 hi Structure gui=bold,italic cterm=bold,italic
@@ -118,11 +118,13 @@ hi Comment cterm=italic gui=italic
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 
-" hi CursorLineNr guifg='#e5c07b' guibg=255 gui=bold,italic
-" hi StatusLine guifg='#e5c07b' guibg=255 gui=bold,italic
-" hi TabLine guifg='#455263' guibg=255
-" hi TabLineSel guifg='#e5c07b' guibg=255 gui=bold,italic
-" hi TabLineFill guibg=255
+hi CursorLineNr guibg='#6A7EC8' guifg=background gui=bold
+hi StatusLine guifg=background guibg='#6A7EC8' gui=bold
+hi TabLine guifg=foreground guibg=255
+hi TabLineSel guibg='#6A7EC8' guifg=background gui=bold
+hi TabLineFill guibg=foreground
+hi Folded guifg='#6A7EC8' guibg=background gui=bold
+hi FoldColumn guibg=background guifg=foreground
 
 " these changes colors to white for syntax <<<
 hi Conditional gui=bold,italic cterm=bold,italic
@@ -132,7 +134,6 @@ hi Repeat gui=bold,italic cterm=bold,italic
 " highlight Delimiter gui=bold cterm=bold
 " highlight Todo gui=bold cterm=bold
 " hi CursorColumn guibg='#444267'
-" hi FoldColumn guibg=232 ctermbg=232
 " make nvim transparent with terminal
 " hi! Normal ctermbg=NONE guibg=NONE
 " hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
