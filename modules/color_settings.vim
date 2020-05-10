@@ -70,6 +70,10 @@ let g:deepspace_italics = 1
 " let g:neodark#backgroud = '#202020'
 let g:neodark#use_256color = 1
 
+" tomasr/molokai dark
+let g:molokai_orignal = 1
+" let g:rehash256 = 1
+
 " other colorschemes <<<
 let g:palenight_terminal_italics=1
 let g:spacegray_underline_search = 1
