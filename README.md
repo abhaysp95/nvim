@@ -9,10 +9,18 @@ to do programming
 I have added many features in the my configuration of text editor. Some of which
 I got with the help of other peoples and some sites.
 
+> Colorschemes for my text-editor and my other tools(terminal, bar etc.) are same
+
+You can find my other config files at [my_config_files](https://github.com/coolabhays/my-config-files)
+
 Here, are the main ones:
 
 
 ### Colorscheme
+
+### Molokai
+Switched to [molokai](https://github.com/tomasr/molokai) colorscheme
+![molokai](sshots/molokai_scheme.png)
 
 ### One Dark(2020-05-06)
 Started using [One Dark](https://github.com/joshdick/onedark.vim) colorscheme.
