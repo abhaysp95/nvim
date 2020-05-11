@@ -111,8 +111,9 @@ autocmd WinEnter *.* silent! loadview
 
 " fold settings <<<
 set foldcolumn=1
-set foldlevel=0
-" set foldlevelstart=1
+set foldlevel=1
+set foldlevelstart=1
+set foldnestmax=3
 set foldmarker=<<<,>>>
 set foldmethod=indent
 
