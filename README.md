@@ -24,6 +24,17 @@ Using [material](https://github.com/kaicataldo/material.vim) colorscheme.
 ![material_colorscheme](sshots/material_scheme.png)
 
 
+## StatusLine(Current)
+
+Using manually setup statusline. Inspired by statusline of [Ahmed El Gabri](https://gabri.me/blog/diy-vim-statusline). Here are the samples:
+
+**Sample1:**
+![statusline1](sshots/cur_statusline1.png)
+
+**Sample2:**
+![statusline2](sshots/cur_statusline2.png)
+
+
 ## AutoCompletion
 
 I'm using [coc.nvim](https://github.com/neoclide/coc.nvim) and
