@@ -25,16 +25,6 @@ let g:currentmode={
     \ 't'      : 'Term '
     \}
 
-
-" highlight User1 cterm=None gui=None ctermfg=007 guifg=fgcolor
-" highlight User2 cterm=None gui=None ctermfg=008 guifg=bgcolor
-" highlight User3 cterm=None gui=None ctermfg=008 guifg=bgcolor
-" highlight User4 cterm=None gui=None ctermfg=008 guifg=bgcolor
-" highlight User5 cterm=None gui=None ctermfg=008 guifg=bgcolor
-" highlight User7 cterm=None gui=None ctermfg=008 guifg=bgcolor
-" highlight User8 cterm=None gui=None ctermfg=008 guifg=bgcolor
-" highlight User9 cterm=None gui=None ctermfg=007 guifg=fgcolor
-
 " " Automatically change the statusline color depending on mode
 " function! ChangeStatuslineColor()
 "   if (mode() =~# '\v(n|no)')
@@ -56,12 +46,13 @@ let g:currentmode={
 
 " Find out current buffer's size and output it.
 function! FileSize()
+	let base = '1024'
 	let bytes = getfsize(expand('%:p'))
-	if (bytes >= 1024)
-		let kbytes = bytes / 1024
+	if (bytes >= base)
+		let kbytes = bytes / base
 	endif
-	if (exists('kbytes') && kbytes >= 1000)
-		let mbytes = kbytes / 1000
+	if (exists('kbytes') && kbytes >= base)
+		let mbytes = kbytes / base
 	endif
 	if bytes <= 0
 		return '0'
@@ -135,17 +126,17 @@ set statusline+=%0*\ %{toupper(g:currentmode[mode()])}   " Current mode
 set statusline+=%8*\ [%n]                                " buffernr
 set statusline+=%8*\ %{GitInfo()}                        " Git Branch name
 set statusline+=\ %{Git_Status()}  " vim - signify
-set statusline+=%8*\ %<%F\ %{ReadOnly()}\ %m\ %w\        " File+path
+set statusline+=%8*\ %<%f\ %m\ %{ReadOnly()}\ %w\        " File+path
 set statusline+=%#warningmsg#
 set statusline+=%*
 set statusline+=%9*\ %=                                  " Space
 set statusline+=%8*\ %y\                                 " FileType
 set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
+set statusline+=\ %b:0x%-3B " value of character under cursor
 set statusline+=%0*\ %2p%%\ \ %l:%L\ {%c}\                 " Rownumber/total (%)
 set statusline+=\ %{LinterStatus()}  " ale linting
 
 " set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
-" set statusline+=\ %b:0x%-3B " value of character under cursor
 " set statusline+=%{mode(1)}
 " set statusline+= %!MyStatusLine()
 " set statusline+=%{ModeCurrent()}               " Changing the statusline color
