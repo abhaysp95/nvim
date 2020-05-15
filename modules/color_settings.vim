@@ -63,6 +63,9 @@ let g:material_theme_style = 'default'
 let g:onedark_hide_endofbuffer = 1
 let g:onedark_terminal_italics = 1
 
+" vim-one
+let g:one_allow_italics = 1
+
 " deep-space
 let g:deepspace_italics = 1
 
@@ -74,11 +77,12 @@ let g:neodark#use_256color = 1
 let g:palenight_terminal_italics=1
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
-let ayucolor="light"
+let ayucolor="dark"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme molokai
+colorscheme ayu
+set background=dark
 set go=a
 
 " enable when onedark is set to colorscheme <<<
@@ -93,42 +97,46 @@ set go=a
 
 
 " highlight settings <<<
-hi Identifiers gui=bold,italic cterm=bold,italic
-hi Constant gui=bold,italic cterm=bold,italic
-hi Statement gui=bold,italic cterm=bold,italic
-hi SignColumn ctermbg=255 guibg=255 gui=bold
-hi CursorLine guibg='#272930'
-hi htmlArg cterm=bold,italic gui=bold,italic
-hi Type gui=bold,italic cterm=bold,italic
-hi Structure gui=bold,italic cterm=bold,italic
-hi Typedef gui=bold,italic cterm=bold,italic
-hi Keyword gui=bold,italic cterm=bold,italic
-hi Label gui=bold,italic cterm=bold,italic
-hi Character gui=bold,italic cterm=bold,italic
-
-hi Function gui=bold cterm=bold
-hi PreProc gui=bold cterm=bold
-hi Special gui=bold cterm=bold
+" hi Identifiers gui=bold,italic cterm=bold,italic
+" hi Constant gui=bold,italic cterm=bold,italic
+" hi Statement gui=bold,italic cterm=bold,italic
+" hi htmlArg cterm=bold,italic gui=bold,italic
+" hi Type gui=bold,italic cterm=bold,italic
+" hi Structure gui=bold,italic cterm=bold,italic
+" hi Typedef gui=bold,italic cterm=bold,italic
+" hi Keyword gui=bold,italic cterm=bold,italic
+" hi Label gui=bold,italic cterm=bold,italic
+" hi Character gui=bold,italic cterm=bold,italic
+"
+" hi Function gui=bold cterm=bold
+" hi PreProc gui=bold cterm=bold
+" hi Special gui=bold cterm=bold
+" " hi Conditional gui=bold,italic cterm=bold,italic
+" " hi Repeat gui=bold,italic cterm=bold,italic
+"
+" hi Underlined gui=underline cterm=underline
+"
+" hi SignColumn ctermbg=255 guibg=255 gui=bold
+" hi CursorLine guibg='#272930'
 hi SpecialComment gui=bold cterm=bold
-
-hi Underlined gui=underline cterm=underline
-
 hi String gui=italic cterm=italic
 hi Comment cterm=italic gui=italic
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
-
-hi CursorLineNr guibg='#6A7EC8' guifg=background gui=bold
-hi StatusLine guifg=background guibg='#6A7EC8' gui=bold
+"
+hi CursorLineNr guibg='#36a3d9' guifg=background gui=bold
+hi StatusLine guifg=background guibg='#36a3d9' gui=bold
 hi TabLine guifg=foreground guibg=255
-hi TabLineSel guibg='#6A7EC8' guifg=background gui=bold
-hi TabLineFill guibg=foreground
-hi Folded guifg='#6A7EC8' guibg=background gui=bold
+hi TabLineSel guibg='#36a3d9' guifg=background gui=bold
+hi TabLineFill guibg=foreground guifg=background
+hi BufTabLineFill guibg=255 guifg=#da12ff
+hi BufTabLineActive guibg=255 guifg=foreground gui=bold
+hi BufTabLineHidden guibg=255 guifg=#a5a5a5
+hi BufTabLineCurrent guibg=#36a3d9 guifg=background gui=bold
+hi Folded guifg='#36a3d9'
 hi FoldColumn guibg=background guifg=foreground
 
 " these changes colors to white for syntax <<<
-hi Conditional gui=bold,italic cterm=bold,italic
-hi Repeat gui=bold,italic cterm=bold,italic
 " hi Boolean gui=bold cterm=bold
 " hi SpecialChar gui=bold cterm=bold
 " highlight Delimiter gui=bold cterm=bold
