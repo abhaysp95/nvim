@@ -85,6 +85,13 @@ set scrolloff=3	    " leaves 3 lines before the edge vertically
 
 " enable autocompletion
 set wildmode=longest,list,full
+
+" read and write
+set autoread
+set autowrite
+
+" show confirm dialog when exiting unsaved file
+
 " Splits open at the bottom and right(should be default)
 set splitbelow splitright
 " Display all matching files when tabs complete
@@ -104,6 +111,7 @@ set signcolumn=auto
 set path+=**
 
 set formatoptions-=cro
+set formatoptions+=n
 set showtabline=2
 
 autocmd WinLeave *.* mkview
@@ -177,7 +185,7 @@ nnoremap <silent><Leader>tq :call QuickFix_toggle()<CR>
 " >>>
 
 " Disables automatic commenting on newline
-autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=0
+autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd Filetype * setlocal formatoptions+=n
 " >>>
 
