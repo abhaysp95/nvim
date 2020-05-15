@@ -139,7 +139,7 @@ nnoremap <leader>tk <C-w>t<C-w>K
 
 " Enable/disable auto comments character <<<
 map <leader>cd :setlocal formatoptions-=cro<CR>
-map <leader>ce :setlocal formatoptions=cro<CR>
+map <leader>ce :setlocal formatoptions+=cro<CR>
 " >>>
 
 " Check file in shellcheck:
