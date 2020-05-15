@@ -119,27 +119,27 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " endfunction
 
 " Explorer (floating window)
-" let g:coc_explorer_global_presets = {
-" 	    \ 'floating': {
-" 	    \ 'position': 'floating',
-" 	    \ },
-" 	    \ 'floatingLeftside': {
-" 	    \ 'position': 'floating',
-" 	    \ 'floating-position': 'left-center',
-" 	    \ 'floating-width': 30,
-" 	    \ },
-" 	    \ 'floatingRightside': {
-" 	    \ 'position': 'floating',
-" 	    \ 'floating-position': 'right-center',
-" 	    \ 'floating-width': 30,
-" 	    \ },
-" 	    \ 'simplify': {
-" 	    \ 'file.child.template': '[selection | clip | 1] [filename omitCenter 1]'
-" 	    \ }
-" 	    \ }
+let g:coc_explorer_global_presets = {
+	    \ 'floating': {
+	    \ 'position': 'floating',
+	    \ },
+	    \ 'floatingLeftside': {
+	    \ 'position': 'floating',
+	    \ 'floating-position': 'left-center',
+	    \ 'floating-width': 30,
+	    \ },
+	    \ 'floatingRightside': {
+	    \ 'position': 'floating',
+	    \ 'floating-position': 'right-center',
+	    \ 'floating-width': 30,
+	    \ },
+	    \ 'simplify': {
+	    \ 'file.child.template': '[selection | clip | 1] [filename omitCenter 1]'
+	    \ }
+	    \ }
 nnoremap ,Ee :CocCommand explorer<CR>
-" nnoremap ,Ef :CocCommand explorer --preset floatingRightside<CR>
-" autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+nnoremap ,Ef :CocCommand explorer --preset floatingRightside<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 " >>>
 
 " some auto-completion settings for <c-space>, <c-n> and <c-p> <<<
