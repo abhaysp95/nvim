@@ -43,6 +43,12 @@ Using manually setup statusline. Inspired by statusline of [Ahmed El Gabri](http
 ![statusline2](sshots/cur_statusline2.png)
 
 
+## File Exploring
+
+I generally use `vim` commands to open files but if needed I use `coc-explorer` sometimes
+![coc-explorer](sshots/coc-explorer.png)
+
+
 ## AutoCompletion
 
 I'm using [coc.nvim](https://github.com/neoclide/coc.nvim) and
