@@ -29,6 +29,8 @@ Plug 'gcmt/wildfire.vim'
 
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
+Plug 'liuchengxu/vim-which-key'
+
 " Theme / Interface
 Plug 'ap/vim-buftabline'
 Plug 'junegunn/rainbow_parentheses.vim'
@@ -103,6 +105,10 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
   let g:tagbar_sort = 0
 
 Plug 'jpalardy/vim-slime'
+
+Plug 'justinmk/vim-dirvish'
+
+" Plug 'gerw/vim-latex-suite'
 
 call plug#end()
 " >>> And this is done by the way
