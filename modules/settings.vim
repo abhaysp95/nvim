@@ -51,7 +51,7 @@ set modelines=2
 set noerrorbells visualbell t_vb=
 set noshiftround
 set nospell
-set autochdir
+" set autochdir
 set nostartofline
 set regexpengine=1
 set showcmd
