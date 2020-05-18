@@ -41,6 +41,9 @@ let g:gruvbox_improved_warnings='1'
 let g:gruvbox_contrast_light='hard'
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_invert_indent_guides='1'
+let g:gruvbox_invert_selection='0'
+let g:gruvbox_sign_column='dark1'
+let g:gruvbox_invert_signs='0'
 " >>>
 
 " nord colorscheme settings" <<<
@@ -81,7 +84,7 @@ let ayucolor="dark"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme ayu
+colorscheme gruvbox
 set background=dark
 set go=a
 
@@ -116,24 +119,24 @@ set go=a
 "
 " hi Underlined gui=underline cterm=underline
 "
-" hi SignColumn ctermbg=255 guibg=255 gui=bold
-" hi CursorLine guibg='#272930'
+hi SignColumn ctermbg=255 guibg=255 gui=bold
+hi CursorLine guibg='#3c3836'
 hi SpecialComment gui=bold cterm=bold
 hi String gui=italic cterm=italic
 hi Comment cterm=italic gui=italic
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 "
-hi CursorLineNr guibg='#36a3d9' guifg=background gui=bold
-hi StatusLine guifg=background guibg='#36a3d9' gui=bold
+hi CursorLineNr guibg='#a89984' guifg=background gui=bold
+hi StatusLine guifg=background guibg='#a89984' gui=bold
 hi TabLine guifg=foreground guibg=255
-hi TabLineSel guibg='#36a3d9' guifg=background gui=bold
+hi TabLineSel guibg='#a89984' guifg=background gui=bold
 hi TabLineFill guibg=foreground guifg=background
 hi BufTabLineFill guibg=255 guifg=#da12ff
 hi BufTabLineActive guibg=255 guifg=foreground gui=bold
 hi BufTabLineHidden guibg=255 guifg=#a5a5a5
-hi BufTabLineCurrent guibg=#36a3d9 guifg=background gui=bold
-hi Folded guifg='#36a3d9'
+hi BufTabLineCurrent guibg=#a89984 guifg=background gui=bold
+hi Folded guifg='#a89984'
 hi FoldColumn guibg=background guifg=foreground
 
 " these changes colors to white for syntax <<<
@@ -141,6 +144,7 @@ hi FoldColumn guibg=background guifg=foreground
 " hi SpecialChar gui=bold cterm=bold
 " highlight Delimiter gui=bold cterm=bold
 " highlight Todo gui=bold cterm=bold
+" hi! Visual guibg='#928374'
 " hi CursorColumn guibg='#444267'
 " make nvim transparent with terminal
 " hi! Normal ctermbg=NONE guibg=NONE
