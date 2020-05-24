@@ -185,11 +185,15 @@ let g:startify_custom_header = s:center(s:header)
 " >>>
 
 " junegunn/rainbow_parethesis <<<
+autocmd FileType * RainbowParentheses
+augroup js_rainbow
+	autocmd!
+	autocmd FileType javascript RainbowParentheses
+augroup end
+
+let g:rainbow#blacklist = [248, '#1f2233', '#464b5d']
 let g:rainbow#max_level = 16
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
-
-autocmd FileType * RainbowParentheses
-let g:rainbow#blacklist = [248, '#1f2233', '#464b5d']
 " >>>
 
 " gcmt/wildfire.vim <<<
@@ -218,6 +222,7 @@ let g:indentline_leadingSpaceChar = '.'
 """"""""""""""""""""""""""""""""
 "  indent-line-guide
 """"""""""""""""""""""""""""""""
-autocmd FileType python,yaml,ruby :IndentGuidesEnable
-let g:indent_guides_enable_on_vim_startup = 0
-let g:indent_guides_guide_size = 1
+"autocmd FileType python,yaml,ruby :IndentGuidesEnable
+"let g:indent_guides_enable_on_vim_startup = 0
+"let g:indent_guides_guide_size = 1
+"let g:indent_guides_auto_colors = 0
