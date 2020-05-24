@@ -122,6 +122,8 @@ nnoremap U <C-R>
 nnoremap cd :cd %:p:h<CR>
 nnoremap cu :cd ..<CR>
 nnoremap zq :qa!<CR>
+nnoremap <localleader>- YpVr-
+nnoremap <localleader>_ YPVr-
 autocmd FileType help nnoremap <buffer>q :helpclose<CR>
 " >>>
 
@@ -157,10 +159,10 @@ if get(g:, 'elite_mode')
 	" nnoremap <Down>     :resize -2<CR>
 	" nnoremap <Left>     :vertical resize +2<CR>
 	" nnoremap <Right>    :vertical resize -2<CR>
-	nnoremap <silent> <M-k>		:resize +2<CR>
-	nnoremap <silent> <M-j>		:resize -2<CR>
-	nnoremap <silent> <M-l>		:vertical resize +2<CR>
-	nnoremap <silent> <M-h>		:vertical resize -2<CR>
+	nnoremap <silent> <M-k> :resize +2<CR>
+	nnoremap <silent> <M-j> :resize -2<CR>
+	nnoremap <silent> <M-l> :vertical resize +2<CR>
+	nnoremap <silent> <M-h> :vertical resize -2<CR>
 endif
 " >>>
 
