@@ -1,4 +1,5 @@
-" Airline configuration <<<
+" Airline configuration
+set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
@@ -52,13 +53,13 @@ let g:airline#extensions#branch#vcs_checks = ['untracked', 'dirty']
 let airline#extensions#ale#error_symbol = 'e:'
 let airline#extensions#ale#warning_symbol = 'w:'
 let g:airline#extensions#nerdtree_status = 0
-let g:airline#extensions#syntastic#enabled = 1
-let airline#extensions#syntastic#error_symbol = 'ë:'
-let airline#extensions#syntastic#stl_format_err = '%E{[%fe(#%e)]}'
-let airline#extensions#syntastic#warning_symbol = 'ẃ:'
-let airline#extensions#syntastic#stl_format_warn = '%W{[%fw(#%w)]}'
 
-let g:airline_theme='material'
+let g:airline_theme='gruvbox'
 let g:hybrid_custom_term_colors=1
 let g:hybrid_reduced_contrast=1
-" >>>
+
+"let g:airline#extensions#syntastic#enabled = 1
+"let airline#extensions#syntastic#error_symbol = 'ë:'
+"let airline#extensions#syntastic#stl_format_err = '%E{[%fe(#%e)]}'
+"let airline#extensions#syntastic#warning_symbol = 'ẃ:'
+"let airline#extensions#syntastic#stl_format_warn = '%W{[%fw(#%w)]}'
