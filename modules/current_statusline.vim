@@ -113,11 +113,26 @@ function! LinterStatus() abort
 	let l:all_errors = l:counts.error + l:counts.style_error
 	let l:all_non_errors = l:counts.total - l:all_errors
 
-	 return l:counts.total == 0 ? ' ' : printf(
-			\   '%d  %d  ',
+	 return l:counts.total == 0 ? ' ' : printf(
+			\   '-%d x%d ',
 			\   all_non_errors,
 			\   all_errors
 			\)
+endfunction
+"     
+
+function! StatusDiagnostic() abort
+  let info = get(b:, 'coc_diagnostic_info', {})
+  if empty(info) | return '' | endif
+  let msgs = []
+  if get(info, 'error', 0)
+    call add(msgs, '✗' . info['error'])
+  endif
+  if get(info, 'warning', 0)
+    call add(msgs, '!' . info['warning'])
+  endif
+  return join(msgs, ''). ''
+ "  . get(g:, 'coc_status', '')
 endfunction
 
 set laststatus=2
@@ -134,6 +149,7 @@ set statusline+=%8*\ %y\                                 " FileType
 set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
 set statusline+=\ %b:0x%-3B " value of character under cursor
 set statusline+=%0*\ %2p%%\ \ %l:%L\ {%c}\                 " Rownumber/total (%)
+set statusline+=\%{StatusDiagnostic()}  " coc-status
 set statusline+=\ %{LinterStatus()}  " ale linting
 
 " set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
