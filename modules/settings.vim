@@ -47,6 +47,7 @@ set incsearch
 set lazyredraw
 set matchpairs+=<:> " Use % to jump between pairs
 set mmp=10000
+set timeoutlen=400
 set modelines=2
 set noerrorbells visualbell t_vb=
 set noshiftround
@@ -63,7 +64,9 @@ set cursorline
 " set cursorcolumn
 set smartcase
 set spelllang=en_us
-set textwidth=0
+set textwidth=80
+set colorcolumn=+1
+autocmd FileType markdown,txt set colorcolumn=0
 set ttimeout
 set mouse=a  "makes vim easy for others
 set undodir=/tmp
@@ -118,7 +121,7 @@ autocmd WinLeave *.* mkview
 autocmd WinEnter *.* silent! loadview
 
 " fold settings <<<
-set foldcolumn=1
+set foldcolumn=0  " currently no foldcolumn
 set foldlevel=1
 set foldlevelstart=1
 set foldnestmax=3
