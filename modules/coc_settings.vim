@@ -52,8 +52,8 @@ inoremap <silent><expr> <C-space> coc#refresh()
 
 
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>ca  <Plug>(coc-codeaction-selected)
-nmap <leader>ca  <Plug>(coc-codeaction-selected)
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
 nmap <leader>ac  <Plug>(coc-codeaction)
@@ -67,6 +67,8 @@ xmap <silent> <C-c> <Plug>(coc-range-select)
 " Using CocList
 " Show all diagnostics
 nnoremap <silent> ,,a  :<C-u>CocList diagnostics<cr>
+" coc-action
+nnoremap <silent> ,,A :<C-u>CocAction<Cr>
 " Manage extensions
 nnoremap <silent> ,,e  :<C-u>CocList extensions<cr>
 " Show commands
@@ -112,6 +114,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 " Higlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * call CocAction('getCurrentFunctionSymbol')
 
 " function! s:check_back_space() abort
 "     let col = col('.') - 1
@@ -194,4 +197,5 @@ augroup omnifuncs
     autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
     autocmd FileType c setlocal omnifunc=ccomplete#Complete
 augroup endif
+
 " >>>
