@@ -1,20 +1,37 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": [
-  ],
-    // "markdown",
+	"coc.preferences.formatOnSaveFiletypes": [
+	],
+	// "markdown",
 
-// "python"
+	// current function update automatically
+	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
 
-  // python config
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
+	// "python"
 
-  // explorer
-  "explorer.width": 30,
-  "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": true,
-  "explorer.keyMappings": {
-    "<cr>": ["expandable?", "expand", "open"],
-    "v": "open:vsplit"
-  }
+	//diagnostics
+	"diagnostic.errorSign": "✗",
+	"diagnostic.warningSign": "",
+	"diagnostic.infoSign": "",
+	"diagnostic.hintSign": " ",
+	// "diagnostic.displayByAle": true,
+
+	// list
+	"list.indicator": ">",
+	"list.selectedSignText": " ",
+
+	//snippets
+	"snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snippets"],
+
+	// python config
+	"python.linting.enabled": true,
+	"python.linting.pylintEnabled": true,
+
+	// explorer
+	"explorer.width": 30,
+	"explorer.icon.enableNerdfont": true,
+	"explorer.previewAction.onHover": true,
+	"explorer.keyMappings": {
+		"<cr>": ["expandable?", "expand", "open"],
+		"v": "open:vsplit"
+	}
 }
