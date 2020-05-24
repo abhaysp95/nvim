@@ -7,9 +7,9 @@ if exists('+termguicolors')
 endif
 
 " Colorcolumn settings <<<
-highlight ColorColumn ctermbg=red
+"highlight ColorColumn ctermbg=red
 " although this is working, color isn't changing to red, it's still grey
-call matchadd('ColorColumn', '\%101v', 100)
+"call matchadd('ColorColumn', '\%101v', 100)
 " >>>
 
 " spell error <<<
@@ -39,7 +39,7 @@ let g:gruvbox_italicize_strings='1'
 let g:gruvbox_improved_strings='0'
 let g:gruvbox_improved_warnings='1'
 let g:gruvbox_contrast_light='hard'
-let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_dark='dafault' " hard, soft
 let g:gruvbox_invert_indent_guides='1'
 let g:gruvbox_invert_selection='0'
 let g:gruvbox_sign_column='dark1'
@@ -119,7 +119,7 @@ set go=a
 "
 " hi Underlined gui=underline cterm=underline
 "
-hi SignColumn ctermbg=255 guibg=255 gui=bold
+"hi SignColumn ctermbg=255 guibg=255 gui=bold
 hi CursorLine guibg='#3c3836'
 hi SpecialComment gui=bold cterm=bold
 hi String gui=italic cterm=italic
@@ -127,17 +127,30 @@ hi Comment cterm=italic gui=italic
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 "
-hi CursorLineNr guibg='#a89984' guifg=background gui=bold
-hi StatusLine guifg=background guibg='#a89984' gui=bold
+hi Operator guifg=#d65d0e
+hi CursorLineNr guibg='#3c3836' guifg=#458588 gui=bold
+hi LineNr guibg='#3c3836'
+hi StatusLine guifg=background guibg='#458588' gui=bold
 hi TabLine guifg=foreground guibg=255
-hi TabLineSel guibg='#a89984' guifg=background gui=bold
+hi TabLineSel guibg='#458588' guifg=background gui=bold
 hi TabLineFill guibg=foreground guifg=background
 hi BufTabLineFill guibg=255 guifg=#da12ff
 hi BufTabLineActive guibg=255 guifg=foreground gui=bold
 hi BufTabLineHidden guibg=255 guifg=#a5a5a5
-hi BufTabLineCurrent guibg=#a89984 guifg=background gui=bold
-hi Folded guifg='#a89984'
+hi BufTabLineCurrent guibg=#458588 guifg=background gui=bold
+hi Folded guifg='#458588'
 hi FoldColumn guibg=background guifg=foreground
+
+"autocmd VimEnter,ColorScheme * :hi IndentGuidesOdd guibg=#504945
+"autocmd VimEnter,ColorScheme * :hi IndentGuidesEven guibg=#7c6f64
+
+" highlight yanked text(currently not included till version 0.4.3)
+"au TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 500)
+"if !exists('##TextYankPost')
+	"map y <Plug>(highlightedyank)
+"endif
+"let g:highlightedyank_highlight_duration = 1000
+"hi HighlightedyankRegion cterm=reverse gui=reverse
 
 " these changes colors to white for syntax <<<
 " hi Boolean gui=bold cterm=bold
