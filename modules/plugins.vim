@@ -19,7 +19,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'junegunn/fzf.vim'
 
-Plug 'machakann/vim-sandwich'
+" surround
+Plug 'tpope/vim-surround'
+" Plug 'machakann/vim-sandwich'
 
 Plug 'tpope/vim-markdown'
 
@@ -53,10 +55,10 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'lifepillar/vim-solarized8'
 Plug 'sjl/badwolf'
 Plug 'tomasr/molokai'
+Plug 'patstockwell/vim-monokai-tasty'
 Plug 'morhetz/gruvbox'
 Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plug 'kaicataldo/material.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'mkarmona/colorsbox'
 Plug 'romainl/Apprentice'
 Plug 'Lokaltog/vim-distinguished'
@@ -69,8 +71,13 @@ Plug 'ajh17/Spacegray.vim'
 Plug 'atelierbram/Base2Tone-vim'
 Plug 'colepeters/spacemacs-theme.vim'
 
+Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'tpope/vim-commentary'
+
+" code commenter
+Plug 'scrooloose/nerdcommenter'
+" Plug 'tpope/vim-commentary'
+
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
@@ -99,7 +106,7 @@ Plug 'unblevable/quick-scope'
 " get startscreen
 Plug 'mhinz/vim-startify'
 
-Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
   let g:tagbar_sort = 0
@@ -121,6 +128,7 @@ call plug#end()
 
 " Plug 'norcalli/nvim-colorizer.lua'
 " Plug 'vim-airline/vim-airline'
+" Plug 'ryanoasis/vim-devicons'
 " Plug 'vim-airline/vim-airline-themes'
 " Plug 'airblade/vim-rooter'
 " Plug 'rbgrouleff/bclose.vim'
