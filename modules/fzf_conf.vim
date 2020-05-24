@@ -17,14 +17,24 @@ map <leader>ff :Files<CR>
 map <leader>fc :Files ~/.config/<CR>
 map <leader>fs :Files ~/.local/bin/.scripts/<CR>
 map <leader>fl :Lines<CR>
+map <leader>fL :execute ":Lines" . expand('<cword>')<CR>
+map <leader>bl :BLines<CR>
+map <leader>bL :execute ":BLines" . expand('<cword>')<CR>
 map <leader>fw :Windows<CR>
-"can also use :Files instead of :FZF
-map <leader>fg :Files
 
 nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>bc :Commands<CR>
 nnoremap <leader>bs :Snippets<CR>
 nnoremap cq: :History:<CR>
+
+" tags symbol in current file finder mapping
+nnoremap <leader>bt :BTag<CR>
+" same as BTag but with the word under cursor pre-filled
+nnoremap <leader>bT :execute ":BTags" . expand('<cword>')<CR>
+" tags symbol in all file finder mapping
+nnoremap <leader>gt :Tags<CR>
+" same as Tags but with the word under cursor pre-filled
+nnoremap <leader>gT :execute ":Tags" . ('<cword>')<CR>
 
 let g:fzf_tags_command = 'ctags -R'
 " Border color
