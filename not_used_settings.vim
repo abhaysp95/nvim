@@ -438,6 +438,102 @@
 " endfunction
 " >>>
 
+"autocmd VimEnter,ColorScheme * :hi IndentGuidesOdd guibg=#504945
+"autocmd VimEnter,ColorScheme * :hi IndentGuidesEven guibg=#7c6f64
+
+" highlight yanked text(currently not included till version 0.4.3)
+"au TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 500)
+"if !exists('##TextYankPost')
+	"map y <Plug>(highlightedyank)
+"endif
+"let g:highlightedyank_highlight_duration = 1000
+"hi HighlightedyankRegion cterm=reverse gui=reverse
+
+" these changes colors to white for syntax <<<
+" hi Boolean gui=bold cterm=bold
+" hi SpecialChar gui=bold cterm=bold
+" highlight Delimiter gui=bold cterm=bold
+" hi! Visual guibg='#928374'
+" hi CursorColumn guibg='#444267'
+" make nvim transparent with terminal
+" hi! Normal ctermbg=NONE guibg=NONE
+" hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+
+" highlight settings <<<
+" hi Identifiers gui=bold,italic cterm=bold,italic
+" hi Constant gui=bold,italic cterm=bold,italic
+" hi Statement gui=bold,italic cterm=bold,italic
+" hi htmlArg cterm=bold,italic gui=bold,italic
+" hi Structure gui=bold,italic cterm=bold,italic
+" hi Typedef gui=bold,italic cterm=bold,italic
+" hi Keyword gui=bold,italic cterm=bold,italic
+" hi Label gui=bold,italic cterm=bold,italic
+" hi Character gui=bold,italic cterm=bold,italic
+"
+" hi PreProc gui=bold cterm=bold
+" hi Special gui=bold cterm=bold
+"
+" hi Underlined gui=underline cterm=underline
+" >>>
+
+" Dim inactive windows using 'colorcolumn' setting <<<
+" This tends to slow down redrawing, but is very useful.
+" Based on https://groups.google.com/d/msg/vim_use/IJU-Vk-QLJE/xz4hjPjCRBUJ
+" XXX: this will only work with lines containing text (i.e. not '~')
+" from
+" if exists('+colorcolumn')
+"   function! s:DimInactiveWindows()
+"     for i in range(1, tabpagewinnr(tabpagenr(), '$'))
+"       let l:range = ""
+"       if i != winnr()
+"         if &wrap
+         " HACK: when wrapping lines is enabled, we use the maximum number
+         " of columns getting highlighted. This might get calculated by
+         " looking for the longest visible line and using a multiple of
+         " winwidth().
+         " let l:width=256 " max
+        " else
+         " let l:width=winwidth(i)
+        " endif
+        " let l:range = join(range(1, l:width), ',')
+      " endif
+      " call setwinvar(i, '&colorcolumn', l:range)
+    " endfor
+  " endfunction
+  " augroup DimInactiveWindows
+    " au!
+    " au WinEnter * call s:DimInactiveWindows()
+  " augroup END
+" endif
+"hi BufTabLineFill guibg=255 guifg=#da12ff
+"hi BufTabLineActive guibg=255 guifg=foreground gui=bold
+"hi BufTabLineHidden guibg=255 guifg=#a5a5a5
+"hi BufTabLineCurrent guibg=#458588 guifg=background gui=bold
+" >>>
+"
+
+" Syntastic Configuration   #Check :help Syntastic <<<
+"let g:syntastic_always_populate_loc_list=1
+"let g:syntastic_auto_loc_list=0
+"let g:syntastic_loc_list_height=6
+"let g:syntastic_check_on_open=0
+"let g:syntastic_auto_jump=3
+"let g:syntastic_check_on_wq=0
+"let g:syntastic_error_symbol = '✖'
+"let g:syntastic_style_error_symbol = '✖'
+"let g:syntastic_enable_highlighting = 1
+ "let g:syntasitc_mode_map = {
+			 "\ "mode": "passive",
+			 "\ "passive_filetypes": ["python"] }
+"let b:syntastic_mode="passive"
+ "let g:syntastic_enable_elixir_checker = 1
+ "let g:syntastic_elixir_checkers = ["elixir"]
+
+"let g:syntastic_quiet_messages = {'regex': 'E117\|W191'}
+"nnoremap <leader>te :Errors<cr>
+"nnoremap <leader>T :SyntasticToggleMode<CR>
+"nnoremap <leader>ts :SyntasticCheck<CR>
+
 " ---- vim-pandoc-syntax(without vim-pandoc) ------- <<<
 " augroup pandoc_syntax
 " 	au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
@@ -467,6 +563,88 @@
 " vmap  <expr>  <UP>     DVB_Drag('up')
 " vmap  <expr>  D        DVB_Duplicate()
 " >>>
+
+" function for Lexplore (doesn't do what I want) <<<
+" function! ToggleLexplorer()
+"     if exists("t:expl_buf_num")
+" 	let expl_win_num = bufwinnr(t:expl_buf_num)
+" 	if expl_win_num != -1
+" 	    let cur_win_nr = winnr()
+" 	    exec expl_win_num . 'wincmd w'
+" 	    close
+" 	    exec cur_win_nr . 'wincmd w'
+" 	    unlet t:expl_buf_num
+" 	else
+" 	    unlet t:expl_buf_num
+" 	endif
+"     else
+" 	exec '1wincmd w'
+" 	Lexplore!
+" 	let t:expl_buf_num = bufnr("%")
+"     endif
+" endfunction
+
+" com! -nargs=* -bar -bang -complete=dir Lexplore call netrw#Lexplore(<q-args>, <bang>0)
+" fun! LexploreToggle(dir, right)
+"     if exists("t:netrw_lexbufnr")
+" 	" close down netrw explorer window
+" 	let lexwinnr = bufwinnr(t:netrw_lexbufnr)
+" 	if lexwinnr != -1
+" 	    let curwin = winnr()
+" 	    exe lexwinnr."wincmd w"
+" 	    close
+" 	    exe curwin."wincmd w"
+" 	endif
+" 	unlet t:netrw_lexbufnr
+"     else
+" 	" open netrw explorer in the dir of current file
+" 	" for remote files also
+" 	let path = substitute(exists("b:netrw_curdir")? b:netrw_curdir : expand("%:p"), '^\(.*[/\\]\)[^/\\]*$','e')
+" 	exe (a:right? "botright" : "topleft")." vertical ".((g.netrw_winsize > 0)? (g:netrw_winsize*winwidth(0))/100 : -g:netrw_winsize) . " new"
+" 	if a:dir != ""
+" 	    exe "Explore ".a:dir
+" 	else
+" 	    exe "Explore ".path
+" 	endif
+" 	setlocal winfixwidth
+" 	let t:netrw_lexbufnr = bufnr("%")
+"     endif
+" endfun
+" >>>
+
+
+" Files + devicons
+"function! Fzf_dev()
+  "function! s:files()
+    "let files = split(system($FZF_DEFAULT_COMMAND), '\n')
+    "return s:prepend_icon(files)
+  "endfunction
+
+  "function! s:prepend_icon(candidates)
+    "let result = []
+    "for candidate in a:candidates
+      "let filename = fnamemodify(candidate, ':p:t')
+      "let icon = WebDevIconsGetFileTypeSymbol(filename, isdirectory(filename))
+      "call add(result, printf("%s %s", icon, candidate))
+    "endfor
+
+    "return result
+  "endfunction
+
+  "function! s:edit_file(item)
+    "let parts = split(a:item, ' ')
+    "let file_path = get(parts, 1, '')
+    "execute 'silent e' file_path
+  "endfunction
+
+  "call fzf#run({
+        "\ 'source': <sid>files(),
+        "\ 'sink':   function('s:edit_file'),
+        "\ 'options': '-m -x +s',
+        "\ 'down':    '40%' })
+"endfunction
+"map <leader>ff :call Fzf_dev()<CR>
+
 
 " ----------------- plugins not in use --------------------- <<<
 

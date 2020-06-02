@@ -1,11 +1,11 @@
-" ------- vim-startify ------------------ <<<
+" ------- vim-startify ------------------
 " save current session/switch to another
 nnoremap <leader>ls :SSave<CR>
 nnoremap <leader>ll :SClose<CR>
 nnoremap <leader>lD :SDelete!
 
 " simplify the startify to just recent files and sessions
-" Custom header
+" Custom header <<<
 " let g:startfiy_custom_header = [
 let s:header = [
 			\ '',
@@ -15,6 +15,7 @@ let s:header = [
 			\ '  ╹┗┛  ┗┛    ╹   ╹ ╹',
 			\ '   ',
 			\ ]
+" >>>
 
 function! s:center(lines) abort
 	let longest_line = max(map(copy(a:lines), 'strwidth(v:val)'))
@@ -57,12 +58,14 @@ function! s:gitUntracked()
     return map(files, "{'line': v:val, 'path': v:val}")
 endfunction
 
+" bookmarks <<<
 let g:startify_bookmarks = [
 			\ { 'n': '~/.config/nvim/init.vim' },
 			\ { 'p': '~/.config/picom.conf' },
 			\ { 'a': '~/.config/alacritty/alacritty.yml'},
 			\ { 'd': '~/.config/dunst/dunstrc'},
-			\ { 'p': '~/.config/polybar/config'},
-			\ { 'r': '~/.config/rofi/config.rasi'}
+			\ { 'b': '~/.config/polybar/config'},
+			\ { 'r': '~/.config/rofi/config.rasi'},
+			\ { 's': '~/.config/sxhkd/sxhkdrc'}
 			\ ]
-
+" >>>

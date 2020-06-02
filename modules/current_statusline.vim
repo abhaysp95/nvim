@@ -69,7 +69,7 @@ function! ReadOnly()
 	if &readonly || !&modifiable
 		return ''
 	else
-		return ''
+		return ' '
 	endif
 endfunction
 function! GitInfo()
@@ -113,43 +113,50 @@ function! LinterStatus() abort
 	let l:all_errors = l:counts.error + l:counts.style_error
 	let l:all_non_errors = l:counts.total - l:all_errors
 
-	 return l:counts.total == 0 ? ' ' : printf(
-			\   '-%d x%d ',
+	 return l:counts.total == 0 ? ' ' : printf(
+			\   ' %d  %d ',
 			\   all_non_errors,
 			\   all_errors
 			\)
 endfunction
-"     
+"  
 
 function! StatusDiagnostic() abort
   let info = get(b:, 'coc_diagnostic_info', {})
-  if empty(info) | return '' | endif
+  if empty(info) | return ' ' | endif
   let msgs = []
   if get(info, 'error', 0)
-    call add(msgs, '✗' . info['error'])
+    call add(msgs, '✗ ' . info['error'])
   endif
   if get(info, 'warning', 0)
-    call add(msgs, '!' . info['warning'])
+    call add(msgs, ' !' . info['warning'])
   endif
   return join(msgs, ''). ''
  "  . get(g:, 'coc_status', '')
 endfunction
 
+function! KnowStatus() abort
+	let msg = []
+	return join(msg, '') . '' . get(g:, 'coc_status', '')
+endfunction
+
 set laststatus=2
 set statusline=
 set statusline+=%0*\ %{toupper(g:currentmode[mode()])}   " Current mode
-set statusline+=%8*\ [%n]                                " buffernr
+set statusline+=%8*\[%n]                                " buffernr
 set statusline+=%8*\ %{GitInfo()}                        " Git Branch name
 set statusline+=\ %{Git_Status()}  " vim - signify
 set statusline+=%8*\ %<%f\ %m\ %{ReadOnly()}\ %w\        " File+path
 set statusline+=%#warningmsg#
 set statusline+=%*
 set statusline+=%9*\ %=                                  " Space
+set statusline+=\ %{KnowStatus()}
 set statusline+=%8*\ %y\                                 " FileType
-set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
-set statusline+=\ %b:0x%-3B " value of character under cursor
-set statusline+=%0*\ %2p%%\ \ %l:%L\ {%c}\                 " Rownumber/total (%)
+set statusline+=%8*\%-3(%{FileSize()}%)                 " File size
+set statusline+=\%b:0x%-3B " value of character under cursor
+set statusline+=%0*\ \ %3p%%\ \ %l:%L\ {%c}\                 " Rownumber/total (%)
 set statusline+=\%{StatusDiagnostic()}  " coc-status
+set statusline+=\ \|
 set statusline+=\ %{LinterStatus()}  " ale linting
 
 " set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color

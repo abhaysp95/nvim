@@ -12,8 +12,16 @@
 	"diagnostic.errorSign": "✗",
 	"diagnostic.warningSign": "",
 	"diagnostic.infoSign": "",
-	"diagnostic.hintSign": " ",
+	"diagnostic.hintSign": "➤ ",
 	// "diagnostic.displayByAle": true,
+
+	"suggest.noselect": false,
+	"codeLens.enable": true,
+	"suggest.preferCompleteThanJumpPlaceholder": true,
+
+	// html
+	"html.suggest.ionic": false,
+	"html.suggest.html5": true,
 
 	// list
 	"list.indicator": ">",
@@ -24,7 +32,11 @@
 
 	// python config
 	"python.linting.enabled": true,
+	"python.jediEnabled": false,
 	"python.linting.pylintEnabled": true,
+	"python.formatting.blackPath": "~/.local/bin/black",
+	"python.linting.mypyEnabled": true,
+	"python.formatting.provider": "black",
 
 	// explorer
 	"explorer.width": 30,
@@ -33,5 +45,6 @@
 	"explorer.keyMappings": {
 		"<cr>": ["expandable?", "expand", "open"],
 		"v": "open:vsplit"
-	}
+	},
+	"explorer.quitOnOpen": true
 }

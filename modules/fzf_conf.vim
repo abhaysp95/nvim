@@ -1,40 +1,15 @@
 " ----------------- settings for fzf --------------------- <<<
-
 " This is the default extra key bindings
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-
 " Enable per-command history.
 " CTRL-N and CTRL-P will be automatically bound to next-history and
 " previous-history instead of down and up. If you don't like the change,
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
-
-map <leader>ff :Files<CR>
-map <leader>fc :Files ~/.config/<CR>
-map <leader>fs :Files ~/.local/bin/.scripts/<CR>
-map <leader>fl :Lines<CR>
-map <leader>fL :execute ":Lines" . expand('<cword>')<CR>
-map <leader>bl :BLines<CR>
-map <leader>bL :execute ":BLines" . expand('<cword>')<CR>
-map <leader>fw :Windows<CR>
-
-nnoremap <leader>bb :Buffers<CR>
-nnoremap <leader>bc :Commands<CR>
-nnoremap <leader>bs :Snippets<CR>
-nnoremap cq: :History:<CR>
-
-" tags symbol in current file finder mapping
-nnoremap <leader>bt :BTag<CR>
-" same as BTag but with the word under cursor pre-filled
-nnoremap <leader>bT :execute ":BTags" . expand('<cword>')<CR>
-" tags symbol in all file finder mapping
-nnoremap <leader>gt :Tags<CR>
-" same as Tags but with the word under cursor pre-filled
-nnoremap <leader>gT :execute ":Tags" . ('<cword>')<CR>
 
 let g:fzf_tags_command = 'ctags -R'
 " Border color
@@ -93,4 +68,27 @@ command! -bang -nargs=* GGrep
   \   fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}), <bang>0)
 
 let g:fzf_files_options = '--preview="pistol {}"'
-" >>>
+
+map <leader>ff :Files<CR>
+map <leader>fc :Files ~/.config/<CR>
+map <leader>fs :Files ~/.local/bin/.scripts/<CR>
+map <leader>fl :Lines<CR>
+map <leader>fL :execute ":Lines" . expand('<cword>')<CR>
+map <leader>bl :BLines<CR>
+map <leader>bL :execute ":BLines" . expand('<cword>')<CR>
+map <leader>fw :Windows<CR>
+
+nnoremap <leader>bb :Buffers<CR>
+nnoremap <leader>bc :Commands<CR>
+nnoremap <leader>bs :Snippets<CR>
+nnoremap cq: :History:<CR>
+
+" tags symbol in current file finder mapping
+nnoremap <leader>bt :BTag<CR>
+" same as BTag but with the word under cursor pre-filled
+nnoremap <leader>bT :execute ":BTags" . expand('<cword>')<CR>
+" tags symbol in all file finder mapping
+nnoremap <leader>gt :Tags<CR>
+" same as Tags but with the word under cursor pre-filled
+nnoremap <leader>gT :execute ":Tags" . ('<cword>')<CR>
+

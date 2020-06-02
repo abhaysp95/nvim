@@ -2,7 +2,6 @@
 set runtimepath^=~/.config/nvim/plugged/dragvisuals
 
 " Some basics:
-filetype plugin on
 syntax on
 
 set binary " allows editing of binary files
@@ -12,7 +11,6 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab "if switched on means it will insert spaces to length of tab
 
-autocmd FileType yaml,python,ruby set expandtab softtabstop=4 shiftwidth=4 tabstop=4
 
 " set smarttab
 set autoindent
@@ -52,6 +50,7 @@ set modelines=2
 set noerrorbells visualbell t_vb=
 set noshiftround
 set nospell
+set conceallevel=3
 " set autochdir
 set nostartofline
 set regexpengine=1
@@ -64,9 +63,8 @@ set cursorline
 " set cursorcolumn
 set smartcase
 set spelllang=en_us
-set textwidth=80
-set colorcolumn=+1
-autocmd FileType markdown,txt set colorcolumn=0
+"set textwidth=80
+set colorcolumn=81
 set ttimeout
 set mouse=a  "makes vim easy for others
 set undodir=/tmp
@@ -125,7 +123,6 @@ set foldcolumn=0  " currently no foldcolumn
 set foldlevel=1
 set foldlevelstart=1
 set foldnestmax=3
-set foldmarker=<<<,>>>
 set foldmethod=indent
 
 set fillchars=vert:\┃,fold:-
@@ -145,11 +142,8 @@ endfunction
 " ǁǂ｜┃
 " >>>
 
-autocmd FileType c,cpp,java set mps+==:;
 
 " Switch between normal and relativenumber and cursorline when switching modes
-autocmd FileType html,c,python,js,config,sh set number relativenumber
-autocmd FileType markdown,txt set nolist
 augroup highlight-when-switching-modes
     autocmd!
     autocmd InsertEnter * setlocal number norelativenumber nocursorline
@@ -187,11 +181,6 @@ endfunction
 nnoremap <silent><Leader>tq :call QuickFix_toggle()<CR>
 " >>>
 
-" Disables automatic commenting on newline
-autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-autocmd Filetype * setlocal formatoptions+=n
-" >>>
-
 " Automatically open & close quickfix window
 autocmd QuickFixCmdPost [^l] * nested cwindow
 
@@ -204,59 +193,10 @@ let g:netrw_altv=1                  "open splits to the right
 let g:netrw_liststyle=3             "tree view
 " >>>
 
-" function for Lexplore (doesn't do what I want) <<<
-" function! ToggleLexplorer()
-"     if exists("t:expl_buf_num")
-" 	let expl_win_num = bufwinnr(t:expl_buf_num)
-" 	if expl_win_num != -1
-" 	    let cur_win_nr = winnr()
-" 	    exec expl_win_num . 'wincmd w'
-" 	    close
-" 	    exec cur_win_nr . 'wincmd w'
-" 	    unlet t:expl_buf_num
-" 	else
-" 	    unlet t:expl_buf_num
-" 	endif
-"     else
-" 	exec '1wincmd w'
-" 	Lexplore!
-" 	let t:expl_buf_num = bufnr("%")
-"     endif
-" endfunction
-
-" com! -nargs=* -bar -bang -complete=dir Lexplore call netrw#Lexplore(<q-args>, <bang>0)
-" fun! LexploreToggle(dir, right)
-"     if exists("t:netrw_lexbufnr")
-" 	" close down netrw explorer window
-" 	let lexwinnr = bufwinnr(t:netrw_lexbufnr)
-" 	if lexwinnr != -1
-" 	    let curwin = winnr()
-" 	    exe lexwinnr."wincmd w"
-" 	    close
-" 	    exe curwin."wincmd w"
-" 	endif
-" 	unlet t:netrw_lexbufnr
-"     else
-" 	" open netrw explorer in the dir of current file
-" 	" for remote files also
-" 	let path = substitute(exists("b:netrw_curdir")? b:netrw_curdir : expand("%:p"), '^\(.*[/\\]\)[^/\\]*$','e')
-" 	exe (a:right? "botright" : "topleft")." vertical ".((g.netrw_winsize > 0)? (g:netrw_winsize*winwidth(0))/100 : -g:netrw_winsize) . " new"
-" 	if a:dir != ""
-" 	    exe "Explore ".a:dir
-" 	else
-" 	    exe "Explore ".path
-" 	endif
-" 	setlocal winfixwidth
-" 	let t:netrw_lexbufnr = bufnr("%")
-"     endif
-" endfun
-" >>>
 
 " Create the 'tags' file(install ctags)
 command! MakeTags !ctags -R .   "use ^] to jump to tag under cursor, g^] for ambiguous tag, ^t to jump back to tag stack
 
-autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
-autocmd BufRead,BufNewFile *.tex set filetype=tex
 
 " Automatically deletes all whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
@@ -280,14 +220,7 @@ iabbrev myname Abhay Shanker Pathak
 iabbrev ppywar pylint: disable=W
 " >>>
 
-augroup FILETYPES
-	autocmd FileType markdown let b:indentLine_setConceal=1
-augroup END
 
-
-" markdown setting
-autocmd FileType markdown set conceallevel=2
-autocmd FileType markdown set foldmethod=marker
 
 au BufRead,BufNewFile *wiki set filetype=markdown
 " :autocmd FileType vimwiki map <leader>d :VimwikiMakeDiaryNote
@@ -305,7 +238,34 @@ echom '(>^.^<)'
 autocmd BufNewFile,BufRead *.html :setlocal nowrap
 " >>>
 
-" python syntax <<<
+" python<<<
 let g:python_highlight_all          = 1
 let g:python_slow_sync              = 0
+let g:python3_host_prog = '/usr/bin/python3'
 " >>>
+
+
+"""""""""""""""""""""""
+"  FileType settings  "
+"""""""""""""""""""""""
+autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
+autocmd BufRead,BufNewFile *.tex set filetype=tex
+augroup FILETYPES
+	autocmd FileType markdown let b:indentLine_setConceal=1
+augroup END
+autocmd FileType markdown set conceallevel=2
+autocmd FileType markdown set foldmethod=marker
+autocmd FileType markdown,txt set nolist
+autocmd VimEnter FileType markdown,txt set colorcolumn=0
+
+autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType html,c,python,js,config,sh set number relativenumber
+autocmd FileType c,cpp,java set mps+==:;
+autocmd FileType yaml,python,ruby set expandtab softtabstop=4 shiftwidth=4 tabstop=4
+filetype plugin on
+autocmd VimEnter FileType markdown,txt set textwidth=0
+autocmd Filetype * setlocal formatoptions+=n
+autocmd FileType vim set foldmethod=marker foldmarker=<<<,>>> foldlevel=0
+autocmd FileType php set autoindent smartindent
+
+" vim:foldmethod=marker:foldlevel=0

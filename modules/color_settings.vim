@@ -59,7 +59,7 @@ let g:nord_underline = 1
 
 " material colorscheme <<<
 let g:material_terminal_italics = 1
-let g:material_theme_style = 'default'
+let g:material_theme_style = 'ocean'
 " >>>
 
 " onedark colorscheme
@@ -80,11 +80,11 @@ let g:neodark#use_256color = 1
 let g:palenight_terminal_italics=1
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
-let ayucolor="dark"
+let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme gruvbox
+colorscheme palenight
 set background=dark
 set go=a
 
@@ -99,7 +99,8 @@ set go=a
 " >>>
 
 
-hi CursorLine guibg='#3c3836'
+hi CursorLine guibg=#333747
+hi ColorColumn guibg=#333747
 hi SpecialComment gui=bold cterm=bold
 hi String gui=italic cterm=italic
 hi Comment cterm=italic gui=italic
@@ -107,16 +108,21 @@ hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 highlight Todo gui=bold cterm=bold
 
-hi Operator guifg=#d65d0e
-hi CursorLineNr guibg='#3c3836' guifg=#458588 gui=bold
-hi LineNr guibg='#3c3836'
-hi StatusLine guifg=background guibg='#458588' gui=bold
+" hi Operator guifg=#d65d0e
+hi CursorLineNr guibg=255 guifg=#82aaff gui=bold
+" hi LineNr guibg='#3c3836'
+hi StatusLine guifg='#82aaff' guibg=255 gui=bold
 hi TabLine guifg=foreground guibg=255
-hi TabLineSel guibg='#458588' guifg=background gui=bold
+hi TabLineSel guibg='#82aaff' guifg=background
 hi TabLineFill guibg=foreground guifg=background
-hi Folded guifg='#458588'
+hi Folded guifg='#82aaff'
 hi FoldColumn guibg=background guifg=foreground
-"hi SignColumn ctermbg=255 guibg=255 gui=bold
+hi SignColumn ctermbg=255 guibg=255 gui=bold
+
+hi Type gui=italic
+hi Function gui=italic
+hi Conditional gui=italic
+hi Repeat gui=italic
 
 if exists("g:loaded_webdevicons")
 	call webdevicons#refresh()

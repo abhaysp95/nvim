@@ -1,4 +1,4 @@
-"-------All-the-plugins-for-vim-and-nvim---------------------- <<<
+"-------All-the-plugins-for-vim-and-nvim----------------------
 call plug#begin()
 " Plug 'vim-syntastic/syntastic' "error checker for languages and scripts
 
@@ -7,6 +7,9 @@ Plug 'dense-analysis/ale'
 
 " for html
 Plug 'mattn/emmet-vim'
+
+" for php and html
+Plug '2072/PHP-Indenting-for-VIm'
 
 " lsp and autocompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': '*', 'do': { -> coc#util#install()}}
@@ -18,6 +21,8 @@ Plug 'vim-python/python-syntax'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 Plug 'junegunn/fzf.vim'
+
+Plug 'ctrlpvim/ctrlp.vim'
 
 " surround
 Plug 'tpope/vim-surround'
@@ -34,52 +39,57 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'liuchengxu/vim-which-key'
 
 " Theme / Interface
-Plug 'ap/vim-buftabline'
+" Plug 'ap/vim-buftabline'
+Plug 'ryanoasis/vim-devicons'
+Plug 'bagrat/vim-buffet'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'rakr/vim-one'
 Plug 'joshdick/onedark.vim'
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'KeitaNakamura/neodark.vim'
+" Plug 'KeitaNakamura/neodark.vim'
 Plug 'haishanh/night-owl.vim'
-Plug 'whatyouhide/vim-gotham'
-Plug 'yuttie/hydrangea-vim'
-Plug 'tyrannicaltoucan/vim-deep-space'
-Plug 'AlessandroYorba/Despacio'
-Plug 'cocopon/iceberg.vim'
-Plug 'nightsense/snow'
-Plug 'nightsense/stellarized'
-Plug 'nightsense/cosmic_latte'
+" Plug 'whatyouhide/vim-gotham'
+" Plug 'yuttie/hydrangea-vim'
+" Plug 'tyrannicaltoucan/vim-deep-space'
+" Plug 'AlessandroYorba/Despacio'
+" Plug 'cocopon/iceberg.vim'
+" Plug 'nightsense/snow'
+" Plug 'nightsense/stellarized'
+" Plug 'nightsense/cosmic_latte'
 Plug 'ayu-theme/ayu-vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'tomasiser/vim-code-dark'
-Plug 'lifepillar/vim-solarized8'
-Plug 'sjl/badwolf'
+" Plug 'arcticicestudio/nord-vim'
+" Plug 'tomasiser/vim-code-dark'
+" Plug 'lifepillar/vim-solarized8'
+" Plug 'sjl/badwolf'
 Plug 'tomasr/molokai'
 Plug 'patstockwell/vim-monokai-tasty'
-Plug 'morhetz/gruvbox'
-Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Plug 'kaicataldo/material.vim'
-Plug 'mkarmona/colorsbox'
-Plug 'romainl/Apprentice'
-Plug 'Lokaltog/vim-distinguished'
-Plug 'chriskempson/base16-vim'
+" Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
+"Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plug 'dracula/vim', {'as': 'dracula'}
+" Plug 'kaicataldo/material.vim'
+" Plug 'mkarmona/colorsbox'
+" Plug 'romainl/Apprentice'
+" Plug 'Lokaltog/vim-distinguished'
+" Plug 'chriskempson/base16-vim'
 Plug 'w0ng/vim-hybrid'
-Plug 'AlessandroYorba/Sierra'
-Plug 'daylerees/colour-schemes'
-Plug 'effkay/argonaut.vim'
-Plug 'ajh17/Spacegray.vim'
-Plug 'atelierbram/Base2Tone-vim'
-Plug 'colepeters/spacemacs-theme.vim'
+" Plug 'AlessandroYorba/Sierra'
+" Plug 'daylerees/colour-schemes'
+" Plug 'effkay/argonaut.vim'
+" Plug 'ajh17/Spacegray.vim'
+" Plug 'atelierbram/Base2Tone-vim'
+" Plug 'colepeters/spacemacs-theme.vim'
 
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
 
 " code commenter
 Plug 'scrooloose/nerdcommenter'
+" Plug 'scrooloose/nerdtree'
 " Plug 'tpope/vim-commentary'
 
 Plug 'kovetskiy/sxhkd-vim'
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -87,6 +97,7 @@ Plug 'ptzz/lf.vim'
 
 Plug 'mhinz/vim-grepper'
 Plug 'sheerun/vim-polyglot'
+" Plug 'pangloss/vim-javascript'
 Plug 'tommcdo/vim-lion'
 
 " shows diff signs in vim's signcolumn
@@ -112,23 +123,25 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
   let g:tagbar_sort = 0
 
 Plug 'jpalardy/vim-slime'
+" if virtual-text is integrated move to orignal metakirby5/codi.vim
+"Plug 'ChristianChiarulli/codi.vim'
+Plug 'metakirby5/codi.vim'
 
 Plug 'justinmk/vim-dirvish'
 
-" Plug 'gerw/vim-latex-suite'
 
 call plug#end()
-" >>> And this is done by the way
+" And this is done by the way
 
 " Browsing
-" Plug 'Yggdroot/indentLine', { 'on': 'IndentLinesEnable' }
-"   autocmd! User indentLine doautocmd indentLine Syntax
-"   let g:indentLine_color_term = 239
-"   let g:indentLine_color_gui = '#616161'
+"Plug 'Yggdroot/indentLine', { 'on': 'IndentLinesEnable' }
+  "autocmd! User indentLine doautocmd indentLine Syntax
+  "let g:indentLine_color_term = 239
+  "let g:indentLine_color_gui = '#616161'
 
 " Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'gerw/vim-latex-suite'
 " Plug 'vim-airline/vim-airline'
-" Plug 'ryanoasis/vim-devicons'
 " Plug 'vim-airline/vim-airline-themes'
 " Plug 'airblade/vim-rooter'
 " Plug 'rbgrouleff/bclose.vim'

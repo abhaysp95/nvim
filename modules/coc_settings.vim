@@ -6,8 +6,9 @@ let g:coc_global_extensions = [
 			\ 'coc-clangd',
 			\ 'coc-emoji',
 			\ 'coc-pairs',
-			\ 'coc-python',
 			\ 'coc-pyls',
+			\ 'coc-phpls',
+			\ 'coc-python',
 			\ 'coc-yaml',
 			\ 'coc-snippets',
 			\ 'coc-tsserver',
@@ -140,7 +141,7 @@ let g:coc_explorer_global_presets = {
 	    \ 'file.child.template': '[selection | clip | 1] [filename omitCenter 1]'
 	    \ }
 	    \ }
-nnoremap ,Ee :CocCommand explorer<CR>
+nnoremap ,e :CocCommand explorer<CR>
 nnoremap ,Ef :CocCommand explorer --preset floatingRightside<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 " >>>

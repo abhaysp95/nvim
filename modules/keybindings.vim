@@ -124,6 +124,11 @@ nnoremap cu :cd ..<CR>
 nnoremap zq :qa!<CR>
 nnoremap <localleader>- YpVr-
 nnoremap <localleader>_ YPVr-
+
+" give blank line after count(if given)
+"nnoremap <expr> o 'm`' . v:count1 . "jO"
+"nnoremap <expr> O 'm`' . v:count1 . "ko"
+
 autocmd FileType help nnoremap <buffer>q :helpclose<CR>
 " >>>
 
@@ -167,7 +172,8 @@ endif
 " >>>
 
 " Save file as sudo on files that require root permission
-cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' \| edit!
+"cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' \| edit!
+"cmap w!! w !sudo tee > /dev/null %
 
 " Notestaking and text/config editing <<<
 autocmd FileType markdown nnoremap <F7> :!pandoc<Space><C-r>%<space>-o<Space><C-r>%.pdf<Enter><Enter>
@@ -177,6 +183,7 @@ nnoremap <leader>[ :Ngrep
 " >>>
 
 " copy/paste registers <<<
+
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y
@@ -186,7 +193,8 @@ noremap <Leader>P "+p
 " delete all buffers except current one
 nnoremap <leader>bd :silent :w \| %bd \| e#<CR>
 
-nmap <leader>gs :set signcolumn=
+nnoremap <leader>gs :set signcolumn=
+nnoremap <leader>ft :set ft=
 
 " operations related to foldmethod = marker(marco trosi) <<<
 vnoremap af:<c-u>silent! normal! [zv]z$<cr>
