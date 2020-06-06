@@ -38,12 +38,16 @@ let g:gruvbox_italicize_comments='1'
 let g:gruvbox_italicize_strings='1'
 let g:gruvbox_improved_strings='0'
 let g:gruvbox_improved_warnings='1'
-let g:gruvbox_contrast_light='hard'
-let g:gruvbox_contrast_dark='dafault' " hard, soft
+"let g:gruvbox_contrast_light='hard'
+let g:gruvbox_contrast_dark='medium' " hard, soft
 let g:gruvbox_invert_indent_guides='1'
 let g:gruvbox_invert_selection='0'
-let g:gruvbox_sign_column='dark1'
 let g:gruvbox_invert_signs='0'
+let g:gruvbox_hls_cursor='orange'
+"let g:gruvbox_number_column='none'
+let g:gruvbox_color_column='bg1'
+let g:gruvbox_sign_column='bg0'
+"let g:gruvbox_guisp_fallback='fg'
 " >>>
 
 " nord colorscheme settings" <<<
@@ -84,7 +88,7 @@ let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme palenight
+colorscheme gruvbox
 set background=dark
 set go=a
 
@@ -99,8 +103,8 @@ set go=a
 " >>>
 
 
-hi CursorLine guibg=#333747
-hi ColorColumn guibg=#333747
+"hi CursorLine guibg=#333747
+"hi ColorColumn guibg=#333747
 hi SpecialComment gui=bold cterm=bold
 hi String gui=italic cterm=italic
 hi Comment cterm=italic gui=italic
@@ -108,21 +112,25 @@ hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 highlight Todo gui=bold cterm=bold
 
-" hi Operator guifg=#d65d0e
-hi CursorLineNr guibg=255 guifg=#82aaff gui=bold
+hi Operator guifg=#cc241d
+hi cOperator guifg=#cc241d
+"hi pythonOperator guifg=#cc241d
+hi javascriptOperator guifg=#cc241d
+hi javascriptForOperator guifg=#cc241d
+hi CursorLineNr guibg=255 guifg=#d79921 gui=bold
 " hi LineNr guibg='#3c3836'
-hi StatusLine guifg='#82aaff' guibg=255 gui=bold
+hi StatusLine guifg='#d79921' guibg=255 gui=bold
 hi TabLine guifg=foreground guibg=255
-hi TabLineSel guibg='#82aaff' guifg=background
+hi TabLineSel guibg='#d79921' guifg=background
 hi TabLineFill guibg=foreground guifg=background
-hi Folded guifg='#82aaff'
+hi Folded guifg='#d79921'
 hi FoldColumn guibg=background guifg=foreground
 hi SignColumn ctermbg=255 guibg=255 gui=bold
 
 hi Type gui=italic
-hi Function gui=italic
-hi Conditional gui=italic
-hi Repeat gui=italic
+"hi Function gui=italic guifg=#83a598
+"hi Conditional gui=italic
+"hi Repeat gui=italic
 
 if exists("g:loaded_webdevicons")
 	call webdevicons#refresh()
