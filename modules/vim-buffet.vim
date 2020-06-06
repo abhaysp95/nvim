@@ -2,11 +2,11 @@
 "  vim-buffet  "
 """"""""""""""""
 function! g:BuffetSetCustomColors()
-	hi! BuffetCurrentBuffer guibg=255 guifg=#82aaff gui=bold
+	hi! BuffetCurrentBuffer guibg=255 guifg=#d79921 gui=bold
 	hi! BuffetActiveBuffer guibg=255 guifg=foreground
-	hi! BuffetBuffer guibg=255 guifg=#676e95
-	hi! BuffetTab guibg=255 guifg=#82aaff gui=bold
-	hi! BuffetTrunc guibg=255 guifg=#82aaff gui=bold
+	hi! BuffetBuffer guibg=255 guifg=#bdae93
+	hi! BuffetTab guibg=255 guifg=#d79921 gui=bold
+	hi! BuffetTrunc guibg=255 guifg=#d79921 gui=bold
 endfunction
 
 nmap <localleader>1 <Plug>BuffetSwitch(1)
