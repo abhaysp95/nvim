@@ -23,6 +23,30 @@
 	"html.suggest.ionic": false,
 	"html.suggest.html5": true,
 
+	//haskell
+		"haskell": {
+			"command": "hie-wrapper",
+			"args": ["--lsp"],
+			"rootPatterns": [
+				"stack.yaml",
+				"cabal.config",
+				"package.yaml"
+			],
+			"filetypes": [
+				"hs",
+				"lhs",
+				"haskell"
+			],
+			"initializationOptions": {},
+			"settings": {
+				"languageServerHaskell": {
+					"hlintOn": true,
+					"maxNumberofProblems": 10,
+					"completionsSnippetsOn": true
+				}
+			}
+		},
+
 	// list
 	"list.indicator": ">",
 	"list.selectedSignText": " ",
