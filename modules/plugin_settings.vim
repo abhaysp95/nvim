@@ -188,7 +188,7 @@ nnoremap <C-p>M :CtrlPMixed<CR>
 """""""""""""""""""""""""
 "  metakirby5/codi.vim  "
 """""""""""""""""""""""""
-let g:codi#width = 40
+let g:codi#width = 30
 let g:codi#autoclose = 1
 let g:codi#rightsplit = 1
 let g:codi#rightalign = 1
