@@ -21,30 +21,12 @@ let g:UltiSnipsJumpBackwardTrigger="<c-g>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-" >>>
+ >>>
 
 
 " -------------------- emmet plugin ---------------" <<<
 "" redefine default trigger key <C-y> followed by , "
 let g:user_emmet_leader_key=','
-" >>>
-
-" Vim Hexokinase <<<
-" Reenable hexokinase on enter
-autocmd VimEnter * HexokinaseTurnOn
-let g:Hexokinase_refreshEvents = ['TextChanged', 'InsertLeave']
-let g:Hexokinase_optInPatterns = [
-			\	'full_hex',
-			\	'triple_hex',
-			\	'rgb',
-			\	'rgba',
-			\	'hsl',
-			\	'hsla',
-			\	'colour_names'
-			\]
-let g:Hexokinase_highlighters = ['backgroundfull']
-let g:Hexokinase_ftDisabled = ['c', 'python', 'java']
-nnoremap <localleader>h :HexokinaseToggle<CR>
 " >>>
 
 " -- vim grepper -- <<<
@@ -119,9 +101,9 @@ hi SignifySignChange ctermbg=255 guibg=255 gui=bold
 " >>>
 
 " ----- vim - quickscope ------------------- <<<
-let g:qs_highlight_on_keys = ['f', 't', 'F', 'T']
-highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+"let g:qs_highlight_on_keys = ['f', 't', 'F', 'T']
+"highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+"highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 " >>>
 
 " ------- ptzz/lf.vim -------------------- "
@@ -194,3 +176,9 @@ let g:codi#rightsplit = 1
 let g:codi#rightalign = 1
 let g:codi#use_buffer_dir = 1
 nnoremap <localleader>c :Codi!!<CR>
+
+"""""""""""""""""""""""""""
+"    vim-colorizer.lua    "
+"""""""""""""""""""""""""""
+"lua require 'colorizer'.setup(nil, { css = true; })
+"autocmd FileType * ColorizerAttachToBuffer
