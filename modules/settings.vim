@@ -1,5 +1,5 @@
 " All the vim/nvim settings
-set runtimepath^=~/.config/nvim/plugged/dragvisuals
+set runtimepath+=/home/raytracer/.config/nvim/colors
 
 " Some basics:
 syntax on
