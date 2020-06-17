@@ -3,29 +3,29 @@
 
 " coc extensions <<<
 let g:coc_global_extensions = [
-			\ 'coc-clangd',
-			\ 'coc-emoji',
 			\ 'coc-pairs',
-			\ 'coc-pyls',
-			\ 'coc-phpls',
-			\ 'coc-python',
-			\ 'coc-yaml',
 			\ 'coc-snippets',
-			\ 'coc-tsserver',
-			\ 'coc-prettier',
-			\ 'coc-markmap',
-			\ 'coc-json',
 			\ 'coc-syntax',
-			\ 'coc-java',
-			\ 'coc-html',
-			\ 'coc-lua',
-			\ 'coc-sh',
-			\ 'coc-css',
-			\ 'coc-vimlsp',
 			\ 'coc-explorer',
 			\ 'coc-ultisnips'
 			\ ]
 " >>>
+			"\ 'coc-tsserver',
+			"\ 'coc-java',
+			" \ 'coc-emoji',
+			"\ 'coc-clangd',
+			"\ 'coc-pyls',
+			"\ 'coc-phpls',
+			"\ 'coc-python',
+			"\ 'coc-yaml',
+			"\ 'coc-prettier',
+			"\ 'coc-markmap',
+			"\ 'coc-json',
+			"\ 'coc-html',
+			"\ 'coc-lua',
+			"\ 'coc-sh',
+			"\ 'coc-css',
+			"\ 'coc-vimlsp',
 
 " some coc related key-bindings <<<
 " Remap for format selected region
