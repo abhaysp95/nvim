@@ -268,4 +268,13 @@ autocmd Filetype * setlocal formatoptions+=n
 autocmd FileType vim set foldmethod=marker foldmarker=<<<,>>> foldlevel=0
 autocmd FileType php set autoindent smartindent
 
+""""""""""""""""""""""""
+"    yank highlight    "
+""""""""""""""""""""""""
+augroup highlight_yank
+	if exists('##TextYankPost')
+		autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank('Substitute', 300)
+	endif
+augroup END
+
 " vim:foldmethod=marker:foldlevel=0
