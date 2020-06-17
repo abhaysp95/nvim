@@ -1,7 +1,7 @@
 "-------All-the-plugins-for-vim-and-nvim----------------------
 call plug#begin()
 " syntax and error detection
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 " for html
 Plug 'mattn/emmet-vim'
@@ -48,8 +48,10 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'tomasr/molokai'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'gruvbox-community/gruvbox'
-Plug 'dracula/vim', {'as': 'dracula'}
-Plug 'w0ng/vim-hybrid'
+" Plug 'dracula/vim', {'as': 'dracula'}
+" Plug 'w0ng/vim-hybrid'
+" Plug 'chriskempson/base16-vim'
+" Plug 'ajh17/Spacegray.vim'
 
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
@@ -77,13 +79,15 @@ Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 
 " display colors
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+" Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'https://github.com/lilydjwg/colorizer'
 
 " Modify * to also work with visual selections
 Plug 'nelstrom/vim-visual-star-search'
 
 " learn using f/F & t/T
-Plug 'unblevable/quick-scope'
+" Plug 'unblevable/quick-scope'
 
 " get startscreen
 Plug 'mhinz/vim-startify'
