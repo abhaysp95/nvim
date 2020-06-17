@@ -155,7 +155,7 @@ set statusline+=%8*\ %y\                                 " FileType
 set statusline+=%8*\%-3(%{FileSize()}%)                 " File size
 set statusline+=\%b:0x%-3B " value of character under cursor
 set statusline+=%0*\ \ %3p%%\ \ %l:%L\ {%c}\                 " Rownumber/total (%)
-set statusline+=\%{StatusDiagnostic()}  " coc-status
+" set statusline+=\%{StatusDiagnostic()}  " coc-status
 " set statusline+=\ \|
 " set statusline+=\ %{LinterStatus()}  " ale linting
 
