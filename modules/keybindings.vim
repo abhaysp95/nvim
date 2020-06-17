@@ -116,7 +116,7 @@ nnoremap clo :lopen<CR>
 nnoremap <leader>nl :Lex! \| vertical resize 30<CR>
 
 " Some handy setting <<<
-nnoremap gG ggvG$
+nnoremap gG gg0vG$
 nnoremap g. @:
 nnoremap U <C-R>
 nnoremap cd :cd %:p:h<CR>
