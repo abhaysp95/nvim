@@ -39,7 +39,7 @@ let g:gruvbox_italicize_strings='1'
 let g:gruvbox_improved_strings='0'
 let g:gruvbox_improved_warnings='1'
 "let g:gruvbox_contrast_light='hard'
-let g:gruvbox_contrast_dark='medium' " hard, soft
+let g:gruvbox_contrast_dark='hard' " medium, soft
 let g:gruvbox_invert_indent_guides='1'
 let g:gruvbox_invert_selection='0'
 let g:gruvbox_invert_signs='0'
@@ -84,11 +84,13 @@ let g:neodark#use_256color = 1
 let g:palenight_terminal_italics=1
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
+let g:spaceray_use_italics = 1
+let g:spacegray_low_contrast = 1
 let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme gruvbox
+colorscheme molokai
 set background=dark
 set go=a
 
@@ -112,20 +114,23 @@ hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 highlight Todo gui=bold cterm=bold
 
-hi Operator guifg=#cc241d
-hi cOperator guifg=#cc241d
+"hi Operator guifg=#cc241d
+"hi cOperator guifg=#cc241d
 "hi pythonOperator guifg=#cc241d
-hi javascriptOperator guifg=#cc241d
-hi javascriptForOperator guifg=#cc241d
-hi CursorLineNr guibg=255 guifg=#d79921 gui=bold
+"hi javascriptOperator guifg=#cc241d
+"hi javascriptForOperator guifg=#cc241d
+" hi CursorLineNr guibg=255 guifg=#d79921 gui=bold
 " hi LineNr guibg='#3c3836'
-hi StatusLine guifg='#d79921' guibg=255 gui=bold
+" hi StatusLine gui=bold guibg=255 guifg=#fabd2f
 hi TabLine guifg=foreground guibg=255
-hi TabLineSel guibg='#d79921' guifg=background
+hi TabLineSel guibg=#455354 guifg=238
 hi TabLineFill guibg=foreground guifg=background
-hi Folded guifg='#d79921'
-hi FoldColumn guibg=background guifg=foreground
+hi Folded guifg='#d79921' guibg=#333747
+"hi FoldColumn guibg=background guifg=foreground
 hi SignColumn ctermbg=255 guibg=255 gui=bold
+hi DiffAdd guifg=#66D9EF guibg=255
+hi DiffChange guifg=#A6E22E guibg=255
+hi DiffDelete guifg=#960050 guibg=255
 
 hi Type gui=italic
 "hi Function gui=italic guifg=#83a598
