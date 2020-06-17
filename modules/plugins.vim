@@ -10,9 +10,12 @@ Plug 'mattn/emmet-vim'
 Plug '2072/PHP-Indenting-for-VIm'
 
 " lsp and autocompletion
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': '*', 'do': { -> coc#util#install()}}
+" Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': '*', 'do': { -> coc#util#install()}}
 
 Plug 'tpope/vim-repeat'
+
+" minimal autopairs
+Plug 'rstacruz/vim-closer'
 
 Plug 'vim-python/python-syntax'
 
