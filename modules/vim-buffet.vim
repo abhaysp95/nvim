@@ -2,10 +2,10 @@
 "  vim-buffet  "
 """"""""""""""""
 function! g:BuffetSetCustomColors()
-	hi! BuffetCurrentBuffer guibg=#464646 guifg=#ababab gui=bold
+	hi! BuffetCurrentBuffer guibg=255 guifg=#f8f8f0 gui=bold
 	hi! BuffetActiveBuffer guibg=255 guifg=foreground
 	hi! BuffetBuffer guibg=255 guifg=#969896
-	hi! BuffetTab guibg=#464646 guifg=#ababab gui=bold
+	hi! BuffetTab guibg=255 guifg=#ababab gui=bold
 	hi! BuffetTrunc guibg=255 guifg=#ababab gui=bold
 endfunction
 
