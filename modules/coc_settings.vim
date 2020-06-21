@@ -3,27 +3,28 @@
 
 " coc extensions <<<
 let g:coc_global_extensions = [
-			\ 'coc-pairs',
 			\ 'coc-snippets',
 			\ 'coc-syntax',
 			\ 'coc-explorer',
-			\ 'coc-ultisnips'
+			\ 'coc-ultisnips',
+			\ 'coc-eslint',
+			\ 'coc-python',
+			\ 'coc-sh'
 			\ ]
 " >>>
+			"\ 'coc-pairs',
 			"\ 'coc-tsserver',
 			"\ 'coc-java',
-			" \ 'coc-emoji',
+			"\ 'coc-emoji',
 			"\ 'coc-clangd',
 			"\ 'coc-pyls',
 			"\ 'coc-phpls',
-			"\ 'coc-python',
 			"\ 'coc-yaml',
 			"\ 'coc-prettier',
 			"\ 'coc-markmap',
 			"\ 'coc-json',
 			"\ 'coc-html',
 			"\ 'coc-lua',
-			"\ 'coc-sh',
 			"\ 'coc-css',
 			"\ 'coc-vimlsp',
 
