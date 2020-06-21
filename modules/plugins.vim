@@ -1,41 +1,23 @@
 "-------All-the-plugins-for-vim-and-nvim----------------------
 call plug#begin()
 " syntax and error detection
-" Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
 " for html
 Plug 'mattn/emmet-vim'
 
-" for php and html
-Plug '2072/PHP-Indenting-for-VIm'
-
-" lsp and autocompletion
-" Plug 'neoclide/coc.nvim', {'branch': 'release', 'tag': '*', 'do': { -> coc#util#install()}}
-
 Plug 'tpope/vim-repeat'
 
 " minimal autopairs
-Plug 'rstacruz/vim-closer'
-
-Plug 'vim-python/python-syntax'
-
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-Plug 'junegunn/fzf.vim'
-
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'cohama/lexima.vim'
 
 " surround
 Plug 'tpope/vim-surround'
 " Plug 'machakann/vim-sandwich'
 
-Plug 'tpope/vim-markdown'
-
 Plug 'terryma/vim-multiple-cursors'
 
 Plug 'gcmt/wildfire.vim'
-
-Plug 'vim-pandoc/vim-pandoc-syntax'
 
 Plug 'liuchengxu/vim-which-key'
 
@@ -44,12 +26,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'bagrat/vim-buffet'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'rakr/vim-one'
-Plug 'joshdick/onedark.vim'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'haishanh/night-owl.vim'
-Plug 'ayu-theme/ayu-vim'
+" Plug 'joshdick/onedark.vim'
+" Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'haishanh/night-owl.vim'
+" Plug 'ayu-theme/ayu-vim'
 Plug 'tomasr/molokai'
-Plug 'patstockwell/vim-monokai-tasty'
+" Plug 'patstockwell/vim-monokai-tasty'
 Plug 'gruvbox-community/gruvbox'
 " Plug 'dracula/vim', {'as': 'dracula'}
 " Plug 'w0ng/vim-hybrid'
@@ -61,50 +43,44 @@ Plug 'junegunn/goyo.vim'
 
 " code commenter
 Plug 'scrooloose/nerdcommenter'
-" Plug 'scrooloose/nerdtree'
-" Plug 'tpope/vim-commentary'
 
 Plug 'kovetskiy/sxhkd-vim'
-" Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'ptzz/lf.vim'
 
 Plug 'mhinz/vim-grepper'
 Plug 'sheerun/vim-polyglot'
-" Plug 'pangloss/vim-javascript'
 Plug 'tommcdo/vim-lion'
 
 " shows diff signs in vim's signcolumn
 Plug 'mhinz/vim-signify'
-Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 
 " display colors
-" Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'norcalli/nvim-colorizer.lua'
-" Plug 'https://github.com/lilydjwg/colorizer'
 
 " Modify * to also work with visual selections
 Plug 'nelstrom/vim-visual-star-search'
 
-" learn using f/F & t/T
-" Plug 'unblevable/quick-scope'
 
 " get startscreen
 Plug 'mhinz/vim-startify'
 
-" Plug 'nathanaelkane/vim-indent-guides'
-
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
-  let g:tagbar_sort = 0
+Plug 'mbbill/undotree'
 
 " live results
 Plug 'jpalardy/vim-slime'
-Plug 'metakirby5/codi.vim'
+" Plug 'metakirby5/codi.vim'
 
+" file navigations
 Plug 'justinmk/vim-dirvish'
+Plug 'scrooloose/nerdtree'
 
+" fuzzy file navigations
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
