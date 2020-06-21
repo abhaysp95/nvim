@@ -15,37 +15,13 @@
 	"diagnostic.hintSign": "➤ ",
 	// "diagnostic.displayByAle": true,
 
-	"suggest.noselect": false,
+	"suggest.noselect": true,
 	"codeLens.enable": true,
 	"suggest.preferCompleteThanJumpPlaceholder": true,
 
 	// html
 	"html.suggest.ionic": false,
 	"html.suggest.html5": true,
-
-	//haskell
-		"haskell": {
-			"command": "hie-wrapper",
-			"args": ["--lsp"],
-			"rootPatterns": [
-				"stack.yaml",
-				"cabal.config",
-				"package.yaml"
-			],
-			"filetypes": [
-				"hs",
-				"lhs",
-				"haskell"
-			],
-			"initializationOptions": {},
-			"settings": {
-				"languageServerHaskell": {
-					"hlintOn": true,
-					"maxNumberofProblems": 10,
-					"completionsSnippetsOn": true
-				}
-			}
-		},
 
 	// list
 	"list.indicator": ">",
