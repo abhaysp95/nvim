@@ -119,15 +119,15 @@ highlight Todo gui=bold cterm=bold
 "hi pythonOperator guifg=#cc241d
 "hi javascriptOperator guifg=#cc241d
 "hi javascriptForOperator guifg=#cc241d
-" hi CursorLineNr guibg=255 guifg=#d79921 gui=bold
-" hi LineNr guibg='#3c3836'
-" hi StatusLine gui=bold guibg=255 guifg=#fabd2f
+hi CursorLineNr guibg=255 gui=bold
+hi LineNr guibg=255
+hi StatusLine gui=bold guibg=255 guifg=#f8f8f0
 hi TabLine guifg=foreground guibg=255
 hi TabLineSel guibg=#455354 guifg=238
 hi TabLineFill guibg=foreground guifg=background
 hi Folded guifg='#d79921' guibg=#333747
 "hi FoldColumn guibg=background guifg=foreground
-hi SignColumn ctermbg=255 guibg=255 gui=bold
+hi SignColumn guibg=255 gui=bold
 hi DiffAdd guifg=#66D9EF guibg=255
 hi DiffChange guifg=#A6E22E guibg=255
 hi DiffDelete guifg=#960050 guibg=255
