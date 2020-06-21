@@ -21,12 +21,11 @@ let g:UltiSnipsJumpBackwardTrigger="<c-g>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
- >>>
 
 
 " -------------------- emmet plugin ---------------" <<<
 "" redefine default trigger key <C-y> followed by , "
-let g:user_emmet_leader_key=','
+let g:user_emmet_leader_key='.'
 " >>>
 
 " -- vim grepper -- <<<
@@ -56,12 +55,15 @@ xmap <Leader>R
 " >>>
 
 " --- ale pluging ----- <<<
-let g:ale_sign_error                            = '•'
-let g:ale_sign_warning                          = '·'
-let g:ale_lint_on_enter                         = 0
+let g:ale_sign_error           = '•'
+let g:ale_sign_warning         = '·'
+let g:ale_sign_info            = ''
+let g:ale_sign_style_warning   = '➤ '
+let g:ale_sign_style_error     = '➤ '
+let g:ale_lint_on_enter        = 0
 " if you want to show after opening file save file
-let g:ale_lint_on_save                          = 1
-let g:ale_lint_on_insert_leave                  = 0
+let g:ale_lint_on_save         = 1
+let g:ale_lint_on_insert_leave = 0
 
 " ---- vim-lion -----"
 let g:lion_squeeze_spaces = 1
@@ -177,8 +179,13 @@ let g:codi#rightalign = 1
 let g:codi#use_buffer_dir = 1
 nnoremap <localleader>c :Codi!!<CR>
 
-"""""""""""""""""""""""""""
-"    vim-colorizer.lua    "
-"""""""""""""""""""""""""""
-"lua require 'colorizer'.setup(nil, { css = true; })
-"autocmd FileType * ColorizerAttachToBuffer
+
+""""""""""""
+"  Tagbar  "
+""""""""""""
+let g:tagbar_sort = 0
+
+""""""""""""""""
+"  lexima.vim  "
+""""""""""""""""
+let g:lexima_enable_endwise_rules = 0  " shuts of ending of if, for etc.
