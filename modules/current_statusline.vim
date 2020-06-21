@@ -142,12 +142,12 @@ endfunction
 
 set laststatus=2
 set statusline=
-                                               " set statusline+=%0*\ %{toupper(g:currentmode[mode()])} " Current mode
+" set statusline+=%0*\ %{toupper(g:currentmode[mode()])} " Current mode
 set statusline=\ %{ReadOnly()}\ %w\ %m         " readable or not and modifiable or not
 set statusline+=%8*\[%n]                       " buffernr
 set statusline+=%8*\ %{GitInfo()}              " Git Branch name
 set statusline+=\ %{Git_Status()}              " vim - signify
-set statusline+=%8*\ %<%f                      " file path
+" set statusline+=%8*\ %<%f                      " file path
 set statusline+=%#warningmsg#
 set statusline+=%*
 set statusline+=%9*\ %=                        " Space
