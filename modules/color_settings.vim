@@ -73,6 +73,9 @@ let g:onedark_terminal_italics = 1
 " vim-one
 let g:one_allow_italics = 1
 
+" vim-monokai-tasty
+let g:vim_monokai_tasty_italic = 1
+
 " deep-space
 let g:deepspace_italics = 1
 
@@ -90,7 +93,7 @@ let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme molokai
+colorscheme molokayo
 set background=dark
 set go=a
 
@@ -121,7 +124,7 @@ highlight Todo gui=bold cterm=bold
 "hi javascriptForOperator guifg=#cc241d
 hi CursorLineNr guibg=255 gui=bold
 hi LineNr guibg=255
-hi StatusLine gui=bold guibg=255 guifg=#f8f8f0
+hi StatusLine gui=bold guibg=255 guifg='f8f8f0'
 hi TabLine guifg=foreground guibg=255
 hi TabLineSel guibg=#455354 guifg=238
 hi TabLineFill guibg=foreground guifg=background
