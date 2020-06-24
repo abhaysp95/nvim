@@ -17,20 +17,22 @@ Plug 'tpope/vim-surround'
 
 Plug 'terryma/vim-multiple-cursors'
 
-Plug 'gcmt/wildfire.vim'
+" Plug 'gcmt/wildfire.vim'
 
-Plug 'liuchengxu/vim-which-key'
+" Plug 'liuchengxu/vim-which-key'
 
 " Theme / Interface
 Plug 'ryanoasis/vim-devicons'
 Plug 'bagrat/vim-buffet'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'rakr/vim-one'
+" Plug 'rakr/vim-one'
 " Plug 'joshdick/onedark.vim'
 " Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'haishanh/night-owl.vim'
 " Plug 'ayu-theme/ayu-vim'
 Plug 'tomasr/molokai'
+Plug 'fmoralesc/molokayo'
+" Plug 'sickill/vim-monokai'
 " Plug 'patstockwell/vim-monokai-tasty'
 Plug 'gruvbox-community/gruvbox'
 " Plug 'dracula/vim', {'as': 'dracula'}
