@@ -166,7 +166,7 @@ augroup auto-resize
     autocmd VimResized * wincmd =
 " >>>
 
-" Toggle quickfix window (coc)<<<
+" Toggle quickfix window (coc)
 function! QuickFix_toggle()
 	for i in range(1, winnr('$'))
 		let bnum = winbufnr(i)
@@ -179,7 +179,6 @@ function! QuickFix_toggle()
 	copen
 endfunction
 nnoremap <silent><Leader>tq :call QuickFix_toggle()<CR>
-" >>>
 
 " Automatically open & close quickfix window
 autocmd QuickFixCmdPost [^l] * nested cwindow
