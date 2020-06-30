@@ -114,6 +114,7 @@ nnoremap clo :lopen<CR>
 " >>>
 
 nnoremap <leader>nl :Lex! \| vertical resize 30<CR>
+nnoremap <leader>nt :TagbarToggle<CR>
 
 " Some handy setting <<<
 nnoremap gG gg0vG$
