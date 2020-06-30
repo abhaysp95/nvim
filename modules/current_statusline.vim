@@ -75,7 +75,7 @@ endfunction
 function! GitInfo()
 	let git = fugitive#head()
 	if git != ''
-		return ' '.fugitive#head()
+		return 'שׂ '.fugitive#head()
 	else
 		return ''
 	endif
@@ -119,7 +119,7 @@ function! LinterStatus() abort
 			\   all_errors
 			\)
 endfunction
-"  
+"  
 
 function! StatusDiagnostic() abort
   let info = get(b:, 'coc_diagnostic_info', {})
@@ -150,16 +150,17 @@ set statusline+=\ %{Git_Status()}              " vim - signify
 " set statusline+=%8*\ %<%f                      " file path
 set statusline+=%#warningmsg#
 set statusline+=%*
+" set statusline+=\ %{TagbarStatusline()}
 set statusline+=%9*\ %=                        " Space
-set statusline+=\ %{KnowStatus()}
 set statusline+=%8*\ %y\                       " FileType
 set statusline+=%8*\%-3(%{FileSize()}%)        " File size
 set statusline+=\%b:0x%-3B                     " value of character under cursor
 set statusline+=%0*\ \ %2p%%\ \ %l:%L\ \ %c\ " Rownumber/total (%)
-" set statusline+=\%{StatusDiagnostic()}                 " coc-status
-" set statusline+=\ \|
 set statusline+=\%{LinterStatus()}             " ale linting
 
+" set statusline+=\ %{KnowStatus()}
+" set statusline+=\%{StatusDiagnostic()}                 " coc-status
+" set statusline+=\ \|
 " set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
 " set statusline+=%{mode(1)}
 " set statusline+= %!MyStatusLine()
