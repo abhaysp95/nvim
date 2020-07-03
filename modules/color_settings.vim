@@ -39,7 +39,7 @@ let g:gruvbox_italicize_strings='1'
 let g:gruvbox_improved_strings='0'
 let g:gruvbox_improved_warnings='1'
 "let g:gruvbox_contrast_light='hard'
-let g:gruvbox_contrast_dark='hard' " medium, soft
+let g:gruvbox_contrast_dark='medium' " hard, soft
 let g:gruvbox_invert_indent_guides='1'
 let g:gruvbox_invert_selection='0'
 let g:gruvbox_invert_signs='0'
@@ -63,7 +63,7 @@ let g:nord_underline = 1
 
 " material colorscheme <<<
 let g:material_terminal_italics = 1
-let g:material_theme_style = 'ocean'
+let g:material_theme_style = 'darker'
 " >>>
 
 " onedark colorscheme
@@ -93,7 +93,7 @@ let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme molokayo
+colorscheme material
 set background=dark
 set go=a
 
@@ -122,18 +122,18 @@ highlight Todo gui=bold cterm=bold
 "hi pythonOperator guifg=#cc241d
 "hi javascriptOperator guifg=#cc241d
 "hi javascriptForOperator guifg=#cc241d
-hi CursorLineNr guibg=255 gui=bold
-hi LineNr guibg=255
+hi CursorLineNr guibg=255 guifg=#f8f8f0
+" hi LineNr guibg=255
 hi StatusLine gui=bold guibg=255 guifg='f8f8f0'
 hi TabLine guifg=foreground guibg=255
 hi TabLineSel guibg=#455354 guifg=238
 hi TabLineFill guibg=foreground guifg=background
-hi Folded guifg='#d79921' guibg=#333747
-"hi FoldColumn guibg=background guifg=foreground
-hi SignColumn guibg=255 gui=bold
+" hi Folded guifg='#d79921' guibg=#333747
+" hi FoldColumn guibg=background guifg=foreground
+" hi SignColumn guibg=255 gui=bold
 hi DiffAdd guifg=#66D9EF guibg=255
 hi DiffChange guifg=#A6E22E guibg=255
-hi DiffDelete guifg=#960050 guibg=255
+hi DiffDelete guifg=#fb4934 guibg=255
 
 hi Type gui=italic
 "hi Function gui=italic guifg=#83a598

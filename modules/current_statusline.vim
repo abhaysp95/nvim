@@ -119,7 +119,7 @@ function! LinterStatus() abort
 			\   all_errors
 			\)
 endfunction
-"  
+"  
 
 function! StatusDiagnostic() abort
   let info = get(b:, 'coc_diagnostic_info', {})
@@ -155,7 +155,7 @@ set statusline+=%9*\ %=                        " Space
 set statusline+=%8*\ %y\                       " FileType
 set statusline+=%8*\%-3(%{FileSize()}%)        " File size
 set statusline+=\%b:0x%-3B                     " value of character under cursor
-set statusline+=%0*\ \ %2p%%\ \ %l:%L\ \ %c\ " Rownumber/total (%)
+set statusline+=%0*\ \ %2p%%\ \ %l:%L\ \ %c\ " Rownumber/total (%)
 set statusline+=\%{LinterStatus()}             " ale linting
 
 " set statusline+=\ %{KnowStatus()}

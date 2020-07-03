@@ -32,11 +32,13 @@ Plug 'junegunn/rainbow_parentheses.vim'
 " Plug 'ayu-theme/ayu-vim'
 Plug 'tomasr/molokai'
 Plug 'fmoralesc/molokayo'
+Plug 'sjl/badwolf'
 " Plug 'sickill/vim-monokai'
 " Plug 'patstockwell/vim-monokai-tasty'
 Plug 'gruvbox-community/gruvbox'
-" Plug 'dracula/vim', {'as': 'dracula'}
-" Plug 'w0ng/vim-hybrid'
+Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'kaicataldo/material.vim'
+Plug 'w0ng/vim-hybrid'
 " Plug 'chriskempson/base16-vim'
 " Plug 'ajh17/Spacegray.vim'
 

@@ -14,7 +14,8 @@ nnoremap <leader>ra :%s///g<Left><Left>
 nnoremap <leader>rc :%s///gc<Left><Left><Left>
 " >>>
 
-" same as above but works on visual selection with *(requires vim-visual-star-search plugin)
+" same as above but works on visual selection with *(requires
+" vim-visual-star-search plugin)
 " <<<
 xnoremap <leader>ro :s///g<Left><Left>
 xnoremap <leader>rd :s//
@@ -33,12 +34,13 @@ nnoremap <silent> p p`]
 " type replacement term and press '.' to repeat the
 " replacement.(somewhat like vim-multiple-cursor plugin)
 nnoremap <silent> <leader>s* :let@/='\<'.expand('<cword>').'\>'<CR>cgn
-" you might as well can search the word and then do 'ce' to replace that word. Depends on how you need it
+" you might as well can search the word and then do 'ce' to replace that word.
+" Depends on how you need it
 xnoremap <silent> <leader>s* "sy:let @/=@s<CR>cgn
 " >>>
 
 " Press enter for newline without insert <<<
-nnoremap <cr> o<esc>
+nnoremap <S-CR> o<esc>
 nnoremap <localleader><cr> O<esc>
 nnoremap <localleader>x i<Space><Esc>l
 nnoremap <localleader>g<CR> r<CR>kddpk==
@@ -71,6 +73,7 @@ autocmd FileType html inoremap ;c <!---<Space><Space>--><CR><CR><++><Esc>2kf<Spa
 autocmd FileType markdown inoremap ;sh ```sh<CR>```<CR><CR><++><Esc>2kO<C-i>
 autocmd FileType markdown inoremap ;p ```python<CR>```<Esc>O
 autocmd FileType markdown inoremap ;c ```c<CR>```<Esc>O
+autocmd FileType python inoremap ;m if<space>_<Esc>x4p2haname<Esc>A<Space>==<Space>"_<Esc>x4p2hamain<Esc>A":<CR>
 " >>>
 
 " some random setting <<<
