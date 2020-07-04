@@ -60,27 +60,27 @@ function! FileSize()
 	if (exists('mbytes'))
 		return mbytes . 'MB '
 	elseif (exists('kbytes'))
-		return kbytes . 'KB '
+		return kbytes . 'KB'
 	else
-		return bytes . 'B '
+		return bytes . 'B'
 	endif
 endfunction
 function! ReadOnly()
 	if &readonly || !&modifiable
-		return ''
+		return 'NM'
 	else
-		return ''
+		return 'M'
 	endif
 endfunction
 function! GitInfo()
 	let git = fugitive#head()
 	if git != ''
-		return 'שׂ '.fugitive#head()
+		return ''.fugitive#head()
 	else
 		return ''
 	endif
 endfunction
-
+"  שׂ
 
 " GIT STATUS -> VIM-SIGNIFY
 function! s:sy_stats_wrapper()
@@ -143,20 +143,21 @@ endfunction
 set laststatus=2
 set statusline=
 " set statusline+=%0*\ %{toupper(g:currentmode[mode()])} " Current mode
-set statusline=\ %{ReadOnly()}\ %w\ %m         " readable or not and modifiable or not
+set statusline=\ %{ReadOnly()}\ %w\%m         " readable or not and modifiable or not
 set statusline+=%8*\[%n]                       " buffernr
 set statusline+=%8*\ %{GitInfo()}              " Git Branch name
-set statusline+=\ %{Git_Status()}              " vim - signify
+set statusline+=\%{Git_Status()}           " vim - signify
+set statusline+=%0*\ %2p%%\ %l:%L\ %c\ " Rownumber/total (%)
+set statusline+=\%b:0x%-3B                     " value of character under cursor
 " set statusline+=%8*\ %<%f                      " file path
 set statusline+=%#warningmsg#
 set statusline+=%*
 " set statusline+=\ %{TagbarStatusline()}
 set statusline+=%9*\ %=                        " Space
 set statusline+=%8*\ %y\                       " FileType
-set statusline+=%8*\%-3(%{FileSize()}%)        " File size
-set statusline+=\%b:0x%-3B                     " value of character under cursor
-set statusline+=%0*\ \ %2p%%\ \ %l:%L\ \ %c\ " Rownumber/total (%)
-set statusline+=\%{LinterStatus()}             " ale linting
+set statusline+=%8*\%<%F                      " file path
+set statusline+=%8*\ %-3(%{FileSize()}%)       " File size
+set statusline+=\ %{LinterStatus()}             " ale linting
 
 " set statusline+=\ %{KnowStatus()}
 " set statusline+=\%{StatusDiagnostic()}                 " coc-status
