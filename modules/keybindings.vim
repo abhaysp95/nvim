@@ -40,7 +40,7 @@ xnoremap <silent> <leader>s* "sy:let @/=@s<CR>cgn
 " >>>
 
 " Press enter for newline without insert <<<
-nnoremap <S-CR> o<esc>
+nnoremap <M-CR> o<esc>
 nnoremap <localleader><cr> O<esc>
 nnoremap <localleader>x i<Space><Esc>l
 nnoremap <localleader>g<CR> r<CR>kddpk==
