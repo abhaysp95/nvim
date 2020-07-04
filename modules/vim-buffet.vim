@@ -2,11 +2,11 @@
 "  vim-buffet  "
 """"""""""""""""
 function! g:BuffetSetCustomColors()
-	hi! BuffetCurrentBuffer guibg=255 guifg=#f8f8f0 gui=bold
+	hi! BuffetCurrentBuffer guibg=255 guifg=#ebdbb2
 	hi! BuffetActiveBuffer guibg=255 guifg=foreground
 	hi! BuffetBuffer guibg=255 guifg=#969896
-	hi! BuffetTab guibg=255 guifg=#ababab gui=bold
-	hi! BuffetTrunc guibg=255 guifg=#ababab gui=bold
+	hi! BuffetTab guibg=255 guifg=#ababab
+	hi! BuffetTrunc guibg=255 guifg=#ababab
 endfunction
 
 nmap <localleader>1 <Plug>BuffetSwitch(1)
@@ -32,8 +32,13 @@ let g:buffet_separator = ""
 let g:buffet_show_index = 1
 let g:buffet_max_plug = 10
 let g:buffet_use_devicons = 1
-let g:buffet_tab_icon = " "
-let g:buffet_new_buffer_name = " "
-let g:buffet_modified_icon = " "
-let g:buffet_left_trunc_icon = " "
-let g:buffet_right_trunc_icon = " "
+"let g:buffet_tab_icon = ""
+"let g:buffet_new_buffer_name = " "
+"let g:buffet_modified_icon = " "
+"let g:buffet_left_trunc_icon = " "
+"let g:buffet_right_trunc_icon = " "
+let g:buffet_tab_icon = "[]"
+let g:buffet_new_buffer_name = "*"
+let g:buffet_modified_icon = "+"
+let g:buffet_left_trunc_icon = "<-"
+let g:buffet_right_trunc_icon = "->"
