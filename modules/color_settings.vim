@@ -93,7 +93,7 @@ let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme material
+colorscheme gruvbox
 set background=dark
 set go=a
 
@@ -122,9 +122,9 @@ highlight Todo gui=bold cterm=bold
 "hi pythonOperator guifg=#cc241d
 "hi javascriptOperator guifg=#cc241d
 "hi javascriptForOperator guifg=#cc241d
-hi CursorLineNr guibg=255 guifg=#f8f8f0
+hi CursorLineNr guibg=255 guifg=#ebdbb2
 " hi LineNr guibg=255
-hi StatusLine gui=bold guibg=255 guifg='f8f8f0'
+hi StatusLine gui=NONE guibg=255 guifg='#ebdbb2'
 hi TabLine guifg=foreground guibg=255
 hi TabLineSel guibg=#455354 guifg=238
 hi TabLineFill guibg=foreground guifg=background
