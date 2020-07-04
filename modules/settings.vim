@@ -260,7 +260,8 @@ autocmd VimEnter FileType markdown,txt set colorcolumn=0
 autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd FileType html,c,python,js,config,sh set number relativenumber
 autocmd FileType c,cpp,java set mps+==:;
-autocmd FileType yaml,python,ruby set expandtab softtabstop=4 shiftwidth=4 tabstop=4
+autocmd FileType python,ruby set expandtab softtabstop=4 shiftwidth=4 tabstop=4
+autocmd FileType yaml set expandtab softtabstop=2 shiftwidth=2 tabstop=2
 filetype plugin on
 autocmd VimEnter FileType markdown,txt set textwidth=0
 autocmd Filetype * setlocal formatoptions+=n
