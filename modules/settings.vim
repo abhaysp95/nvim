@@ -20,7 +20,6 @@ set list
 set linebreak
 set sidescroll=1 " smooth scrolling
 set nostartofline " places cursor to same position when switching buffers
-set autoindent
 set autoread
 set backspace=indent,eol,start
 set clipboard+=unnamed,unnamedplus
