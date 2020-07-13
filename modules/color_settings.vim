@@ -93,52 +93,45 @@ let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme gruvbox
+colorscheme apprentice
 set background=dark
 set go=a
-
-" enable when onedark is set to colorscheme <<<
-" if (has("autocmd"))
-" 	augroup colorextend
-" 		autocmd!
-"Make 'function's bold in GUI mode"
-" 		autocmd ColorScheme * call onedark#extend_highlight("Function", { "gui": "bold", "cterm": "bold" })
-" 	augroup END
-" endif
-" >>>
 
 
 "hi CursorLine guibg=#333747
 "hi ColorColumn guibg=#333747
-hi SpecialComment gui=bold cterm=bold
-hi String gui=italic cterm=italic
-hi Comment cterm=italic gui=italic
-hi Visual cterm=reverse ctermbg=NONE
-hi htmlItalic gui=italic cterm=italic
-highlight Todo gui=bold cterm=bold
 
 "hi Operator guifg=#cc241d
 "hi cOperator guifg=#cc241d
 "hi pythonOperator guifg=#cc241d
 "hi javascriptOperator guifg=#cc241d
 "hi javascriptForOperator guifg=#cc241d
-hi CursorLineNr guibg=255 guifg=#ebdbb2
 " hi LineNr guibg=255
-hi StatusLine gui=NONE guibg=255 guifg='#ebdbb2'
-hi TabLine guifg=foreground guibg=255
-hi TabLineSel guibg=#455354 guifg=238
-hi TabLineFill guibg=foreground guifg=background
 " hi Folded guifg='#d79921' guibg=#333747
 " hi FoldColumn guibg=background guifg=foreground
-" hi SignColumn guibg=255 gui=bold
-hi DiffAdd guifg=#66D9EF guibg=255
-hi DiffChange guifg=#A6E22E guibg=255
-hi DiffDelete guifg=#fb4934 guibg=255
-
-hi Type gui=italic
 "hi Function gui=italic guifg=#83a598
 "hi Conditional gui=italic
 "hi Repeat gui=italic
+"hi DiffAdd guifg=#66D9EF guibg=255
+"hi DiffChange guifg=#A6E22E guibg=255
+"hi DiffDelete guifg=#fb4934 guibg=255
+
+hi SpecialComment gui=bold cterm=bold
+hi String gui=italic cterm=italic
+hi Comment cterm=italic gui=italic
+hi Visual cterm=reverse ctermbg=NONE
+hi htmlItalic gui=italic cterm=italic
+hi Todo gui=bold cterm=bold
+hi CursorLineNr guibg=255 guifg=#ebdbb2 gui=NONE
+hi StatusLine gui=NONE guibg=255 guifg=235
+hi TabLine guifg=foreground guibg=242 gui=NONE
+hi TabLineSel guibg=255 guifg=foreground gui=NONE
+hi TabLineFill guibg=background guifg=foreground cterm=NONE gui=NONE
+hi DiffAdd gui=NONE guibg=#1c1c1c
+hi DiffChange gui=NONE guibg=#1c1c1c
+hi DiffDelete gui=NONE guibg=#1c1c1c
+hi SignColumn gui=bold guibg=#1c1c1c
+hi Type gui=italic
 
 if exists("g:loaded_webdevicons")
 	call webdevicons#refresh()
