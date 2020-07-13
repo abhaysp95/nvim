@@ -78,7 +78,7 @@ autocmd FileType python inoremap ;m if<space>_<Esc>x4p2haname<Esc>A<Space>==<Spa
 
 " some random setting <<<
 " Cycle through splits
-nnoremap <S-Tab> <C-w>w
+nnoremap <C-Tab> <C-w>w
 
 " Edit vim config file in a new tab
 map <Leader>ev : tabnew $MYVIMRC<CR>
@@ -116,8 +116,13 @@ nnoremap clo :lopen<CR>
 " nnoremap <C-p> :cprev<CR>
 " >>>
 
+" different trees
 nnoremap <leader>nl :Lex! \| vertical resize 30<CR>
-nnoremap <leader>nt :TagbarToggle<CR>
+nnoremap <leader>tt :TagbarToggle<CR>
+nnoremap <leader>ut :UndotreeToggle<CR>
+
+" move in buffer
+nnoremap <S-Tab> :b#<CR>
 
 " Some handy setting <<<
 nnoremap gG gg0vG$
