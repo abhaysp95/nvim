@@ -93,7 +93,7 @@ let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme apprentice
+colorscheme afterglow
 set background=dark
 set go=a
 
