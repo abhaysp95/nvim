@@ -36,7 +36,7 @@ set omnifunc=syntaxcomplete#Complete
 set encoding=utf-8
 
 set ruler
-set title	" sets title for document in terminal"
+set title  " sets title for document in terminal"
 set hlsearch
 set ignorecase
 set smartcase
@@ -275,5 +275,60 @@ augroup highlight_yank
 		autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank('Substitute', 300)
 	endif
 augroup END
+
+
+
+" some auto-completion settings for <c-space>, <c-n> and <c-p> <<<
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Or use `complete_info` if your vim support it, like:
+inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" it doesn't take this much time to open a nvim file(recording is affecting)
+"
+" saw this? what type of completion was this and the one which is happening as I'm typing is just a general completion, right?
+
+" now see this,
+
+" saw that i pressed <C-space> to open the second type of completion menu, what was that? Also noticed that it had already selected the first one.
+
+" not selected, I had to press <C-n>
+
+" now, see
+" saw already selected first one
+
+" tying to improve completion pop-up menu: -----------------------
+" in first one, <c-n> works normally, however when completion menu appears the <Down> key is simulated.
+" this keeps the menu item always highlighted so that you can hit enter anytime to insert it.
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+			\ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
+			\ '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
+" these two mappings are supposed to do show.
+" this one stimulates <C-x><C-o> to bring omni-completion menu, the stimulates <C-n><C-p> to remove longest common text
+" then finally stimulates <Down> again to keep match highlighted
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+			\ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+" here's another example of set of mappings that first close any popups that are open which means you seamlessly switch between omni and user completions.
+" if the menu is visible, use the above trick to keep the text you typed and select first
+" open omni completion menu closing previous if open and opening new menu without changing the text
+inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+			\ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+" open user completion menu closing previous if open an opening new menu without changing the text
+inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+			\ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+" >>>
+
+" some autocomplete settings <<<
+augroup omnifuncs
+    autocmd!
+    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd FileType html,markdown setlocal omnifunc=htmkcomplete#CompleteTags
+    autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+    autocmd FileType c setlocal omnifunc=ccomplete#Complete
+augroup endif
 
 " vim:foldmethod=marker:foldlevel=0
