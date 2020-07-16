@@ -93,7 +93,7 @@ let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme afterglow
+colorscheme onedark
 set background=dark
 set go=a
 
@@ -127,10 +127,10 @@ hi StatusLine gui=NONE guibg=255 guifg=235
 hi TabLine guifg=foreground guibg=242 gui=NONE
 hi TabLineSel guibg=255 guifg=foreground gui=NONE
 hi TabLineFill guibg=background guifg=foreground cterm=NONE gui=NONE
-hi DiffAdd gui=NONE guibg=#1c1c1c
-hi DiffChange gui=NONE guibg=#1c1c1c
-hi DiffDelete gui=NONE guibg=#1c1c1c
-hi SignColumn gui=bold guibg=#1c1c1c
+hi DiffAdd gui=NONE
+hi DiffChange gui=NONE
+hi DiffDelete gui=NONE
+hi SignColumn gui=bold
 hi Type gui=italic
 
 if exists("g:loaded_webdevicons")
