@@ -143,21 +143,22 @@ endfunction
 set laststatus=2
 set statusline=
 " set statusline+=%0*\ %{toupper(g:currentmode[mode()])} " Current mode
-set statusline=\ %{ReadOnly()}\ %w\%m         " readable or not and modifiable or not
-set statusline+=%8*\[%n]                       " buffernr
-set statusline+=%8*\ %{GitInfo()}              " Git Branch name
-set statusline+=\%{Git_Status()}           " vim - signify
-set statusline+=%0*\ %c\ %l:%L\ %2p%%\     " Rownumber/total (%)
-set statusline+=\%b:0x%-3B                     " value of character under cursor
-" set statusline+=%8*\ %<%f                      " file path
+set statusline=\ %{ReadOnly()}\ %w\%m    " readable or not and modifiable or not
+set statusline+=%8*\[%n]                 " buffernr
+set statusline+=%8*\ %{GitInfo()}        " Git Branch name
+set statusline+=\%{Git_Status()}         " vim - signify
+set statusline+=%0*\ %l:%c\ %2p%%\       " Rownumber/total (%)
+set statusline+=\%b:0x%-3B               " value of character under cursor
+                                         " set statusline+=%8*\ %<%f                              " file path
 set statusline+=%#warningmsg#
 set statusline+=%*
 " set statusline+=\ %{TagbarStatusline()}
-set statusline+=%9*\ %=                        " Space
-set statusline+=%8*\ %y\                       " FileType
-set statusline+=%8*\%<%f                      " file path
-set statusline+=%8*\ %-3(%{FileSize()}%)       " File size
-set statusline+=\ %{LinterStatus()}             " ale linting
+set statusline+=%9*\ %=                  " Space
+set statusline+=%8*\ %y\                 " FileType
+set statusline+=%8*\%<%f                 " file path
+set statusline+=\ TL:%L                     " total line count
+set statusline+=%8*\ %-3(%{FileSize()}%) " File size
+set statusline+=\ %{LinterStatus()}      " ale linting
 
 " set statusline+=\ %{KnowStatus()}
 " set statusline+=\%{StatusDiagnostic()}                 " coc-status
