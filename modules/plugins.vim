@@ -3,6 +3,9 @@ call plug#begin()
 " syntax and error detection
 Plug 'dense-analysis/ale'
 
+" completion
+Plug 'vim-scripts/AutoComplPop'
+
 " for html
 Plug 'mattn/emmet-vim'
 
@@ -17,6 +20,7 @@ Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 
 " Theme / Interface
+Plug 'joshdick/onedark.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug 'dracula/vim', {'as': 'dracula'}
@@ -65,7 +69,6 @@ Plug 'jpalardy/vim-slime'
 
 " file navigations
 Plug 'justinmk/vim-dirvish'
-" Plug 'scrooloose/nerdtree'
 
 " fuzzy file navigations
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
