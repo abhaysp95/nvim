@@ -1,6 +1,6 @@
 " returns hex value from current colorscheme, not in use
-let fgcolor=synIDattr(synIDtrans(hlID("Normal")), "fg", "gui")
-let bgcolor=synIDattr(synIDtrans(hlID("Normal")), "bg", "gui")
+" let fgcolor=synIDattr(synIDtrans(hlID("Normal")), "fg", "gui")
+" let bgcolor=synIDattr(synIDtrans(hlID("Normal")), "bg", "gui")
 
 "              :h mode() to see all modes
 let g:currentmode={
@@ -24,25 +24,6 @@ let g:currentmode={
     \ '!'      : 'Shell ',
     \ 't'      : 'Term '
     \}
-
-" " Automatically change the statusline color depending on mode
-" function! ChangeStatuslineColor()
-"   if (mode() =~# '\v(n|no)')
-"     " exe 'hi! StatusLine ctermfg=008 guifg=fgcolor gui=None cterm=None'
-" 	exe 'hi! StatusLine gui=Bold'
-"   elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block' || get(g:currentmode, mode(), '') ==# 't')
-"     " exe 'hi! StatusLine ctermfg=005 guifg=#00ff00 guibg=#282828 gui=None cterm=None'
-" 	exe 'hi! StatusLine gui=Bold'
-"   elseif (mode() ==# 'i')
-"     " exe 'hi! StatusLine ctermfg=004 guifg=#6CBCE8 guibg=#181818 gui=None cterm=None'
-" 	exe 'hi! StatusLine gui=Bold'
-"   else
-"     " exe 'hi! StatusLine ctermfg=006 guifg=orange guibg=#484848 gui=None cterm=None'
-" 	exe 'hi! StatusLine gui=Bold'
-"   endif
-"
-"   return ''
-" endfunction
 
 " Find out current buffer's size and output it.
 function! FileSize()
@@ -160,6 +141,10 @@ set statusline+=\ TL:%L                     " total line count
 set statusline+=%8*\ %-3(%{FileSize()}%) " File size
 set statusline+=\ %{LinterStatus()}      " ale linting
 
+hi User1 ctermfg=007 ctermbg=239 guibg=#4e4e4e guifg=#adadad
+hi User2 ctermfg=007 ctermbg=236 guibg=#303030 guifg=#adadad
+hi User3 ctermfg=236 ctermbg=236 guibg=#303030 guifg=#303030
+hi User4 ctermfg=239 ctermbg=239 guibg=#4e4e4e guifg=#4e4e4e
 " set statusline+=\ %{KnowStatus()}
 " set statusline+=\%{StatusDiagnostic()}                 " coc-status
 " set statusline+=\ \|
