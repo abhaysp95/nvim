@@ -112,7 +112,7 @@ set path+=**
 
 set formatoptions-=cro
 set formatoptions+=n
-set showtabline=2
+set showtabline=0
 
 autocmd WinLeave *.* mkview
 autocmd WinEnter *.* silent! loadview

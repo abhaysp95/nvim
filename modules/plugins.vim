@@ -20,14 +20,15 @@ Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 
 " Theme / Interface
-Plug 'joshdick/onedark.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'gruvbox-community/gruvbox'
-Plug 'dracula/vim', {'as': 'dracula'}
-Plug 'danilo-augusto/vim-afterglow'
-Plug 'romainl/Apprentice'
-Plug 'Badacadabra/vim-archery'
-Plug 'w0ng/vim-hybrid'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+" Plug 'joshdick/onedark.vim'
+" Plug 'gruvbox-community/gruvbox'
+" Plug 'dracula/vim', {'as': 'dracula'}
+" Plug 'danilo-augusto/vim-afterglow'
+" Plug 'romainl/Apprentice'
+" Plug 'Badacadabra/vim-archery'
+" Plug 'w0ng/vim-hybrid'
 
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'

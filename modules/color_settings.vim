@@ -93,7 +93,7 @@ let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme onedark
+colorscheme challenger_deep
 set background=dark
 set go=a
 
@@ -106,7 +106,6 @@ set go=a
 "hi pythonOperator guifg=#cc241d
 "hi javascriptOperator guifg=#cc241d
 "hi javascriptForOperator guifg=#cc241d
-" hi LineNr guibg=255
 " hi Folded guifg='#d79921' guibg=#333747
 " hi FoldColumn guibg=background guifg=foreground
 "hi Function gui=italic guifg=#83a598
@@ -115,6 +114,7 @@ set go=a
 "hi DiffAdd guifg=#66D9EF guibg=255
 "hi DiffChange guifg=#A6E22E guibg=255
 "hi DiffDelete guifg=#fb4934 guibg=255
+" hi CursorLineNr guibg=255 guifg=#ebdbb2 gui=NONE
 
 hi SpecialComment gui=bold cterm=bold
 hi String gui=italic cterm=italic
@@ -122,15 +122,15 @@ hi Comment cterm=italic gui=italic
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 hi Todo gui=bold cterm=bold
-hi CursorLineNr guibg=255 guifg=#ebdbb2 gui=NONE
-hi StatusLine gui=NONE guibg=255 guifg=235
+" hi LineNr guibg=255
+hi StatusLine gui=NONE guibg=#100e23 guifg=236
 hi TabLine guifg=foreground guibg=242 gui=NONE
-hi TabLineSel guibg=255 guifg=foreground gui=NONE
-hi TabLineFill guibg=background guifg=foreground cterm=NONE gui=NONE
+hi TabLineSel guibg=#100e23 guifg=foreground gui=NONE
+hi TabLineFill guibg=255 guifg=foreground cterm=NONE gui=NONE
 hi DiffAdd gui=NONE
 hi DiffChange gui=NONE
 hi DiffDelete gui=NONE
-hi SignColumn gui=bold
+" hi SignColumn gui=bold
 hi Type gui=italic
 
 if exists("g:loaded_webdevicons")
