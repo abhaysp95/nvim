@@ -117,13 +117,13 @@ set go=a
 " hi CursorLineNr guibg=255 guifg=#ebdbb2 gui=NONE
 
 hi SpecialComment gui=bold cterm=bold
-hi String gui=italic cterm=italic
+" hi String gui=italic cterm=italic
 hi Comment cterm=italic gui=italic
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 hi Todo gui=bold cterm=bold
 " hi LineNr guibg=255
-hi StatusLine gui=NONE guibg=#100e23 guifg=236
+hi StatusLine gui=NONE guibg=#100e23 guifg=#91ddff
 hi TabLine guifg=foreground guibg=242 gui=NONE
 hi TabLineSel guibg=#100e23 guifg=foreground gui=NONE
 hi TabLineFill guibg=255 guifg=foreground cterm=NONE gui=NONE
