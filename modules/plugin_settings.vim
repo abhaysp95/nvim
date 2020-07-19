@@ -64,6 +64,14 @@ let g:ale_lint_on_enter        = 0
 " if you want to show after opening file save file
 let g:ale_lint_on_save         = 1
 let g:ale_lint_on_insert_leave = 0
+" virtualenv
+let g:ale_virtualenv_dir_names = [
+			\ '~/Documents/npython/practice/udemy_selenium/selenium_practice/'
+			\ ]
+" check :h ale-python-options
+let g:ale_python_pylint_change_directory = 0
+let g:ale_python_flake8_change_directory = 0
+let g:ale_python_auto_pipenv = 1
 
 " ---- vim-lion -----"
 let g:lion_squeeze_spaces = 1
