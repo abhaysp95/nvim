@@ -88,7 +88,7 @@ map <Leader>sv : source $MYVIMRC<CR>
 " >>>
 
 " linenumber settings <<<
-nmap <F5>      : set invrelativenumber number<CR>
+nmap <F5>      : set invrelativenumber nonumber<CR>
 nmap <leader>N : set nonumber norelativenumber<CR>
 " >>>
 
