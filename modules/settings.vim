@@ -146,7 +146,7 @@ endfunction
 augroup highlight-when-switching-modes
     autocmd!
     autocmd InsertEnter * setlocal number norelativenumber nocursorline
-    autocmd InsertLeave * setlocal relativenumber cursorline
+    autocmd InsertLeave * setlocal nonumber relativenumber cursorline
     if &buftype != "terminal"
 		autocmd BufEnter,WinEnter * setlocal cursorline
 		autocmd BufLeave,WinLeave * setlocal nocursorline
