@@ -1,10 +1,11 @@
 # Neovim
 
 Currently, `nvim` is my primary text editor. I use it from editing config files
-to do programming
+to do programming.
+**Because I ♥️  N/vim**
 
 
-# Features
+# 😎 Features
 
 I have added many features in the my configuration of text editor. Some of which
 I got with the help of other peoples and some sites.
@@ -16,9 +17,16 @@ You can find my other config files at [my_config_files](https://github.com/coola
 Here, are the main ones:
 
 
-### Colorscheme
+### 🎨 Colorscheme
 
-### Molokai
+All of the Colorschemes mentioned here are the 🏆
+
+### Challenger Deep(Currently Using)
+Switched to new [Challenger Deep](https://github.com/challenger-deep-theme/vim) colorscheme
+This colorscheme is super 🔥
+![Challenger-Deep](sshots/challenger_deep.png)
+
+### Molokai(Used long time)
 Switched to [molokai](https://github.com/tomasr/molokai) colorscheme
 ![molokai](sshots/molokai_scheme.png)
 
@@ -36,11 +44,14 @@ Using [material](https://github.com/kaicataldo/material.vim) colorscheme.
 
 Using manually setup statusline. Inspired by statusline of [Ahmed El Gabri](https://gabri.me/blog/diy-vim-statusline). Here are the samples:
 
-**Sample1:**
+**Sample1**:
 ![statusline1](sshots/cur_statusline1.png)
 
 **Sample2:**
-![statusline2](sshots/cur_statusline2.png)
+![statusline2](sshots/cur_statusline1.png)
+
+**Sample3:**
+![statusline3](sshots/cur_statusline2.png)
 
 
 ## File Exploring
@@ -49,14 +60,14 @@ I generally use `vim` commands to open files but if needed I use `coc-explorer` 
 ![coc-explorer](sshots/coc-explorer.png)
 
 
-## AutoCompletion
+## 👾AutoCompletion
 
 I'm using [coc.nvim](https://github.com/neoclide/coc.nvim) and
 [ultisnips](https://github.com/sirver/UltiSnips) for autocompletion.
 ![autocompletion](sshots/autocompletion.png)
 
 
-## Intellisense and LSP
+## 👾 Intellisense and LSP
 
 Using different _extensions_ and _language server_ with the help of `coc`
 ![intellisense](sshots/intellisense1.png)
@@ -65,12 +76,13 @@ Using different _extensions_ and _language server_ with the help of `coc`
 
 ## File browsing
 
+Vim is also known for it's super 🏃‍♂️  file browsing.
 Using [fzf](https://github.com/junegunn/fzf.vim) for file browsing and getting to other commands.
 Overall, fzf makes everytypes of browsing awesome
 ![fzf](sshots/fzf_files.png)
 
 
-## Grepping in project
+## 🦸‍♂️ Grepping in project
 
 Using `rg` with combination of `fzf` which makes grepping insanly fast and awesome
 ![ripgrep](sshots/ripgrep.png)
