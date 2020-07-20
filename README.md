@@ -48,10 +48,10 @@ Using manually setup statusline. Inspired by statusline of [Ahmed El Gabri](http
 ![statusline1](sshots/cur_statusline1.png)
 
 **Sample2:**
-![statusline2](sshots/cur_statusline1.png)
+![statusline2](sshots/cur_statusline2.png)
 
 **Sample3:**
-![statusline3](sshots/cur_statusline2.png)
+![statusline3](sshots/cur_statusline3.png)
 
 
 ## File Exploring
