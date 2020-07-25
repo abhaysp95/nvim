@@ -2,6 +2,7 @@
 
 Currently, `nvim` is my primary text editor. I use it from editing config files
 to do programming.
+
 **Because I ♥️  N/vim**
 
 
