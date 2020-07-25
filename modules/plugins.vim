@@ -6,6 +6,9 @@ Plug 'dense-analysis/ale'
 " completion
 Plug 'vim-scripts/AutoComplPop'
 
+" intellisense
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " for html
 Plug 'mattn/emmet-vim'
 
@@ -20,8 +23,15 @@ Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 
 " Theme / Interface
-Plug 'junegunn/rainbow_parentheses.vim'
+" Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'jaredgorski/fogbell.vim'
+Plug 'YorickPeterse/happy_hacking.vim'
+" Plug 'nanotech/jellybeans.vim'
+" Plug 'owickstrom/vim-colors-paramount'
+" Plug 'mhartington/oceanic-next'
+Plug 'axvr/photon.vim'
+Plug 'gruvbox-community/gruvbox'
 
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
@@ -82,7 +92,6 @@ call plug#end()
 " Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'fmoralesc/molokayo'
 " Plug 'gcmt/wildfire.vim'
-" Plug 'gruvbox-community/gruvbox'
 " Plug 'haishanh/night-owl.vim'
 " Plug 'joshdick/onedark.vim'
 " Plug 'kaicataldo/material.vim'
