@@ -13,9 +13,9 @@
 	"diagnostic.warningSign": "",
 	"diagnostic.infoSign": "",
 	"diagnostic.hintSign": "➤ ",
-	// "diagnostic.displayByAle": true,
+	"diagnostic.displayByAle": true,
 
-	"suggest.noselect": true,
+	"suggest.noselect": false,
 	"codeLens.enable": true,
 	"suggest.preferCompleteThanJumpPlaceholder": true,
 
