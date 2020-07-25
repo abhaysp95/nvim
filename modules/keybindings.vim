@@ -54,10 +54,23 @@ autocmd CmdwinLeave * nnoremap <CR> o<esc>
 " >>>
 
 " ---- format paragraph ------ "<<<
-" format paragraph (selected or not) to 80 character lines
 nnoremap <leader>gP gqap
 xnoremap <leader>gP gqa
 " >>>
+
+function! LinePaste(cmd)
+	call setreg(v:register, getreg(v:register), 'V')
+	exe 'normal '.a:cmd
+endfunction
+nnoremap <localleader>lp :call LinePaste('p')<CR>
+nnoremap <localleader>lP :call LinePaste('P')<CR>
+
+function! CharacterPaste(cmd)
+	let @"=substitute(@", '\n$', '', '')
+	exe 'normal '.a:cmd
+endfunction
+nnoremap <localleader>cp :call CharacterPaste('p')<CR>
+nnoremap <localleader>cP :call CharacterPaste('P')<CR>
 
 nnoremap c "_c
 inoremap j' <ESC>
