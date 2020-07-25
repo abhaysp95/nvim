@@ -39,7 +39,7 @@ let g:gruvbox_italicize_strings='1'
 let g:gruvbox_improved_strings='0'
 let g:gruvbox_improved_warnings='1'
 "let g:gruvbox_contrast_light='hard'
-let g:gruvbox_contrast_dark='medium' " hard, soft
+let g:gruvbox_contrast_dark='hard' " medium, soft
 let g:gruvbox_invert_indent_guides='1'
 let g:gruvbox_invert_selection='0'
 let g:gruvbox_invert_signs='0'
@@ -93,13 +93,13 @@ let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 " >>>
 "
-colorscheme challenger_deep
+colorscheme photon
 set background=dark
 set go=a
 
 
-"hi CursorLine guibg=#333747
-"hi ColorColumn guibg=#333747
+hi CursorLine guibg=#1d2021
+hi ColorColumn guibg=#1d2021
 
 "hi Operator guifg=#cc241d
 "hi cOperator guifg=#cc241d
@@ -116,22 +116,22 @@ set go=a
 "hi DiffDelete guifg=#fb4934 guibg=255
 " hi CursorLineNr guibg=255 guifg=#ebdbb2 gui=NONE
 
-hi SpecialComment gui=bold cterm=bold
+" hi SpecialComment gui=bold cterm=bold
 " hi String gui=italic cterm=italic
-hi Comment cterm=italic gui=italic
+hi Normal ctermbg=0 guibg=#000000
+" hi Comment cterm=italic gui=italic
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 hi Todo gui=bold cterm=bold
-" hi LineNr guibg=255
-hi StatusLine gui=NONE guibg=#100e23 guifg=#91ddff
+" hi LineNr guibg=#1d2021 guifg=foreground
+" hi StatusLine guifg=#1d2021 guibg=foreground
 hi TabLine guifg=foreground guibg=242 gui=NONE
 hi TabLineSel guibg=#100e23 guifg=foreground gui=NONE
 hi TabLineFill guibg=255 guifg=foreground cterm=NONE gui=NONE
-hi DiffAdd gui=NONE
-hi DiffChange gui=NONE
-hi DiffDelete gui=NONE
-" hi SignColumn gui=bold
-hi Type gui=italic
+hi DiffAdd  guibg=255
+hi DiffChange  guibg=255
+hi DiffDelete  guibg=255
+" hi Type gui=italic
 
 if exists("g:loaded_webdevicons")
 	call webdevicons#refresh()

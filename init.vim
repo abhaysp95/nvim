@@ -26,8 +26,8 @@ else
 	luafile ~/.config/nvim/modules/plug-colorizer.lua
 endif
 
-" source $HOME/.config/nvim/modules/vim-buffet.vim
 " source $HOME/.config/nvim/modules/coc_settings.vim
+" source $HOME/.config/nvim/modules/vim-buffet.vim
 " source ~/.config/nvim/modules/old_statusline.vim
 " source $HOME/.config/nvim/modules/airline_conf.vim
 " source ~/.config/nvim/modules/statusline_dhruv.vim
