@@ -8,6 +8,7 @@ let g:coc_global_extensions = [
 			\ 'coc-explorer',
 			\ 'coc-ultisnips',
 			\ 'coc-eslint',
+			\ 'coc-python'
 			\ ]
 " >>>
 			"\ 'coc-pairs',
@@ -25,7 +26,6 @@ let g:coc_global_extensions = [
 			"\ 'coc-lua',
 			"\ 'coc-css',
 			"\ 'coc-vimlsp',
-			"\ 'coc-python',
 			"\ 'coc-sh'
 
 " some coc related key-bindings <<<
