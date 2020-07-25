@@ -37,7 +37,6 @@ set encoding=utf-8
 
 set ruler
 set title  " sets title for document in terminal"
-set laststatus=0
 set hlsearch
 set ignorecase
 set smartcase
