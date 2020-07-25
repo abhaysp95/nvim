@@ -121,25 +121,41 @@ function! KnowStatus() abort
 	return join(msg, '') . '' . get(g:, 'coc_status', '')
 endfunction
 
-set laststatus=2
-set statusline=
-" set statusline+=%0*\ %{toupper(g:currentmode[mode()])} " Current mode
-set statusline=%0*\ %{ReadOnly()}\ %w\%m    " readable or not and modifiable or not
-set statusline+=%0*\[%n]                 " buffernr
-set statusline+=%0*\ %{GitInfo()}        " Git Branch name
-set statusline+=%0*\%{Git_Status()}         " vim - signify
-set statusline+=%0*\ %l:%c\ %2p%%\       " Rownumber/total (%)
-set statusline+=%0*\%b:0x%-3B               " value of character under cursor
-                                         " set statusline+=%8*\ %<%f                              " file path
-set statusline+=%#warningmsg#
-set statusline+=%*
-" set statusline+=\ %{TagbarStatusline()}
-set statusline+=%8*\ %=                  " Space
-set statusline+=%0*\ %y\                 " FileType
-set statusline+=%0*\%<%f                 " file path
-set statusline+=%0*\ TL:%L                     " total line count
-set statusline+=%0*\ %-3(%{FileSize()}%) " File size
-set statusline+=%0*\ %{LinterStatus()}      " ale linting
+" toggle statusline
+let s:hidden_all = 0
+function! ToggleHiddenAll()
+	if s:hidden_all == 0
+		let s:hidden_all = 1
+		set laststatus=0
+		set noshowmode
+		set noruler
+		set noshowcmd
+		set cmdheight=1
+		set statusline=
+	else
+		let s:hidden_all = 0
+		set laststatus=2
+		set statusline=
+		" set statusline+=%0*\ %{toupper(g:currentmode[mode()])} " Current mode
+		set statusline=%0*\ %{ReadOnly()}\ %w\%m    " readable or not and modifiable or not
+		set statusline+=%0*\[%n]                 " buffernr
+		set statusline+=%0*\ %{GitInfo()}        " Git Branch name
+		set statusline+=%0*\%{Git_Status()}         " vim - signify
+		set statusline+=%0*\ %l:%c\ %2p%%\       " Rownumber/total (%)
+		set statusline+=%0*\%b:0x%-3B               " value of character under cursor
+												 " set statusline+=%8*\ %<%f                              " file path
+		set statusline+=%0*\%#warningmsg#
+		set statusline+=%*
+		" set statusline+=\ %{TagbarStatusline()}
+		set statusline+=%0*\ %=                  " Space
+		set statusline+=%0*\ %y\                 " FileType
+		set statusline+=%0*\%<%f                 " file path
+		set statusline+=%0*\ TL:%L                     " total line count
+		set statusline+=%0*\ %-3(%{FileSize()}%) " File size
+		set statusline+=%0*\ %{LinterStatus()}      " ale linting
+	endif
+endfunction
+call ToggleHiddenAll()
 
 hi User1 ctermfg=007 ctermbg=239 guibg=#4e4e4e guifg=#adadad
 hi User2 ctermfg=007 ctermbg=236 guibg=#303030 guifg=#adadad
