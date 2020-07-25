@@ -122,11 +122,11 @@ nnoremap <leader>fl :vsplit \| Lf<CR>
 
 
 " junegunn/rainbow_parethesis <<<
-autocmd FileType * RainbowParentheses
-augroup js_rainbow
-	autocmd!
-	autocmd FileType javascript RainbowParentheses
-augroup end
+"autocmd FileType * RainbowParentheses
+"augroup js_rainbow
+	"autocmd!
+	"autocmd FileType javascript RainbowParentheses
+"augroup end
 
 let g:rainbow#blacklist = [248, '#1f2233', '#464b5d']
 let g:rainbow#max_level = 16
