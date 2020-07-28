@@ -182,10 +182,10 @@ map <leader>p :!opout <c-r>%<CR><CR>
 " since sometimes non vim users have to use my machine so arrow is necessary, so changed
 let g:elite_mode=1
 if get(g:, 'elite_mode')
-	" nnoremap <Up>       :resize +2<CR>
-	" nnoremap <Down>     :resize -2<CR>
-	" nnoremap <Left>     :vertical resize +2<CR>
-	" nnoremap <Right>    :vertical resize -2<CR>
+	nnoremap <Up> :<NOP>
+	nnoremap <Down> :<NOP>
+	nnoremap <Left> :<NOP>
+	nnoremap <Right> :<NOP>
 	nnoremap <silent> <M-k> :resize +2<CR>
 	nnoremap <silent> <M-j> :resize -2<CR>
 	nnoremap <silent> <M-l> :vertical resize +2<CR>
