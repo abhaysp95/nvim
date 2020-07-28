@@ -743,4 +743,5 @@
 "Plug 'jiangmiao/auto-pairs'
 "Plug 'vim-scripts/AutoComplPop'
 "Plug 'ajh17/VimCompletesMe'
+"Plug 'terryma/vim-multiple-cursors'
 " >>>
