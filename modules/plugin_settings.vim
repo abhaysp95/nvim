@@ -175,18 +175,6 @@ let g:indentLine_bufTypeExclude = [ "help",
 "let g:indent_guides_auto_colors = 0
 
 
-"""""""""""""""
-"  ctrlp-vim  "
-"""""""""""""""
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'rg --files --hidden'
-nnoremap <C-p>p :CtrlP<CR>
-nnoremap <C-p>b :CtrlPBuffer<CR>
-nnoremap <C-p>m :CtrlPMRU<CR>
-nnoremap <C-p>M :CtrlPMixed<CR>
-
 """""""""""""""""""""""""
 "  metakirby5/codi.vim  "
 """""""""""""""""""""""""
@@ -203,7 +191,25 @@ nnoremap <localleader>c :Codi!!<CR>
 """"""""""""
 let g:tagbar_sort = 0
 
+
 """"""""""""""""
 "  lexima.vim  "
 """"""""""""""""
 let g:lexima_enable_endwise_rules = 0  " shuts of ending of if, for etc.
+
+
+""""""""""""""""""""""""""
+"   takac/vim-hardtime   "
+""""""""""""""""""""""""""
+let g:hardtime_default_on = 1  " usage
+" customizations
+let g:list_of_normal_keys = ["h", "j", "k", "l", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:list_of_visual_keys = ["h", "j", "k", "l", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:list_of_insert_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+let g:list_of_disabled_keys = []
+let g:hardtime_timeout = 1500  " timeout
+let g:hardtime_showmsg = 1  " enables notification
+let g:hardtime_ignore_buffer_patterns = [ "nofile" ]  " ignore a buffer pattern
+let g:hardtime_ignore_quickfix = 1  " don't work on quickfix window
+let g:hardtime_allow_different_key = 1  " allow jh not jj
+let g:hardtime_maxcount = 2  " jj will work but not jjj
