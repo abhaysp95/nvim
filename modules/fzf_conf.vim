@@ -69,14 +69,14 @@ command! -bang -nargs=* GGrep
 
 let g:fzf_files_options = '--preview="pistol {}"'
 
-map <leader>ff :Files<CR>
-map <leader>fc :Files ~/.config/<CR>
-map <leader>fs :Files ~/.local/bin/.scripts/<CR>
-map <leader>fl :Lines<CR>
-map <leader>fL :execute ":Lines" . expand('<cword>')<CR>
-map <leader>bl :BLines<CR>
-map <leader>bL :execute ":BLines" . expand('<cword>')<CR>
-map <leader>fw :Windows<CR>
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fc :Files ~/.config/<CR>
+nnoremap <leader>fs :Files ~/.local/bin/.scripts/<CR>
+nnoremap <leader>fl :Lines<CR>
+nnoremap <leader>fL :Lines <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>bl :BLines<CR>
+nnoremap <leader>bL :BLines <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>fw :Windows<CR>
 
 nnoremap <leader>bb :Buffers<CR>
 nnoremap <leader>bc :Commands<CR>
@@ -86,9 +86,9 @@ nnoremap cq: :History:<CR>
 " tags symbol in current file finder mapping
 nnoremap <leader>bt :BTag<CR>
 " same as BTag but with the word under cursor pre-filled
-nnoremap <leader>bT :execute ":BTags" . expand('<cword>')<CR>
+nnoremap <leader>bT :BTags <C-R>=expand("<cword>")<CR><CR>
 " tags symbol in all file finder mapping
 nnoremap <leader>gt :Tags<CR>
 " same as Tags but with the word under cursor pre-filled
-nnoremap <leader>gT :execute ":Tags" . ('<cword>')<CR>
+nnoremap <leader>gT :Tags <C-R>=expand("<cword>")<CR><CR>
 
