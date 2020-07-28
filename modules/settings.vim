@@ -15,10 +15,26 @@ set noexpandtab "if switched on means it will insert spaces to length of tab
 " set smarttab
 set autoindent
 set smartindent
-set listchars=tab:\┃\ ,nbsp:␣,extends:…,trail:⋅
-set list
-set linebreak
-set sidescroll=1 " smooth scrolling
+
+set list  " show whitespaces
+set listchars=tab:\|\ ,nbsp:⦸,extends:»,precedes:«,trail:•
+" ,space:⋅  " not necessary
+"set listchars=nbsp:␣
+"set listchars+=tab:\\
+"set listchars+=extends:…
+"set listchars+=precedes:«
+"set listchars+=trail:⋅
+" ▷┅ ┃𐎖  ⤜ ≻ 𐎐  ⤐ ⟼  𒋱   𒋰𒋰  ↢↣ ⤙⤚ ⯮⯮ 𒋰𒋰  ⤙⤚
+
+if has('linebreak')
+	set linebreak  " wrap long lines
+endif
+if has('linebreak')
+	let &showbreak='↳ '
+endif
+
+set sidescroll=0 " smooth scrolling
+set sidescrolloff=3 " same as scrolloff but for columns
 set nostartofline " places cursor to same position when switching buffers
 set autoread
 set backspace=indent,eol,start
@@ -45,7 +61,7 @@ set lazyredraw
 set matchpairs+=<:> " Use % to jump between pairs
 set mmp=10000
 set timeoutlen=400
-set modelines=2
+set modelines=5  " scan this many lines looking for modeline
 set noerrorbells visualbell t_vb=
 set noshiftround
 set nospell
@@ -56,7 +72,11 @@ set regexpengine=1
 set showcmd
 set showmatch
 set noshowmode
-" set noshowcmd
+
+if has('showcmd')
+	set noshowcmd
+endif
+
 set shortmess+=Ft
 set cursorline
 " set cursorcolumn
@@ -83,26 +103,41 @@ set modelines=4
 set hlsearch
 set scrolloff=3	    " leaves 3 lines before the edge vertically
 
-" enable autocompletion
-set wildmode=longest,list,full
-
 " read and write
 set autoread
 set autowrite
+
+" updates
+set updatecount=80  " update swapfiles every 80 typed characters
+set updatetime=2000   " cursorhold interval
+
+if has('virtualedit')
+  set virtualedit=block  " allow cursor to move where there is no text in visual block mode
+endif
 
 " show confirm dialog when exiting unsaved file
 
 " Splits open at the bottom and right(should be default)
 set splitbelow splitright
+
+set whichwrap=b,h,l,s,<,>,[,],~       " allow <BS>/h/l/<Left>/<Right>/<Space>, ~ to cross line boundaries
+set wildcharm=<C-z>                   " substitute for 'wildchar' (<Tab>) in macros
 " Display all matching files when tabs complete
-set wildmenu
+if has('wildmenu')
+	set wildmenu    " show options as list when switching buffers
+endif
+" enable autocompletion
+set wildmode=longest:full,list:full,full
+
+
 " Better display for messages
 set cmdheight=1
 
 " Smaller updatetime for cursorhold & cursorholdI
 set updatetime=300
-" don't give |ins-completion-menu| messages
-" set shortmess+=c
+
+" shortmess settings
+set shortmess+=IOTWacot
 " always show signcolums
 set signcolumn=auto
 
@@ -124,7 +159,7 @@ set foldlevelstart=1
 set foldnestmax=3
 set foldmethod=indent
 
-set fillchars=vert:\┃,fold:-
+set fillchars+=vert:\┃,fold:·,diff:∙
   autocmd BufReadPost *
     \ if line("'\"") >= 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
@@ -141,12 +176,16 @@ endfunction
 " ǁǂ｜┃
 " >>>
 
+if has('nvim-0.3.1')
+	set fillchars+=eob:\              " suppress ~ at EndOfBuffer
+endif
+
 
 " Switch between normal and relativenumber and cursorline when switching modes
 augroup highlight-when-switching-modes
     autocmd!
     autocmd InsertEnter * setlocal number norelativenumber nocursorline
-    autocmd InsertLeave * setlocal nonumber relativenumber cursorline
+    autocmd InsertLeave * setlocal number relativenumber cursorline
     if &buftype != "terminal"
 		autocmd BufEnter,WinEnter * setlocal cursorline
 		autocmd BufLeave,WinLeave * setlocal nocursorline
