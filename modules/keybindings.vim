@@ -227,3 +227,7 @@ onoremap if:normal vif<cr>
 "
 " open terminal in new split
 nnoremap <leader>ct :vsplit term://zsh<CR>
+
+" some expand settings
+nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
