@@ -6,19 +6,18 @@ if exists('+termguicolors')
 	set termguicolors
 endif
 
-" Colorcolumn settings <<<
+" Colorcolumn settings
 "highlight ColorColumn ctermbg=red
 " although this is working, color isn't changing to red, it's still grey
 "call matchadd('ColorColumn', '\%101v', 100)
-" >>>
 
-" spell error <<<
-highlight SpecialKey guifg=#ffffff guibg=#116611
+
+" spell error
 hi SpellBad cterm=underline ctermfg=9
 hi SpellLocal cterm=underline ctermfg=9
 hi SpellRare cterm=underline ctermfg=9
 hi SpellCap cterm=underline
-" >>>
+
 
 if (has('nvim'))
 	let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
@@ -28,7 +27,7 @@ let base16colorspace=256
 set background=dark
 " source this to your profile
 
-" gruvbox settings <<<
+" gruvbox settings
 let g:gruvbox_bold='1'
 let g:gruvbox_italic='1'
 let g:gruvbox_undercurl='1'
@@ -48,9 +47,8 @@ let g:gruvbox_hls_cursor='orange'
 let g:gruvbox_color_column='bg1'
 let g:gruvbox_sign_column='bg0'
 "let g:gruvbox_guisp_fallback='fg'
-" >>>
 
-" nord colorscheme settings" <<<
+" nord colorscheme settings"
 let g:nord_cursor_line_number_background = 0
 let g:nord_uniform_status_line = 0
 let g:nord_bold_vertical_split_line = 0
@@ -59,12 +57,26 @@ let g:nord_bold = 1
 let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_underline = 1
-" >>>
 
-" material colorscheme <<<
+
+" gruvbox-material
+let g:gruvbox_material_background='hard'
+let g:gruvbox_material_palette = 'material'
+let g:gruvbox_material_enable_italic = 1
+let g:gruvbox_material_disable_italic_comment = 0
+let g:gruvbox_material_enable_bold = 1
+let g:gruvbox_material_visual = 'grey background'
+let g:gruvbox_material_menu_selection_background = 'grey'
+let g:gruvbox_material_sign_column_background = 'none'
+let g:gruvbox_material_current_word = 'underline'
+let g:gruvbox_material_statusline_style = 'orignal'
+let g:gruvbox_material_better_performance = 1
+
+
+" material colorscheme
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'darker'
-" >>>
+
 
 " onedark colorscheme
 let g:onedark_hide_endofbuffer = 1
@@ -83,7 +95,7 @@ let g:deepspace_italics = 1
 " let g:neodark#backgroud = '#202020'
 let g:neodark#use_256color = 1
 
-" other colorschemes <<<
+" other colorschemes
 let g:palenight_terminal_italics=1
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
@@ -91,15 +103,11 @@ let g:spaceray_use_italics = 1
 let g:spacegray_low_contrast = 1
 let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
-" >>>
-"
-colorscheme photon
+
+colorscheme gruvbox-material
 set background=dark
 set go=a
 
-
-hi CursorLine guibg=#1d2021
-hi ColorColumn guibg=#1d2021
 
 "hi Operator guifg=#cc241d
 "hi cOperator guifg=#cc241d
@@ -118,7 +126,7 @@ hi ColorColumn guibg=#1d2021
 
 " hi SpecialComment gui=bold cterm=bold
 " hi String gui=italic cterm=italic
-hi Normal ctermbg=0 guibg=#000000
+" hi Normal ctermbg=0 guibg=#000000
 " hi Comment cterm=italic gui=italic
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
@@ -131,6 +139,7 @@ hi TabLineFill guibg=255 guifg=foreground cterm=NONE gui=NONE
 hi DiffAdd  guibg=255
 hi DiffChange  guibg=255
 hi DiffDelete  guibg=255
+hi SpecialKey guifg=#ffffff guibg=#116611
 " hi Type gui=italic
 
 if exists("g:loaded_webdevicons")
