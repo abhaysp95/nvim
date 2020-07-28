@@ -12,6 +12,7 @@ Plug 'vim-scripts/AutoComplPop'
 " for html
 Plug 'mattn/emmet-vim'
 
+" better repitition
 Plug 'tpope/vim-repeat'
 
 " minimal autopairs
@@ -20,18 +21,14 @@ Plug 'cohama/lexima.vim'
 " surround
 Plug 'tpope/vim-surround'
 
-Plug 'terryma/vim-multiple-cursors'
-
 " Theme / Interface
-" Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'jaredgorski/fogbell.vim'
 Plug 'YorickPeterse/happy_hacking.vim'
-" Plug 'nanotech/jellybeans.vim'
-" Plug 'owickstrom/vim-colors-paramount'
-" Plug 'mhartington/oceanic-next'
 Plug 'axvr/photon.vim'
 Plug 'gruvbox-community/gruvbox'
+Plug 'phanviet/vim-monokai-pro'
+Plug 'sainnhe/gruvbox-material'
 
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
@@ -59,12 +56,18 @@ Plug 'norcalli/nvim-colorizer.lua'
 " Modify * to also work with visual selections
 Plug 'nelstrom/vim-visual-star-search'
 
+" Indent line
+Plug 'Yggdroot/indentLine'
+
+" Learn movement in vim the hard way
+" Plug 'takac/vim-hardtime'
 
 " get startscreen
 Plug 'mhinz/vim-startify'
 
 " show tag tree
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
+
 " show undo history in tree
 Plug 'mbbill/undotree'
 
@@ -77,14 +80,14 @@ Plug 'justinmk/vim-dirvish'
 " fuzzy file navigations
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
 
+
+" Plug 'Badacadabra/vim-archery'
 " Plug 'ajh17/Spacegray.vim'
 " Plug 'ayu-theme/ayu-vim'
-" Plug 'Badacadabra/vim-archery'
 " Plug 'bagrat/vim-buffet'
 " Plug 'chriskempson/base16-vim'
 " Plug 'danilo-augusto/vim-afterglow'
@@ -97,6 +100,9 @@ call plug#end()
 " Plug 'kaicataldo/material.vim'
 " Plug 'liuchengxu/vim-which-key'
 " Plug 'machakann/vim-sandwich'
+" Plug 'mhartington/oceanic-next'
+" Plug 'nanotech/jellybeans.vim'
+" Plug 'owickstrom/vim-colors-paramount'
 " Plug 'patstockwell/vim-monokai-tasty'
 " Plug 'rakr/vim-one'
 " Plug 'romainl/Apprentice'
@@ -105,5 +111,6 @@ call plug#end()
 " Plug 'sjl/badwolf'
 " Plug 'tomasr/molokai'
 " Plug 'w0ng/vim-hybrid'
+" Plug 'junegunn/rainbow_parentheses.vim'
 
 " Plug 'metakirby5/codi.vim'
