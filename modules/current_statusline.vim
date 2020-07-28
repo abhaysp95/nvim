@@ -94,7 +94,7 @@ function! LinterStatus() abort
 	let l:all_errors = l:counts.error + l:counts.style_error
 	let l:all_non_errors = l:counts.total - l:all_errors
 
-	 return l:counts.total == 0 ? ' ' : printf(
+	 return l:counts.total == 0 ? '/- ' : printf(
 			\   '!%d ✗ %d ',
 			\   all_non_errors,
 			\   all_errors
@@ -159,7 +159,8 @@ function! ToggleHiddenAll()
 		call Current_Statusline()
 	endif
 endfunction
-call ToggleHiddenAll()
+call Current_Statusline()
+nnoremap <localleader>hs :call ToggleHiddenAll()<CR>
 
 hi User1 ctermfg=007 ctermbg=239 guibg=#4e4e4e guifg=#adadad
 hi User2 ctermfg=007 ctermbg=236 guibg=#303030 guifg=#adadad
