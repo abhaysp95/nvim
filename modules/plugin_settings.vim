@@ -15,12 +15,12 @@ autocmd! User GoyoLeave Limelight!
 
 " *Ultisnips configs <<<
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-h>"
-let g:UltiSnipsJumpBackwardTrigger="<c-g>"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-h>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-g>"
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+ "If you want :UltiSnipsEdit to split your window.
+"let g:UltiSnipsEditSplit="vertical"
 
 
 " -------------------- emmet plugin ---------------" <<<
@@ -72,6 +72,8 @@ let g:ale_virtualenv_dir_names = [
 let g:ale_python_pylint_change_directory = 0
 let g:ale_python_flake8_change_directory = 0
 let g:ale_python_auto_pipenv = 1
+autocmd FileType * :ALEDisable
+nnoremap <localleader>a :ALEToggle<CR>
 
 " ---- vim-lion -----"
 let g:lion_squeeze_spaces = 1
@@ -157,6 +159,7 @@ let g:indentLine_color_term = 239
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = ' '
 let g:indentLine_char = '|'
+let g:indentLine_first_char = '|'
 let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 2
 let g:indentLine_bufTypeExclude = [ "help", "quickfix", "terminal", "prompt", "nofile" ]
@@ -209,3 +212,22 @@ let g:hardtime_ignore_buffer_patterns = [ "nofile" ]  " ignore a buffer pattern
 let g:hardtime_ignore_quickfix = 1  " don't work on quickfix window
 let g:hardtime_allow_different_key = 1  " allow jh not jj
 let g:hardtime_maxcount = 2  " jj will work but not jjj
+
+
+""""""""""""""""""""""""""
+"   vim-tmux-navigator   "
+""""""""""""""""""""""""""
+let g:tmux_navigator_no_mappings = 0  " custom mapping on
+
+" actually, I am already habitual to defaults bindings of plugin
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
+
+" activate autoupdate on leave
+let g:tmux_navigator_save_on_switch = 2  " 1 => :update, 2 => :wall
+
+" disable tmux navigator when zooming the vim pane
+let g:tmux_navigator_disable_when_zoomed = 1

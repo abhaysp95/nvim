@@ -17,7 +17,7 @@ set autoindent
 set smartindent
 
 set list  " show whitespaces
-set listchars=tab:\|\ ,nbsp:⦸,extends:»,precedes:«,trail:•
+set listchars=tab:\|\ ,nbsp:⦸,extends:»,precedes:«,trail:•,eol:¬
 " ,space:⋅  " not necessary
 "set listchars=nbsp:␣
 "set listchars+=tab:\\

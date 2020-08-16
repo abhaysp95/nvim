@@ -1,3 +1,4 @@
+set t_Co=256
 
 " Set Proper Tabs
 if exists('+termguicolors')
@@ -57,6 +58,8 @@ let g:nord_bold = 1
 let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_underline = 1
+" from my fork
+let g:nord_background = "black"
 
 
 " gruvbox-material
@@ -69,7 +72,7 @@ let g:gruvbox_material_visual = 'grey background'
 let g:gruvbox_material_menu_selection_background = 'grey'
 let g:gruvbox_material_sign_column_background = 'none'
 let g:gruvbox_material_current_word = 'underline'
-let g:gruvbox_material_statusline_style = 'orignal'
+let g:gruvbox_material_statusline_style = 'original'
 let g:gruvbox_material_better_performance = 1
 
 
@@ -104,35 +107,16 @@ let g:spacegray_low_contrast = 1
 let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 
-colorscheme gruvbox-material
-set background=dark
+" sonokai
+let g:sonokai_style = 'maia'
+
+colorscheme xcodedarkhc
 set go=a
 
 
-"hi Operator guifg=#cc241d
-"hi cOperator guifg=#cc241d
-"hi pythonOperator guifg=#cc241d
-"hi javascriptOperator guifg=#cc241d
-"hi javascriptForOperator guifg=#cc241d
-" hi Folded guifg='#d79921' guibg=#333747
-" hi FoldColumn guibg=background guifg=foreground
-"hi Function gui=italic guifg=#83a598
-"hi Conditional gui=italic
-"hi Repeat gui=italic
-"hi DiffAdd guifg=#66D9EF guibg=255
-"hi DiffChange guifg=#A6E22E guibg=255
-"hi DiffDelete guifg=#fb4934 guibg=255
-" hi CursorLineNr guibg=255 guifg=#ebdbb2 gui=NONE
-
-" hi SpecialComment gui=bold cterm=bold
-" hi String gui=italic cterm=italic
-" hi Normal ctermbg=0 guibg=#000000
-" hi Comment cterm=italic gui=italic
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
 hi Todo gui=bold cterm=bold
-" hi LineNr guibg=#1d2021 guifg=foreground
-" hi StatusLine guifg=#1d2021 guibg=foreground
 hi TabLine guifg=foreground guibg=242 gui=NONE
 hi TabLineSel guibg=#100e23 guifg=foreground gui=NONE
 hi TabLineFill guibg=255 guifg=foreground cterm=NONE gui=NONE
@@ -140,7 +124,8 @@ hi DiffAdd  guibg=255
 hi DiffChange  guibg=255
 hi DiffDelete  guibg=255
 hi SpecialKey guifg=#ffffff guibg=#116611
-" hi Type gui=italic
+hi StatusLine guibg=255 guifg=foreground
+hi SignColumn guibg=background
 
 if exists("g:loaded_webdevicons")
 	call webdevicons#refresh()

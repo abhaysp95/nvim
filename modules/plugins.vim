@@ -23,13 +23,15 @@ Plug 'tpope/vim-surround'
 
 " Theme / Interface
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-Plug 'jaredgorski/fogbell.vim'
-Plug 'YorickPeterse/happy_hacking.vim'
-Plug 'axvr/photon.vim'
-Plug 'gruvbox-community/gruvbox'
-Plug 'phanviet/vim-monokai-pro'
 Plug 'sainnhe/gruvbox-material'
+Plug 'coolabhays/nord-vim'
+Plug 'w0ng/vim-hybrid'
+Plug 'arzg/vim-colors-xcode'
+Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'whatyouhide/vim-gotham'
+Plug 'cocopon/iceberg.vim'
 
+" No distractions
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/goyo.vim'
 
@@ -38,9 +40,6 @@ Plug 'scrooloose/nerdcommenter'
 
 " sxhkd syntax
 Plug 'kovetskiy/sxhkd-vim'
-
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 
 Plug 'mhinz/vim-grepper'
 Plug 'sheerun/vim-polyglot'
@@ -60,7 +59,6 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'Yggdroot/indentLine'
 
 " Learn movement in vim the hard way
-" Plug 'takac/vim-hardtime'
 
 " get startscreen
 Plug 'mhinz/vim-startify'
@@ -80,6 +78,9 @@ Plug 'justinmk/vim-dirvish'
 " fuzzy file navigations
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" vim-tmux navigator
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
@@ -105,12 +106,26 @@ call plug#end()
 " Plug 'owickstrom/vim-colors-paramount'
 " Plug 'patstockwell/vim-monokai-tasty'
 " Plug 'rakr/vim-one'
-" Plug 'romainl/Apprentice'
 " Plug 'ryanoasis/vim-devicons'
 " Plug 'sickill/vim-monokai'
 " Plug 'sjl/badwolf'
 " Plug 'tomasr/molokai'
-" Plug 'w0ng/vim-hybrid'
 " Plug 'junegunn/rainbow_parentheses.vim'
+" Plug 'jaredgorski/fogbell.vim'
+" Plug 'YorickPeterse/happy_hacking.vim'
+" Plug 'axvr/photon.vim'
+" Plug 'gruvbox-community/gruvbox'
+" Plug 'phanviet/vim-monokai-pro'
+" Plug 'romainl/Apprentice'
+" Plug 'lifepillar/vim-solarized8'
+" Plug 'jacoborus/tender.vim'
+" Plug 'arcticicestudio/nord-vim'
+" Plug 'bluz71/vim-moonfly-colors'
+" Plug 'NLKNguyen/papercolor-theme'
+" Plug 'reedes/vim-colors-pencil'
+" Plug 'sainnhe/sonokai'
 
 " Plug 'metakirby5/codi.vim'
+" Plug 'SirVer/ultisnips'
+" Plug 'takac/vim-hardtime'
+" Plug 'honza/vim-snippets'
