@@ -231,3 +231,25 @@ nnoremap <leader>ct :vsplit term://zsh<CR>
 " some expand settings
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
+
+" add timestamp
+function! InsertTimeStamp()
+   call complete(col('.'), [strftime("%Y-%m-%d"), strftime("%Y-%m-%dT%H:%M"), strftime("%d. %B %Y"), strftime("%H:%M")])
+   return ''
+endfunction
+inoremap <M-a>t <C-R>=InsertTimeStamp()<CR>
+
+" yank path
+function! YankPath()
+   let l:Path      = expand('%:p')
+   let l:Directory = expand('%:p:h')
+   let l:File      = expand('%:p:t')
+   let l:Paths = ["quit", l:Path, l:Directory, l:File]
+   let l:i=0
+   let l:i = confirm("Yank Path","&path\n&directory\n&filename")
+   if l:i != 0
+      let @+=l:Paths[l:i]
+      let @"=l:Paths[l:i]
+   endif
+endfunction
+nnoremap <localleader>Y :call YankPath()<CR>
