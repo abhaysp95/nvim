@@ -30,6 +30,7 @@ Plug 'arzg/vim-colors-xcode'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'whatyouhide/vim-gotham'
 Plug 'cocopon/iceberg.vim'
+Plug 'ghifarit53/tokyonight-vim'
 
 " No distractions
 Plug 'junegunn/limelight.vim'
@@ -124,6 +125,8 @@ call plug#end()
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'reedes/vim-colors-pencil'
 " Plug 'sainnhe/sonokai'
+" Plug 'artanikin/vim-synthwave84'
+" Plug 'ntk148v/vim-horizon'
 
 " Plug 'metakirby5/codi.vim'
 " Plug 'SirVer/ultisnips'
