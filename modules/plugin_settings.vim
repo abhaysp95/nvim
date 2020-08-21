@@ -73,7 +73,7 @@ let g:ale_python_pylint_change_directory = 0
 let g:ale_python_flake8_change_directory = 0
 let g:ale_python_auto_pipenv = 1
 autocmd FileType * :ALEDisable
-nnoremap <localleader>a :ALEToggle<CR>
+nnoremap <localleader>aa :ALEToggle<CR>
 
 " ---- vim-lion -----"
 let g:lion_squeeze_spaces = 1
