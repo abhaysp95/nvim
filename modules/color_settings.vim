@@ -110,8 +110,14 @@ let g:gotham_airline_empahsised_insert = 0
 " sonokai
 let g:sonokai_style = 'maia'
 
-colorscheme xcodedarkhc
-set go=a
+" tokyo-night colorscheme
+let g:tokyonight_style = 'night'  " night, storm
+let g:tokyonight_enable_italic = 1
+let g:tokyonight_transparent_background = 0
+let g:tokyonight_menu_selection_background = 'blue'  " green, red, blue
+let g:tokyonight_disable_italic_comment = 0
+let g:tokyonight_cursor = 'auto'  " auto, red, green, blue
+let g:tokyonight_current_word = 'grey background'  " bold, italic, underline, 'grey background'
 
 
 hi Visual cterm=reverse ctermbg=NONE
@@ -132,3 +138,6 @@ if exists("g:loaded_webdevicons")
 endif
 
 syn sync fromstart
+
+colorscheme tokyonight
+set go=a
