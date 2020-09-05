@@ -45,6 +45,7 @@ nnoremap <localleader><cr> O<esc>
 nnoremap <localleader>x i<Space><Esc>l
 nnoremap <localleader>g<CR> r<CR>kddpk==
 nnoremap <localleader><localleader>g<CR> r<CR>kddpk==
+nnoremap <M-P> I<Space><esc>pmp0x`p
 
 " but don't effect command line mode
 autocmd CmdwinEnter * nnoremap <CR> <CR>
@@ -53,7 +54,7 @@ autocmd CmdwinLeave * nnoremap <CR> o<esc>
 " nnoremap <localleader>g<CR> i<CR><ESC>
 "
 
-" ---- format paragraph ------ "<<<
+" ---- format paragraph ------
 nnoremap <leader>gP gqap
 xnoremap <leader>gP gqa
 "
@@ -195,7 +196,7 @@ endif
 
 " Save file as sudo on files that require root permission
 "cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' \| edit!
-"cmap w!! w !sudo tee > /dev/null %
+cmap w!! w !sudo tee > /dev/null %
 
 " Notestaking and text/config editing
 autocmd FileType markdown nnoremap <F7> :!pandoc<Space><C-r>%<space>-o<Space><C-r>%.pdf<Enter><Enter>

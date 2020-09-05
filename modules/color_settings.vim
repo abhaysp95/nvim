@@ -26,6 +26,7 @@ endif
 " source "$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh"
 let base16colorspace=256
 set background=dark
+
 " source this to your profile
 
 " gruvbox settings
@@ -68,8 +69,8 @@ let g:gruvbox_material_palette = 'material'
 let g:gruvbox_material_enable_italic = 1
 let g:gruvbox_material_disable_italic_comment = 0
 let g:gruvbox_material_enable_bold = 1
-let g:gruvbox_material_visual = 'grey background'
-let g:gruvbox_material_menu_selection_background = 'grey'
+let g:gruvbox_material_visual = 'green background'
+let g:gruvbox_material_menu_selection_background = 'green'
 let g:gruvbox_material_sign_column_background = 'none'
 let g:gruvbox_material_current_word = 'underline'
 let g:gruvbox_material_statusline_style = 'original'
@@ -108,7 +109,10 @@ let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
 
 " sonokai
-let g:sonokai_style = 'maia'
+let g:sonokai_style = 'shusia'
+
+" edge
+    let g:edge_style = 'neon'
 
 " tokyo-night colorscheme
 let g:tokyonight_style = 'night'  " night, storm
@@ -119,6 +123,15 @@ let g:tokyonight_disable_italic_comment = 0
 let g:tokyonight_cursor = 'auto'  " auto, red, green, blue
 let g:tokyonight_current_word = 'grey background'  " bold, italic, underline, 'grey background'
 
+" xcodedarkhc
+let g:xcodedarkhc_green_comments = 1
+let g:xcodedarkhc_emph_types = 1
+let g:xcodedarkhc_emph_funcs = 1
+let g:xcodedarkhc_emph_indents = 1
+let g:xcodedarkhc_match_paren_style = 0
+let g:xcodedarkhc_dim_punctuation = 1
+
+colorscheme xcodedarkhc
 
 hi Visual cterm=reverse ctermbg=NONE
 hi htmlItalic gui=italic cterm=italic
@@ -126,9 +139,9 @@ hi Todo gui=bold cterm=bold
 hi TabLine guifg=foreground guibg=242 gui=NONE
 hi TabLineSel guibg=#100e23 guifg=foreground gui=NONE
 hi TabLineFill guibg=255 guifg=foreground cterm=NONE gui=NONE
-hi DiffAdd  guibg=255
-hi DiffChange  guibg=255
-hi DiffDelete  guibg=255
+hi DiffAdd  guibg=background
+hi DiffChange  guibg=background
+hi DiffDelete  guibg=background
 hi SpecialKey guifg=#ffffff guibg=#116611
 hi StatusLine guibg=255 guifg=foreground
 hi SignColumn guibg=background
@@ -138,6 +151,4 @@ if exists("g:loaded_webdevicons")
 endif
 
 syn sync fromstart
-
-colorscheme tokyonight
 set go=a

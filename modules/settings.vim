@@ -338,34 +338,34 @@ inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<
 "" tying to improve completion pop-up menu: -----------------------
 "" in first one, <c-n> works normally, however when completion menu appears the <Down> key is simulated.
 "" this keeps the menu item always highlighted so that you can hit enter anytime to insert it.
-"inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-			"\ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-"inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
-			"\ '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+			\ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <C-p> pumvisible() ? '<C-p>' :
+			\ '<C-p><C-r>=pumvisible() ? "\<lt>Up>" : ""<CR>'
 "" these two mappings are supposed to do show.
 "" this one stimulates <C-x><C-o> to bring omni-completion menu, the stimulates <C-n><C-p> to remove longest common text
 "" then finally stimulates <Down> again to keep match highlighted
-"inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-			"\ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+			\ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
-"" here's another example of set of mappings that first close any popups that are open which means you seamlessly switch between omni and user completions.
-"" if the menu is visible, use the above trick to keep the text you typed and select first
-"" open omni completion menu closing previous if open and opening new menu without changing the text
-"inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-			"\ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
-"" open user completion menu closing previous if open an opening new menu without changing the text
-"inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-			"\ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
-"" >>>
+" here's another example of set of mappings that first close any popups that are open which means you seamlessly switch between omni and user completions.
+" if the menu is visible, use the above trick to keep the text you typed and select first
+" open omni completion menu closing previous if open and opening new menu without changing the text
+inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+			\ '<C-x><C-o><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+" open user completion menu closing previous if open an opening new menu without changing the text
+inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+			\ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+" >>>
 
-"" some autocomplete settings <<<
-"augroup omnifuncs
-    "autocmd!
-    "autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-    "autocmd FileType html,markdown setlocal omnifunc=htmkcomplete#CompleteTags
-    "autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-    "autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-    "autocmd FileType c setlocal omnifunc=ccomplete#Complete
-"augroup endif
+" some autocomplete settings <<<
+augroup omnifuncs
+	autocmd!
+	autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+	autocmd FileType html,markdown setlocal omnifunc=htmkcomplete#CompleteTags
+	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+	autocmd FileType c setlocal omnifunc=ccomplete#Complete
+augroup endif
 
 " vim:foldmethod=marker:foldlevel=0

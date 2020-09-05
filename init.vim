@@ -19,6 +19,7 @@ else
 	source $HOME/.config/nvim/modules/settings.vim
 	source $HOME/.config/nvim/modules/plugin_settings.vim
 	source $HOME/.config/nvim/modules/keybindings.vim
+	source $HOME/.config/nvim/modules/coc_settings.vim
 	source $HOME/.config/nvim/modules/fzf_conf.vim
 	source $HOME/.config/nvim/modules/current_statusline.vim
 	source $HOME/.config/nvim/modules/vim-startify.vim
@@ -26,7 +27,6 @@ else
 	luafile ~/.config/nvim/modules/plug-colorizer.lua
 endif
 
-" source $HOME/.config/nvim/modules/coc_settings.vim
 " source $HOME/.config/nvim/modules/vim-buffet.vim
 " source ~/.config/nvim/modules/old_statusline.vim
 " source $HOME/.config/nvim/modules/airline_conf.vim

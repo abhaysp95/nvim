@@ -13,7 +13,7 @@
 	"diagnostic.warningSign": "",
 	"diagnostic.infoSign": "",
 	"diagnostic.hintSign": "➤ ",
-	"diagnostic.displayByAle": true,
+	"diagnostic.displayByAle": false,
 
 	"suggest.noselect": false,
 	"codeLens.enable": true,
@@ -33,6 +33,7 @@
 	// python config
 	"python.linting.enabled": true,
 	"python.jediEnabled": false,
+	// "python.jediPath": "/usr/lib/python3.8/site-packages",
 	"python.linting.pylintEnabled": true,
 	"python.formatting.blackPath": "~/.local/bin/black",
 	"python.linting.mypyEnabled": true,

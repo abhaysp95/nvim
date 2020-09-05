@@ -8,25 +8,27 @@ let g:coc_global_extensions = [
 			\ 'coc-explorer',
 			\ 'coc-ultisnips',
 			\ 'coc-eslint',
+			\ 'coc-clangd',
+			\ 'coc-java',
+			\ 'coc-yank',
+			\ 'coc-vimlsp',
+			\ 'coc-sh',
+			\ 'coc-json',
+			\ 'coc-yaml',
 			\ 'coc-python'
 			\ ]
 " >>>
+			\ 'coc-jedi',
 			"\ 'coc-pairs',
 			"\ 'coc-tsserver',
-			"\ 'coc-java',
 			"\ 'coc-emoji',
-			"\ 'coc-clangd',
 			"\ 'coc-pyls',
 			"\ 'coc-phpls',
-			"\ 'coc-yaml',
 			"\ 'coc-prettier',
 			"\ 'coc-markmap',
-			"\ 'coc-json',
 			"\ 'coc-html',
 			"\ 'coc-lua',
 			"\ 'coc-css',
-			"\ 'coc-vimlsp',
-			"\ 'coc-sh'
 
 " some coc related key-bindings <<<
 " Remap for format selected region

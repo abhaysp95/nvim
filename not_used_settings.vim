@@ -664,6 +664,90 @@
 "map <leader>ff :call Fzf_dev()<CR>
 
 
+" Limelight configuration
+"let g:limelight_conceal_ctermbg     = 'dark-gray'
+"let g:limelight_conceal_ctermfg     = 240
+"let g:limelight_default_coefficient = 0.5
+"let g:limelight_paragraph_span      = 1
+
+
+" Goyo plugin makes text more readable when writing prose:
+"map <leader>F :Goyo \| set background=dark\| set linebreak<CR>
+"autocmd! User GoyoEnter Limelight
+"autocmd! User GoyoLeave Limelight!
+
+
+" -- undotree ----
+"let g:undotree_HighlightChangedWithSign = 0
+"let g:undotree_WindowLayout             = 3
+"nnoremap <leader>U :UndotreeToggle<CR>
+
+
+" ----- vim - quickscope -------------------
+"let g:qs_highlight_on_keys = ['f', 't', 'F', 'T']
+"highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+"highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+
+
+" gcmt/wildfire.vim
+" This selects the next closest text object.
+map <leader><CR> <Plug>(wildfire-fuel)
+
+""""""""""""""""""""""""""""""""
+"  indent-line-guide
+""""""""""""""""""""""""""""""""
+"autocmd FileType python,yaml,ruby :IndentGuidesEnable
+"let g:indent_guides_enable_on_vim_startup = 0
+"let g:indent_guides_guide_size = 1
+"let g:indent_guides_auto_colors = 0
+
+
+"""""""""""""""""""""""""
+"  metakirby5/codi.vim  "
+"""""""""""""""""""""""""
+"let g:codi#width = 30
+"let g:codi#autoclose = 1
+"let g:codi#rightsplit = 1
+"let g:codi#rightalign = 1
+"let g:codi#use_buffer_dir = 1
+"nnoremap <localleader>c :Codi!!<CR>
+
+
+""""""""""""""""
+"  lexima.vim  "
+""""""""""""""""
+"let g:lexima_enable_endwise_rules = 0  " shuts of ending of if, for etc.
+
+
+""""""""""""""""""""""""""
+"   takac/vim-hardtime   "
+""""""""""""""""""""""""""
+"let g:hardtime_default_on = 1  " usage
+ "customizations
+"let g:list_of_normal_keys = ["h", "j", "k", "l", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+"let g:list_of_visual_keys = ["h", "j", "k", "l", "<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+"let g:list_of_insert_keys = ["<UP>", "<DOWN>", "<LEFT>", "<RIGHT>"]
+"let g:list_of_disabled_keys = []
+"let g:hardtime_timeout = 1500  " timeout
+"let g:hardtime_showmsg = 1  " enables notification
+"let g:hardtime_ignore_buffer_patterns = [ "nofile" ]  " ignore a buffer pattern
+"let g:hardtime_ignore_quickfix = 1  " don't work on quickfix window
+"let g:hardtime_allow_different_key = 1  " allow jh not jj
+"let g:hardtime_maxcount = 2  " jj will work but not jjj
+
+
+" This selects the previous closest text object.
+" vmap <leader><CR> <Plug>(wildfire-water)
+
+" ----- airblade/vim-rooter ---- "
+let g:rooter_change_directory_for_non_project_files = 'current'
+
+" ------ vim-slime ---- "
+let g:slime_target = "x11"
+" if using target as neovim then use command
+" `:echo b:terminal_job_id` to get jobid of terminal
+
+
 " ----------------- plugins not in use --------------------- <<<
 
 " Plug 'tmux-plugins/vim-tmux-focus-events'

@@ -1,13 +1,17 @@
 "-------All-the-plugins-for-vim-and-nvim----------------------
 call plug#begin()
 " syntax and error detection
-Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale', { 'on': 'ALEEnable' }
 
 " completion
-Plug 'vim-scripts/AutoComplPop'
+" Plug 'vim-scripts/AutoComplPop'
 
 " intellisense
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " for html
 Plug 'mattn/emmet-vim'
@@ -22,6 +26,7 @@ Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-surround'
 
 " Theme / Interface
+Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'sainnhe/gruvbox-material'
 Plug 'coolabhays/nord-vim'
@@ -29,12 +34,19 @@ Plug 'w0ng/vim-hybrid'
 Plug 'arzg/vim-colors-xcode'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'whatyouhide/vim-gotham'
-Plug 'cocopon/iceberg.vim'
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'patstockwell/vim-monokai-tasty'
+Plug 'coolabhays/molokai'
+Plug 'coolabhays/molokayo'
+Plug 'sainnhe/sonokai'
+Plug 'tomasiser/vim-code-dark'
+Plug 'srcery-colors/srcery-vim'
+Plug 'jacoborus/tender.vim'
+Plug 'haishanh/night-owl.vim'
 
 " No distractions
-Plug 'junegunn/limelight.vim'
-Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/limelight.vim'
+" Plug 'junegunn/goyo.vim'
 
 " code commenter
 Plug 'scrooloose/nerdcommenter'
@@ -68,10 +80,10 @@ Plug 'mhinz/vim-startify'
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
 " show undo history in tree
-Plug 'mbbill/undotree'
+" Plug 'mbbill/undotree'
 
 " live results
-Plug 'jpalardy/vim-slime'
+" Plug 'jpalardy/vim-slime'
 
 " file navigations
 Plug 'justinmk/vim-dirvish'
@@ -94,10 +106,7 @@ call plug#end()
 " Plug 'chriskempson/base16-vim'
 " Plug 'danilo-augusto/vim-afterglow'
 " Plug 'dracula/vim', {'as': 'dracula'}
-" Plug 'drewtempelmeyer/palenight.vim'
-" Plug 'fmoralesc/molokayo'
 " Plug 'gcmt/wildfire.vim'
-" Plug 'haishanh/night-owl.vim'
 " Plug 'joshdick/onedark.vim'
 " Plug 'kaicataldo/material.vim'
 " Plug 'liuchengxu/vim-which-key'
@@ -105,17 +114,13 @@ call plug#end()
 " Plug 'mhartington/oceanic-next'
 " Plug 'nanotech/jellybeans.vim'
 " Plug 'owickstrom/vim-colors-paramount'
-" Plug 'patstockwell/vim-monokai-tasty'
 " Plug 'rakr/vim-one'
 " Plug 'ryanoasis/vim-devicons'
 " Plug 'sickill/vim-monokai'
 " Plug 'sjl/badwolf'
-" Plug 'tomasr/molokai'
-" Plug 'junegunn/rainbow_parentheses.vim'
 " Plug 'jaredgorski/fogbell.vim'
 " Plug 'YorickPeterse/happy_hacking.vim'
 " Plug 'axvr/photon.vim'
-" Plug 'gruvbox-community/gruvbox'
 " Plug 'phanviet/vim-monokai-pro'
 " Plug 'romainl/Apprentice'
 " Plug 'lifepillar/vim-solarized8'
@@ -124,11 +129,17 @@ call plug#end()
 " Plug 'bluz71/vim-moonfly-colors'
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'reedes/vim-colors-pencil'
-" Plug 'sainnhe/sonokai'
 " Plug 'artanikin/vim-synthwave84'
 " Plug 'ntk148v/vim-horizon'
+" Plug 'sainnhe/forest-night'
+" Plug 'cocopon/iceberg.vim'
+" Plug 'gruvbox-community/gruvbox'
+" Plug 'sainnhe/edge'
+" Plug 'lisposter/vim-blackboard'
+" Plug 'huyvohcmc/atlas.vim'
+" Plug 'safv12/andromeda.vim'
+" Plug 'drewtempelmeyer/palenight.vim'
+" Plug 'nightsense/snow'
 
 " Plug 'metakirby5/codi.vim'
-" Plug 'SirVer/ultisnips'
 " Plug 'takac/vim-hardtime'
-" Plug 'honza/vim-snippets'
