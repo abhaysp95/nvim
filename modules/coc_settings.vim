@@ -15,12 +15,12 @@ let g:coc_global_extensions = [
 			\ 'coc-sh',
 			\ 'coc-json',
 			\ 'coc-yaml',
-			\ 'coc-python'
+			\ 'coc-python',
+			\ 'coc-tsserver'
 			\ ]
 " >>>
-			\ 'coc-jedi',
+			"\ 'coc-jedi',
 			"\ 'coc-pairs',
-			"\ 'coc-tsserver',
 			"\ 'coc-emoji',
 			"\ 'coc-pyls',
 			"\ 'coc-phpls',
