@@ -60,7 +60,7 @@ let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_underline = 1
 " from my fork
-let g:nord_background = "black"
+let g:nord_background = "dark"
 
 
 " gruvbox-material
@@ -112,7 +112,7 @@ let g:gotham_airline_empahsised_insert = 0
 let g:sonokai_style = 'shusia'
 
 " edge
-    let g:edge_style = 'neon'
+let g:edge_style = 'neon'
 
 " tokyo-night colorscheme
 let g:tokyonight_style = 'night'  " night, storm
@@ -131,9 +131,19 @@ let g:xcodedarkhc_emph_indents = 1
 let g:xcodedarkhc_match_paren_style = 0
 let g:xcodedarkhc_dim_punctuation = 1
 
-colorscheme xcodedarkhc
+" Alessandro/Sierra
+let g:sierra_Midnight = 1
+
+" Alessandro/Alduin
+let g:alduin_Shout_Dragon_Aspect = 0
+let g:alduin_Shout_Become_Ethereal = 0
+let g:alduin_Shout_Fire_Breath = 1
+let g:alduin_Shout_Aura_Whisper = 0
+
+colorscheme sierra
 
 hi Visual cterm=reverse ctermbg=NONE
+hi Comment cterm=italic gui=italic
 hi htmlItalic gui=italic cterm=italic
 hi Todo gui=bold cterm=bold
 hi TabLine guifg=foreground guibg=242 gui=NONE

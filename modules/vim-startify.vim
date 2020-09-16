@@ -5,7 +5,7 @@ nnoremap <leader>ll :SClose<CR>
 nnoremap <leader>lD :SDelete!
 
 " simplify the startify to just recent files and sessions
-" Custom header <<<
+" Custom header
 " let g:startfiy_custom_header = [
 let s:header = [
 			\ '',
@@ -15,7 +15,6 @@ let s:header = [
 			\ '  ╹┗┛  ┗┛    ╹   ╹ ╹',
 			\ '   ',
 			\ ]
-" >>>
 
 function! s:center(lines) abort
 	let longest_line = max(map(copy(a:lines), 'strwidth(v:val)'))
@@ -58,7 +57,7 @@ function! s:gitUntracked()
     return map(files, "{'line': v:val, 'path': v:val}")
 endfunction
 
-" bookmarks <<<
+" bookmarks
 let g:startify_bookmarks = [
 			\ { 'n': '~/.config/nvim/init.vim' },
 			\ { 'p': '~/.config/picom.conf' },
@@ -69,4 +68,3 @@ let g:startify_bookmarks = [
 			\ { 's': '~/.config/sxhkd/sxhkdrc'},
 			\ { 'c': '~/.config/bspwm/bspwmrc'}
 			\ ]
-" >>>

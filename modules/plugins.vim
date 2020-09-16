@@ -26,9 +26,10 @@ Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-surround'
 
 " Theme / Interface
-Plug 'junegunn/rainbow_parentheses.vim'
+"Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'sainnhe/gruvbox-material'
+Plug 'gruvbox-community/gruvbox'
 Plug 'coolabhays/nord-vim'
 Plug 'w0ng/vim-hybrid'
 Plug 'arzg/vim-colors-xcode'
@@ -43,10 +44,16 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'srcery-colors/srcery-vim'
 Plug 'jacoborus/tender.vim'
 Plug 'haishanh/night-owl.vim'
+Plug 'AlessandroYorba/Alduin'
+Plug 'AlessandroYorba/Sierra'
+Plug 'joshdick/onedark.vim'
 
 " No distractions
 " Plug 'junegunn/limelight.vim'
 " Plug 'junegunn/goyo.vim'
+
+" Bullets
+Plug 'dkarter/bullets.vim'
 
 " code commenter
 Plug 'scrooloose/nerdcommenter'
@@ -79,12 +86,6 @@ Plug 'mhinz/vim-startify'
 " show tag tree
 Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
-" show undo history in tree
-" Plug 'mbbill/undotree'
-
-" live results
-" Plug 'jpalardy/vim-slime'
-
 " file navigations
 Plug 'justinmk/vim-dirvish'
 
@@ -107,14 +108,12 @@ call plug#end()
 " Plug 'danilo-augusto/vim-afterglow'
 " Plug 'dracula/vim', {'as': 'dracula'}
 " Plug 'gcmt/wildfire.vim'
-" Plug 'joshdick/onedark.vim'
 " Plug 'kaicataldo/material.vim'
 " Plug 'liuchengxu/vim-which-key'
 " Plug 'machakann/vim-sandwich'
 " Plug 'mhartington/oceanic-next'
 " Plug 'nanotech/jellybeans.vim'
 " Plug 'owickstrom/vim-colors-paramount'
-" Plug 'rakr/vim-one'
 " Plug 'ryanoasis/vim-devicons'
 " Plug 'sickill/vim-monokai'
 " Plug 'sjl/badwolf'
@@ -133,13 +132,19 @@ call plug#end()
 " Plug 'ntk148v/vim-horizon'
 " Plug 'sainnhe/forest-night'
 " Plug 'cocopon/iceberg.vim'
-" Plug 'gruvbox-community/gruvbox'
 " Plug 'sainnhe/edge'
 " Plug 'lisposter/vim-blackboard'
 " Plug 'huyvohcmc/atlas.vim'
 " Plug 'safv12/andromeda.vim'
 " Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'nightsense/snow'
+" Plug 'rakr/vim-one'
 
 " Plug 'metakirby5/codi.vim'
 " Plug 'takac/vim-hardtime'
+
+" show undo history in tree
+" Plug 'mbbill/undotree'
+
+" live results
+" Plug 'jpalardy/vim-slime'
