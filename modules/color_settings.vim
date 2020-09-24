@@ -140,7 +140,15 @@ let g:alduin_Shout_Become_Ethereal = 0
 let g:alduin_Shout_Fire_Breath = 1
 let g:alduin_Shout_Aura_Whisper = 0
 
-colorscheme sierra
+"  Rigellute/shades-of-purple.vim  "
+let g:shades_of_purple_bold = 1
+let g:shades_of_purple_italic = 1
+
+" jacoborus/tender.vim "
+let g:tender_italics = 1
+let g:tender_bold = 1
+
+colorscheme tender
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
