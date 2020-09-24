@@ -47,13 +47,15 @@ Plug 'haishanh/night-owl.vim'
 Plug 'AlessandroYorba/Alduin'
 Plug 'AlessandroYorba/Sierra'
 Plug 'joshdick/onedark.vim'
+Plug 'herrbischoff/cobalt2.vim'
+Plug 'Rigellute/shades-of-purple.vim'
 
 " No distractions
 " Plug 'junegunn/limelight.vim'
 " Plug 'junegunn/goyo.vim'
 
 " Bullets
-Plug 'dkarter/bullets.vim'
+"Plug 'dkarter/bullets.vim'
 
 " code commenter
 Plug 'scrooloose/nerdcommenter'
