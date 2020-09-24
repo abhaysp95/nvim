@@ -101,10 +101,10 @@ nnoremap <leader>fl :vsplit \| Lf<CR>
 
 " junegunn/rainbow_parethesis
 "autocmd FileType * RainbowParentheses
-augroup js_rainbow
-	autocmd!
-	autocmd FileType javascript RainbowParentheses
-augroup end
+"augroup js_rainbow
+	"autocmd!
+	"autocmd FileType javascript RainbowParentheses
+"augroup end
 
 let g:rainbow#blacklist = [248, '#1f2233', '#464b5d']
 let g:rainbow#max_level = 16
@@ -153,24 +153,24 @@ let g:tmux_navigator_disable_when_zoomed = 1
 """""""""""""""""""""""""""
 "   dkarter/bullets.vim   "
 """""""""""""""""""""""""""
-let g:bullets_enabled_file_types = [
-			\ 'markdown',
-			\ 'text',
-			\ 'gitcommit',
-			\ 'scratch',
-			\ 'yaml',
-			\ 'yml'
-			\ ]
+"let g:bullets_enabled_file_types = [
+			"\ 'markdown',
+			"\ 'text',
+			"\ 'gitcommit',
+			"\ 'scratch',
+			"\ 'yaml',
+			"\ 'yml'
+			"\ ]
 
-let g:bullets_enable_in_empty_buffers = 0
-let g:bullets_set_mappings = 0
-let g:bullets_mapping_leader = '<M-b>'
-let g:bullets_delete_last_bullet_if_empty = 0
-let g:bullets_line_spacing = 1
-let g:bullets_pad_right = 1
-let g:bullets_max_alpha_characters = 2
-let g:bullets_outline_levels = ['ROM', 'ABC', 'num', 'abc', 'rom', 'std-', 'std*', 'std+']
-let g:bullets_renumber_on_change = 1
-let g:bullets_nested_checkboxes = 1
-let g:bullets_checkbox_markers = ' .oOX'
-let g:bullets_checkbox_partials_toggle = 1
+"let g:bullets_enable_in_empty_buffers = 0
+"let g:bullets_set_mappings = 0
+"let g:bullets_mapping_leader = '<M-b>'
+"let g:bullets_delete_last_bullet_if_empty = 0
+"let g:bullets_line_spacing = 1
+"let g:bullets_pad_right = 1
+"let g:bullets_max_alpha_characters = 2
+"let g:bullets_outline_levels = ['ROM', 'ABC', 'num', 'abc', 'rom', 'std-', 'std*', 'std+']
+"let g:bullets_renumber_on_change = 1
+"let g:bullets_nested_checkboxes = 1
+"let g:bullets_checkbox_markers = ' .oOX'
+"let g:bullets_checkbox_partials_toggle = 1
