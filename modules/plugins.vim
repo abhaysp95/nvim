@@ -26,7 +26,7 @@ Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-surround'
 
 " Theme / Interface
-"Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'luochen1990/rainbow'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'sainnhe/gruvbox-material'
 Plug 'gruvbox-community/gruvbox'
@@ -45,10 +45,18 @@ Plug 'srcery-colors/srcery-vim'
 Plug 'jacoborus/tender.vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'AlessandroYorba/Alduin'
+Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'AlessandroYorba/Sierra'
 Plug 'joshdick/onedark.vim'
 Plug 'herrbischoff/cobalt2.vim'
 Plug 'Rigellute/shades-of-purple.vim'
+Plug 'rakr/vim-one'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'cormacrelf/vim-colors-github'
+Plug 'chuling/ci_dark'
+Plug 'chuling/equinusocio-material.vim'
+Plug 'fxn/vim-monochrome'
+Plug 'ajh17/Spacegray.vim'
 
 " No distractions
 " Plug 'junegunn/limelight.vim'
@@ -102,13 +110,12 @@ call plug#end()
 
 
 
-" Plug 'Badacadabra/vim-archery'
-" Plug 'ajh17/Spacegray.vim'
+" Plug 'junegunn/rainbow_parentheses.vim'
 " Plug 'ayu-theme/ayu-vim'
+" Plug 'Badacadabra/vim-archery'
 " Plug 'bagrat/vim-buffet'
 " Plug 'chriskempson/base16-vim'
 " Plug 'danilo-augusto/vim-afterglow'
-" Plug 'dracula/vim', {'as': 'dracula'}
 " Plug 'gcmt/wildfire.vim'
 " Plug 'kaicataldo/material.vim'
 " Plug 'liuchengxu/vim-which-key'
@@ -140,7 +147,6 @@ call plug#end()
 " Plug 'safv12/andromeda.vim'
 " Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'nightsense/snow'
-" Plug 'rakr/vim-one'
 
 " Plug 'metakirby5/codi.vim'
 " Plug 'takac/vim-hardtime'

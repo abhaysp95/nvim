@@ -1,24 +1,25 @@
 " Code of Conquer settings and bindings
 " full autocompletion settings
 
-" coc extensions <<<
+" coc extensions
 let g:coc_global_extensions = [
 			\ 'coc-snippets',
 			\ 'coc-syntax',
-			\ 'coc-explorer',
 			\ 'coc-ultisnips',
-			\ 'coc-eslint',
-			\ 'coc-clangd',
-			\ 'coc-java',
 			\ 'coc-yank',
-			\ 'coc-vimlsp',
+			\ 'coc-eslint',
 			\ 'coc-sh',
 			\ 'coc-json',
 			\ 'coc-yaml',
 			\ 'coc-python',
-			\ 'coc-tsserver'
+			\ 'coc-lua',
+			\ 'coc-tsserver',
+			\ 'coc-java',
 			\ ]
-" >>>
+
+			"\ 'coc-clangd',
+			"\ 'coc-vimlsp',
+			"\ 'coc-explorer',
 			"\ 'coc-jedi',
 			"\ 'coc-pairs',
 			"\ 'coc-emoji',
@@ -30,7 +31,7 @@ let g:coc_global_extensions = [
 			"\ 'coc-lua',
 			"\ 'coc-css',
 
-" some coc related key-bindings <<<
+" some coc related key-bindings
 " Remap for format selected region
 xmap <leader>v  <Plug>(coc-format-selected)
 nmap <leader>v  <Plug>(coc-format-selected)
@@ -67,6 +68,7 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 " Use <C-c> for select selections ranges, needs server support, like: coc-tsserver, coc-python
 nmap <silent> <C-c> <Plug>(coc-range-select)
 xmap <silent> <C-c> <Plug>(coc-range-select)
+xmap <silent> <C-C> <Plug>(coc-range-select-backward)
 
 " Using CocList
 " Show all diagnostics
@@ -87,9 +89,8 @@ nnoremap <silent> ,,j  :<C-u>CocNext<CR>
 nnoremap <silent> ,,k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> ,,p  :<C-u>CocListResume<CR>
-" >>>
 
-" rest coc settings and functions <<<
+" rest coc settings and functions
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 function! s:show_documentation()
 	if &filetype == 'vim'
@@ -147,9 +148,8 @@ let g:coc_explorer_global_presets = {
 nnoremap ,e :CocCommand explorer<CR>
 nnoremap ,Ef :CocCommand explorer --preset floatingRightside<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-" >>>
 
-" some auto-completion settings for <c-space>, <c-n> and <c-p> <<<
+" some auto-completion settings for <c-space>, <c-n> and <c-p>
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
@@ -190,9 +190,8 @@ inoremap <expr> <C-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Es
 " open user completion menu closing previous if open an opening new menu without changing the text
 inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
 			\ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
-" >>>
 
-" some autocomplete settings <<<
+" some autocomplete settings
 augroup omnifuncs
     autocmd!
     autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -202,4 +201,3 @@ augroup omnifuncs
     autocmd FileType c setlocal omnifunc=ccomplete#Complete
 augroup endif
 
-" >>>

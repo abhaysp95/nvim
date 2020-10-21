@@ -1,4 +1,28 @@
 {
+
+	"languageserver": {
+		"ccls": {
+			"command": "ccls",
+			"filetypes": [
+				"c",
+				"cpp",
+				"objc",
+				"objcpp"
+			],
+			"rootPatterns": [
+				".ccls",
+				"compile_commands.json",
+				".vim/",
+				".git/"
+			],
+			"initializationOptions": {
+				"cache": {
+					"directory": "/tmp/ccls"
+				}
+			}
+		}
+	},
+
 	"coc.preferences.formatOnSaveFiletypes": [
 	],
 	// "markdown",
@@ -13,9 +37,9 @@
 	"diagnostic.warningSign": "",
 	"diagnostic.infoSign": "",
 	"diagnostic.hintSign": "➤ ",
-	"diagnostic.displayByAle": false,
+	"diagnostic.displayByAle": true,
 
-	"suggest.noselect": false,
+	"suggest.noselect": true,
 	"codeLens.enable": true,
 	"suggest.preferCompleteThanJumpPlaceholder": true,
 
@@ -47,5 +71,6 @@
 		"<cr>": ["expandable?", "expand", "open"],
 		"v": "open:vsplit"
 	},
-	"explorer.quitOnOpen": true
+  "explorer.quitOnOpen": true,
+  "java.format.settings.url": "/home/raytracer/.config/coc/extensions/node_modules/redhat.java/eclipse-formatter.xml"
 }

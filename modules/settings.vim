@@ -17,14 +17,14 @@ set autoindent
 set smartindent
 
 set list  " show whitespaces
-set listchars=tab:\|\ ,nbsp:⦸,extends:»,precedes:«,trail:•,eol:¬
+set listchars=tab:\│\ ,nbsp:⦸,extends:»,precedes:«,trail:•,eol:¬
 " ,space:⋅  " not necessary
 "set listchars=nbsp:␣
 "set listchars+=tab:\\
 "set listchars+=extends:…
 "set listchars+=precedes:«
 "set listchars+=trail:⋅
-" ▷┅ ┃𐎖  ⤜ ≻ 𐎐  ⤐ ⟼  𒋱   𒋰𒋰  ↢↣ ⤙⤚ ⯮⯮ 𒋰𒋰  ⤙⤚
+" ▷┅ ┃𐎖  ⤜ ≻ 𐎐  ⤐ ⟼  𒋱   𒋰𒋰  ↢↣ ⤙⤚ ⯮⯮ 𒋰𒋰  ⤙⤚ │
 
 if has('linebreak')
 	set linebreak  " wrap long lines
@@ -65,7 +65,7 @@ set modelines=5  " scan this many lines looking for modeline
 set noerrorbells visualbell t_vb=
 set noshiftround
 set nospell
-set conceallevel=3
+set conceallevel=2
 " set autochdir
 set nostartofline
 set regexpengine=1
@@ -149,8 +149,9 @@ set formatoptions-=cro
 set formatoptions+=n
 set showtabline=0
 
-autocmd WinLeave *.* mkview
-autocmd WinEnter *.* silent! loadview
+" fold settings
+"autocmd WinLeave *.* mkview
+"autocmd WinEnter *.* silent! loadview
 
 " fold settings <<<
 set foldcolumn=0  " currently no foldcolumn
@@ -178,6 +179,7 @@ endfunction
 
 if has('nvim-0.3.1')
 	set fillchars+=eob:\              " suppress ~ at EndOfBuffer
+	set fillchars+=vert:│
 endif
 
 
@@ -195,13 +197,14 @@ augroup highlight-when-switching-modes
 augroup checktime
     autocmd!
     autocmd CursorHold * silent! checktime
-augroup END
+augroup end
 " >>>
 
 " Resize splits when vim changes size <<<
 augroup auto-resize
     autocmd!
     autocmd VimResized * wincmd =
+augroup end
 " >>>
 
 " Toggle quickfix window (coc)
@@ -280,30 +283,6 @@ let g:python3_host_prog = '/usr/bin/python3'
 " >>>
 
 
-"""""""""""""""""""""""
-"  FileType settings  "
-"""""""""""""""""""""""
-autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
-autocmd BufRead,BufNewFile *.tex set filetype=tex
-augroup FILETYPES
-	autocmd FileType markdown let b:indentLine_setConceal=1
-augroup END
-autocmd FileType markdown set conceallevel=2
-autocmd FileType markdown set foldmethod=marker
-autocmd FileType markdown,txt set nolist
-autocmd VimEnter FileType markdown,txt set colorcolumn=0
-
-autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-autocmd FileType html,c,python,js,config,sh set number relativenumber
-autocmd FileType c,cpp,java set mps+==:;
-autocmd FileType python,ruby set expandtab softtabstop=4 shiftwidth=4 tabstop=4
-autocmd FileType yaml set expandtab softtabstop=2 shiftwidth=2 tabstop=2
-filetype plugin on
-autocmd VimEnter FileType markdown,txt set textwidth=0
-autocmd Filetype * setlocal formatoptions+=n
-autocmd FileType vim set foldmethod=marker foldmarker=<<<,>>> foldlevel=0
-autocmd FileType php set autoindent smartindent
-
 """"""""""""""""""""""""
 "    yank highlight    "
 """"""""""""""""""""""""
@@ -311,7 +290,7 @@ augroup highlight_yank
 	if exists('##TextYankPost')
 		autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank('Substitute', 300)
 	endif
-augroup END
+augroup end
 
 
 
@@ -367,5 +346,36 @@ augroup omnifuncs
 	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 	autocmd FileType c setlocal omnifunc=ccomplete#Complete
 augroup endif
+
+
+"""""""""""""""""""""""
+"  FileType settings  "
+"""""""""""""""""""""""
+autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
+autocmd BufRead,BufNewFile *.tex set filetype=tex
+augroup FILETYPES
+	autocmd FileType markdown let b:indentLine_setConceal=1
+augroup end
+autocmd FileType markdown set conceallevel=2 concealcursor=cv
+autocmd FileType markdown set foldmethod=marker
+autocmd FileType markdown,txt set nolist
+autocmd VimEnter FileType markdown,txt set colorcolumn=0
+
+autocmd Filetype * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType html,c,python,js,config,sh set number relativenumber
+autocmd FileType c,cpp,java set mps+==:;
+autocmd FileType python,ruby set expandtab softtabstop=4 shiftwidth=4 tabstop=4
+autocmd FileType yaml set expandtab softtabstop=2 shiftwidth=2 tabstop=2
+filetype plugin on
+autocmd VimEnter FileType markdown,txt set textwidth=0
+autocmd Filetype * setlocal formatoptions+=n
+autocmd FileType vim set foldmethod=marker foldmarker=<<<,>>> foldlevel=0
+autocmd FileType php set autoindent smartindent
+
+augroup noPipesStartify
+	if &buftype == "startify"
+		autocmd set listchars=tab:\
+	endif
+augroup end
 
 " vim:foldmethod=marker:foldlevel=0

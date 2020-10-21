@@ -81,13 +81,13 @@ nmap ]g <plug>(signify-next-hunk)
 nmap <leader>gJ 9999<leader>gj
 nmap <leader>gK 9999<leader>gk
 
-let g:signify_sign_add = '✭'
-let g:signify_sign_change = '➜'
-let g:signify_sign_delete_first_line = '✹'
-let g:signify_sign_delete = '~'
+let g:signify_sign_add = '│'
+let g:signify_sign_change = '│'
+let g:signify_sign_delete_first_line = '│'
+let g:signify_sign_delete = '│'
 let g:signify_show_count = 0
 let g:signify_sign_show_text = 1
-"
+"✹    ✭  ➜
 
 hi SignifySignAdd ctermbg=255 guibg=255
 hi SignifySignDelete ctermbg=255 guibg=255
@@ -120,7 +120,7 @@ let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = ' '
 let g:indentLine_char = '|'
 let g:indentLine_first_char = '|'
-let g:indentLine_concealcursor = 'inc'
+let g:indentLine_concealcursor = 'cv'
 let g:indentLine_conceallevel = 2
 let g:indentLine_bufTypeExclude = [ "help", "quickfix", "terminal", "prompt", "nofile" ]
 let g:indentLine_fileTypeExclude = [ "startify", "man" ]

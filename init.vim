@@ -16,8 +16,8 @@ if has('win32')
 	source C:\Users\raytracer\_vimrc
 else
 	source $HOME/.config/nvim/modules/plugins.vim
-	source $HOME/.config/nvim/modules/settings.vim
 	source $HOME/.config/nvim/modules/plugin_settings.vim
+	source $HOME/.config/nvim/modules/settings.vim
 	source $HOME/.config/nvim/modules/keybindings.vim
 	source $HOME/.config/nvim/modules/coc_settings.vim
 	source $HOME/.config/nvim/modules/fzf_conf.vim
@@ -25,6 +25,12 @@ else
 	source $HOME/.config/nvim/modules/vim-startify.vim
 	source $HOME/.config/nvim/modules/color_settings.vim
 	luafile ~/.config/nvim/modules/plug-colorizer.lua
+
+	augroup autosourcing
+		autocmd!
+		autocmd BufWritePost ~/.config/nvim/init.vim,~/.config/nvim/modules/color_settings.vim source %
+		" cause I make changes in color_settings much frequently
+	augroup END
 endif
 
 " source $HOME/.config/nvim/modules/vim-buffet.vim

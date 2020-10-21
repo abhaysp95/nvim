@@ -27,6 +27,9 @@ endif
 let base16colorspace=256
 set background=dark
 
+" luochen1990/rainbow "
+let g:rainbow_active = 1
+
 " source this to your profile
 
 " gruvbox settings
@@ -105,8 +108,10 @@ let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
 let g:spaceray_use_italics = 1
 let g:spacegray_low_contrast = 1
-let ayucolor="mirage"
 let g:gotham_airline_empahsised_insert = 0
+
+" ayu-theme/ayu-vim "
+let ayucolor="mirage"
 
 " sonokai
 let g:sonokai_style = 'shusia'
@@ -148,7 +153,28 @@ let g:shades_of_purple_italic = 1
 let g:tender_italics = 1
 let g:tender_bold = 1
 
-colorscheme tender
+" NLKNguyen/PaperColor "
+let g:PaperColor_allow_bold = 1
+let g:PaperColor_allow_italic = 1
+
+" cormacrelf/vim-colors-github "
+let g:github_colors_soft = 1
+let g:github_colors_extra_functions = 1
+
+" chuling/equinusocio_material "
+let g:equinusocio_material_style = 'darker'
+let g:equinusocio_material_less = 50
+let g:equinusocio_material_hide_vertsplit = 1
+let g:equinusocio_material_bracket_improved = 0
+
+" dracula/vim "
+let g:dracula_bold = 1
+let g:dracula_italic = 1
+let g:dracula_underline = 1
+let g:dracula_undercurl = 1
+let g:dracula_inverse = 0
+
+colorscheme seashell
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
@@ -163,6 +189,8 @@ hi DiffDelete  guibg=background
 hi SpecialKey guifg=#ffffff guibg=#116611
 hi StatusLine guibg=255 guifg=foreground
 hi SignColumn guibg=background
+" hi Normal guibg=#1e1f29 guifg=#bbc5ff  " for dracula
+
 
 if exists("g:loaded_webdevicons")
 	call webdevicons#refresh()
