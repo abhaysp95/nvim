@@ -154,7 +154,7 @@ set showtabline=0
 "autocmd WinEnter *.* silent! loadview
 
 " fold settings <<<
-set foldcolumn=0  " currently no foldcolumn
+set foldcolumn=1  " currently no foldcolumn
 set foldlevel=1
 set foldlevelstart=1
 set foldnestmax=3
