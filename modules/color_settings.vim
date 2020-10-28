@@ -28,7 +28,7 @@ let base16colorspace=256
 set background=dark
 
 " luochen1990/rainbow "
-let g:rainbow_active = 1
+let g:rainbow_active = 0
 
 " source this to your profile
 
@@ -111,7 +111,7 @@ let g:spacegray_low_contrast = 1
 let g:gotham_airline_empahsised_insert = 0
 
 " ayu-theme/ayu-vim "
-let ayucolor="mirage"
+let ayucolor="dark"
 
 " sonokai
 let g:sonokai_style = 'shusia'
@@ -174,7 +174,7 @@ let g:dracula_underline = 1
 let g:dracula_undercurl = 1
 let g:dracula_inverse = 0
 
-colorscheme seashell
+colorscheme ayu
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
@@ -183,13 +183,19 @@ hi Todo gui=bold cterm=bold
 hi TabLine guifg=foreground guibg=242 gui=NONE
 hi TabLineSel guibg=#100e23 guifg=foreground gui=NONE
 hi TabLineFill guibg=255 guifg=foreground cterm=NONE gui=NONE
+hi LineNr guibg=background
 hi DiffAdd  guibg=background
 hi DiffChange  guibg=background
 hi DiffDelete  guibg=background
+hi SignifySignAdd guibg=background
+hi SignifySignChange guibg=background
+hi SignifySignDelete guibg=background
 hi SpecialKey guifg=#ffffff guibg=#116611
 hi StatusLine guibg=255 guifg=foreground
-hi SignColumn guibg=background
-" hi Normal guibg=#1e1f29 guifg=#bbc5ff  " for dracula
+hi SignColumn guibg=background guifg=#2d3640
+hi FoldColumn guibg=background guifg=foreground
+" hybrid's background
+hi Normal guibg=#0a0e14
 
 
 if exists("g:loaded_webdevicons")
