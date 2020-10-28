@@ -15,11 +15,13 @@ let g:coc_global_extensions = [
 			\ 'coc-lua',
 			\ 'coc-tsserver',
 			\ 'coc-java',
+			\ 'coc-marketplace',
 			\ ]
 
+			"\ 'coc-terminal'
+			"\ 'coc-explorer'
 			"\ 'coc-clangd',
 			"\ 'coc-vimlsp',
-			"\ 'coc-explorer',
 			"\ 'coc-jedi',
 			"\ 'coc-pairs',
 			"\ 'coc-emoji',
@@ -148,6 +150,9 @@ let g:coc_explorer_global_presets = {
 nnoremap ,e :CocCommand explorer<CR>
 nnoremap ,Ef :CocCommand explorer --preset floatingRightside<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+" coc-terminal
+nnoremap <leader>te  <Plug>(coc-terminal-toggle)
 
 " some auto-completion settings for <c-space>, <c-n> and <c-p>
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
