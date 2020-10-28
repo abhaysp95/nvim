@@ -27,40 +27,32 @@ Plug 'tpope/vim-surround'
 
 " Theme / Interface
 Plug 'luochen1990/rainbow'
-Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 Plug 'sainnhe/gruvbox-material'
-Plug 'gruvbox-community/gruvbox'
-Plug 'coolabhays/nord-vim'
-Plug 'w0ng/vim-hybrid'
 Plug 'arzg/vim-colors-xcode'
 Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'whatyouhide/vim-gotham'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'patstockwell/vim-monokai-tasty'
-Plug 'coolabhays/molokai'
-Plug 'coolabhays/molokayo'
 Plug 'sainnhe/sonokai'
 Plug 'tomasiser/vim-code-dark'
 Plug 'srcery-colors/srcery-vim'
-Plug 'jacoborus/tender.vim'
 Plug 'haishanh/night-owl.vim'
-Plug 'AlessandroYorba/Alduin'
 Plug 'dracula/vim', {'as': 'dracula'}
-Plug 'AlessandroYorba/Sierra'
-Plug 'joshdick/onedark.vim'
 Plug 'herrbischoff/cobalt2.vim'
 Plug 'Rigellute/shades-of-purple.vim'
-Plug 'rakr/vim-one'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'cormacrelf/vim-colors-github'
 Plug 'chuling/ci_dark'
 Plug 'chuling/equinusocio-material.vim'
 Plug 'fxn/vim-monochrome'
 Plug 'ajh17/Spacegray.vim'
+Plug 'Badacadabra/vim-archery'
+Plug 'embark-theme/vim'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'chriskempson/base16-vim'
+Plug 'pbrisbin/vim-colors-off'
+Plug 'drewtempelmeyer/palenight.vim'
 
 " No distractions
 " Plug 'junegunn/limelight.vim'
-" Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim'
 
 " Bullets
 "Plug 'dkarter/bullets.vim'
@@ -108,11 +100,15 @@ Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
+"autocmd VimEnter *
+			"\ if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+			"\ | PlugInstall | q
+			"\ | endif
+
 
 
 " Plug 'junegunn/rainbow_parentheses.vim'
 " Plug 'ayu-theme/ayu-vim'
-" Plug 'Badacadabra/vim-archery'
 " Plug 'bagrat/vim-buffet'
 " Plug 'chriskempson/base16-vim'
 " Plug 'danilo-augusto/vim-afterglow'
@@ -140,13 +136,26 @@ call plug#end()
 " Plug 'artanikin/vim-synthwave84'
 " Plug 'ntk148v/vim-horizon'
 " Plug 'sainnhe/forest-night'
-" Plug 'cocopon/iceberg.vim'
 " Plug 'sainnhe/edge'
 " Plug 'lisposter/vim-blackboard'
 " Plug 'huyvohcmc/atlas.vim'
 " Plug 'safv12/andromeda.vim'
-" Plug 'drewtempelmeyer/palenight.vim'
 " Plug 'nightsense/snow'
+" Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+" Plug 'gruvbox-community/gruvbox'
+" Plug 'coolabhays/nord-vim'
+" Plug 'w0ng/vim-hybrid'
+" Plug 'whatyouhide/vim-gotham'
+" Plug 'coolabhays/molokai'
+" Plug 'coolabhays/molokayo'
+" Plug 'jacoborus/tender.vim'
+" Plug 'AlessandroYorba/Alduin'
+" Plug 'AlessandroYorba/Sierra'
+" Plug 'joshdick/onedark.vim'
+" Plug 'rakr/vim-one'
+" Plug 'NLKNguyen/papercolor-theme'
+" Plug 'cormacrelf/vim-colors-github'
+" Plug 'cocopon/iceberg.vim'
 
 " Plug 'metakirby5/codi.vim'
 " Plug 'takac/vim-hardtime'
