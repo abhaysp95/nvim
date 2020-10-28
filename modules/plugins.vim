@@ -100,10 +100,10 @@ Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
-"autocmd VimEnter *
-			"\ if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
-			"\ | PlugInstall | q
-			"\ | endif
+autocmd VimEnter *
+			\ if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+			\ | PlugInstall | q
+			\ | endif
 
 
 
