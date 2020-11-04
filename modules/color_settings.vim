@@ -194,8 +194,22 @@ hi SpecialKey guifg=#ffffff guibg=#116611
 hi StatusLine guibg=255 guifg=foreground
 hi SignColumn guibg=background guifg=#2d3640
 hi FoldColumn guibg=background guifg=foreground
-" hybrid's background
+hi StatusLine guibg=background gui=NONE
+hi Comment gui=NONE
+
+" palenight's background
+" hi Normal guibg=#0d162c
+" hi Normal guibg=#070f22
+
+" ayu-dark
 hi Normal guibg=#0a0e14
+
+
+" off
+" hi Normal guibg=#080808
+
+" gruvbox-dark-custom
+" hi Normal guibg=#10151a
 
 
 if exists("g:loaded_webdevicons")
