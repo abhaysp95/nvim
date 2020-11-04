@@ -16,10 +16,10 @@ let g:coc_global_extensions = [
 			\ 'coc-tsserver',
 			\ 'coc-java',
 			\ 'coc-marketplace',
+			\ 'coc-explorer'
 			\ ]
 
 			"\ 'coc-terminal'
-			"\ 'coc-explorer'
 			"\ 'coc-clangd',
 			"\ 'coc-vimlsp',
 			"\ 'coc-jedi',
@@ -91,6 +91,17 @@ nnoremap <silent> ,,j  :<C-u>CocNext<CR>
 nnoremap <silent> ,,k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> ,,p  :<C-u>CocListResume<CR>
+
+" Map function and class text objects
+" NOTE: Requires ‘textDocument.documentSymbol’ support from the language server.
+xmap ,if <Plug>(coc-funcobj-i)
+omap ,if <Plug>(coc-funcobj-i)
+xmap ,af <Plug>(coc-funcobj-a)
+omap ,af <Plug>(coc-funcobj-a)
+xmap ,ic <Plug>(coc-classobj-i)
+omap ,ic <Plug>(coc-classobj-i)
+xmap ,ac <Plug>(coc-classobj-a)
+omap ,ac <Plug>(coc-classobj-a)
 
 " rest coc settings and functions
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
