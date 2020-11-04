@@ -63,6 +63,16 @@ let g:ale_python_auto_pipenv = 1
 nnoremap <localleader>ae :ALEEnable<CR>
 nnoremap <localleader>aa :ALEToggle<CR>
 
+" setup compilers for languages
+let g:ale_linters = {
+			\ 'java': ['javac'],
+			\ 'python': ['pylint'],
+			\ 'go': ['dlv'],
+			\ 'c': ['gdb'],
+			\ 'cpp': ['gdb'],
+			\ 'sh': ['bash']
+			\ }
+
 " ---- vim-lion -----"
 let g:lion_squeeze_spaces = 1
 
@@ -148,6 +158,15 @@ let g:tmux_navigator_save_on_switch = 2  " 1 => :update, 2 => :wall
 
 " disable tmux navigator when zooming the vim pane
 let g:tmux_navigator_disable_when_zoomed = 1
+
+
+""""""""""""""""""""
+"   fatih/vim-go   "
+""""""""""""""""""""
+let g:go_fmt_command = "gofmt"  " try, gofmt and gopls
+let g:go_auto_type_info = 0
+let g:go_def_mapping_enabled = 0
+let g:go_fmt_fail_silently = 1
 
 
 """""""""""""""""""""""""""

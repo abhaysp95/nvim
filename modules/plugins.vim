@@ -1,10 +1,8 @@
 "-------All-the-plugins-for-vim-and-nvim----------------------
 call plug#begin()
 " syntax and error detection
-Plug 'dense-analysis/ale', { 'on': 'ALEEnable' }
-
-" completion
-" Plug 'vim-scripts/AutoComplPop'
+Plug 'dense-analysis/ale'
+" , { 'on': 'ALEEnable' }
 
 " intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -15,6 +13,9 @@ Plug 'honza/vim-snippets'
 
 " for html
 Plug 'mattn/emmet-vim'
+
+" for go
+Plug 'fatih/vim-go'
 
 " better repitition
 Plug 'tpope/vim-repeat'
@@ -32,30 +33,18 @@ Plug 'arzg/vim-colors-xcode'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'patstockwell/vim-monokai-tasty'
-Plug 'sainnhe/sonokai'
-Plug 'tomasiser/vim-code-dark'
-Plug 'srcery-colors/srcery-vim'
-Plug 'haishanh/night-owl.vim'
-Plug 'dracula/vim', {'as': 'dracula'}
-Plug 'herrbischoff/cobalt2.vim'
 Plug 'Rigellute/shades-of-purple.vim'
-Plug 'chuling/ci_dark'
-Plug 'chuling/equinusocio-material.vim'
-Plug 'fxn/vim-monochrome'
-Plug 'ajh17/Spacegray.vim'
-Plug 'Badacadabra/vim-archery'
 Plug 'embark-theme/vim'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'chriskempson/base16-vim'
 Plug 'pbrisbin/vim-colors-off'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'safv12/andromeda.vim'
+Plug 'ntk148v/vim-horizon'
+Plug 'chuling/equinusocio-material.vim'
 
-" No distractions
-" Plug 'junegunn/limelight.vim'
-Plug 'junegunn/goyo.vim'
-
-" Bullets
-"Plug 'dkarter/bullets.vim'
+" icons
+Plug 'ryanoasis/vim-devicons'
 
 " code commenter
 Plug 'scrooloose/nerdcommenter'
@@ -100,10 +89,10 @@ Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
-autocmd VimEnter *
-			\ if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
-			\ | PlugInstall | q
-			\ | endif
+"autocmd VimEnter *
+			"\ if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+			"\ | PlugInstall | q
+			"\ | endif
 
 
 
@@ -119,7 +108,6 @@ autocmd VimEnter *
 " Plug 'mhartington/oceanic-next'
 " Plug 'nanotech/jellybeans.vim'
 " Plug 'owickstrom/vim-colors-paramount'
-" Plug 'ryanoasis/vim-devicons'
 " Plug 'sickill/vim-monokai'
 " Plug 'sjl/badwolf'
 " Plug 'jaredgorski/fogbell.vim'
@@ -134,12 +122,10 @@ autocmd VimEnter *
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'reedes/vim-colors-pencil'
 " Plug 'artanikin/vim-synthwave84'
-" Plug 'ntk148v/vim-horizon'
 " Plug 'sainnhe/forest-night'
 " Plug 'sainnhe/edge'
 " Plug 'lisposter/vim-blackboard'
 " Plug 'huyvohcmc/atlas.vim'
-" Plug 'safv12/andromeda.vim'
 " Plug 'nightsense/snow'
 " Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 " Plug 'gruvbox-community/gruvbox'
@@ -156,6 +142,16 @@ autocmd VimEnter *
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'cormacrelf/vim-colors-github'
 " Plug 'cocopon/iceberg.vim'
+" Plug 'sainnhe/sonokai'
+" Plug 'tomasiser/vim-code-dark'
+" Plug 'srcery-colors/srcery-vim'
+" Plug 'haishanh/night-owl.vim'
+" Plug 'dracula/vim', {'as': 'dracula'}
+" Plug 'herrbischoff/cobalt2.vim'
+" Plug 'chuling/ci_dark'
+" Plug 'fxn/vim-monochrome'
+" Plug 'ajh17/Spacegray.vim'
+" Plug 'Badacadabra/vim-archery'
 
 " Plug 'metakirby5/codi.vim'
 " Plug 'takac/vim-hardtime'
@@ -163,5 +159,16 @@ autocmd VimEnter *
 " show undo history in tree
 " Plug 'mbbill/undotree'
 
+" completion
+" Plug 'vim-scripts/AutoComplPop'
+
 " live results
 " Plug 'jpalardy/vim-slime'
+
+" No distractions
+" Plug 'junegunn/limelight.vim'
+" Plug 'junegunn/goyo.vim'
+
+" Bullets
+"Plug 'dkarter/bullets.vim'
+

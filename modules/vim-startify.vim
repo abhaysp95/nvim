@@ -42,9 +42,9 @@ let g:startify_session_persistence = 1
 
 let g:webdevicons_enable_startify = 1
 
-"function! StartifyEntryFormat() abort
-	"return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-"endfunction
+function! StartifyEntryFormat() abort
+	return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
 
 function! s:gitModified()
     let files = systemlist('git ls-files -m 2>/dev/null')

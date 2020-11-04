@@ -126,8 +126,10 @@ nnoremap cln :lnext<CR>
 nnoremap clp :lprevious<CR>
 nnoremap clc :lclose<CR>
 nnoremap clo :lopen<CR>
-" nnoremap <C-n> :cnext<CR>
-" nnoremap <C-p> :cprev<CR>
+nnoremap ccn :cnext<CR>
+nnoremap ccp :cprev<CR>
+nnoremap ccc :cclose<CR>
+nnoremap cco :copen<CR>
 "
 
 " different trees

@@ -4,6 +4,11 @@ set runtimepath+=/home/raytracer/.config/nvim/colors
 " Some basics:
 syntax on
 
+" cursor
+let &t_SI.="\e[6 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_EI.="\e[2 q" "EI = NORMAL mode (ELSE)
+
 set binary " allows editing of binary files
 
 set tabstop=4
@@ -154,7 +159,8 @@ set showtabline=0
 "autocmd WinEnter *.* silent! loadview
 
 " fold settings <<<
-set foldcolumn=1  " currently no foldcolumn
+set foldcolumn=1
+set nofoldenable
 set foldlevel=1
 set foldlevelstart=1
 set foldnestmax=3

@@ -161,7 +161,7 @@ function! ToggleHiddenAll()
 	endif
 endfunction
 call Current_Statusline()
-call ToggleHiddenAll()
+" call ToggleHiddenAll()
 nnoremap <localleader>tb :call ToggleHiddenAll()<CR>
 
 hi User1 ctermfg=007 ctermbg=239 guibg=#4e4e4e guifg=#adadad
