@@ -20,15 +20,33 @@
 					"directory": "/tmp/ccls"
 				}
 			}
+		},
+		"golang": {
+			"command": "gopls",
+			"filetypes": [
+				"go"
+			],
+			"rootPatterns": [
+				"go.mod",
+				".vim/",
+				".git/"
+			]
 		}
 	},
 
+
+
 	"coc.preferences.formatOnSaveFiletypes": [
 	],
+
+
+
 	// "markdown",
 
 	// current function update automatically
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
+	"coc.preferences.snippets.enable": true,
+	"coc.preferences.hoverTarget": "echo",
 
 	// "python"
 
@@ -38,10 +56,17 @@
 	"diagnostic.infoSign": "",
 	"diagnostic.hintSign": "➤ ",
 	"diagnostic.displayByAle": true,
+	"diagnostic.messageTarget": "echo",
+	"diagnostic.virtualTextCurrentLineOnly": true,
 
+	"suggest.triggerAfterInsertEnter":true,
+	"suggest.minTriggerInputLength": 2,
 	"suggest.noselect": true,
 	"codeLens.enable": true,
 	"suggest.preferCompleteThanJumpPlaceholder": true,
+	"suggest.snippetIndicator": " ►",
+	"suggest.floatEnable": false,
+	"signature.target": "echo",
 
 	// html
 	"html.suggest.ionic": false,
@@ -62,6 +87,10 @@
 	"python.formatting.blackPath": "~/.local/bin/black",
 	"python.linting.mypyEnabled": true,
 	"python.formatting.provider": "black",
+
+	// java config
+	"java.home": "/usr/lib/jvm/java-11-openjdk/",
+	"java.errors.incompleteClasspath.severity": "ignore",
 
 	// explorer
 	"explorer.width": 30,
