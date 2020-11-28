@@ -1,8 +1,9 @@
 " All the vim/nvim settings
-set runtimepath+=/home/raytracer/.config/nvim/colors
+set runtimepath+=/home/raytracer/.config/nvim
 
 " Some basics:
 syntax on
+filetype plugin on
 
 " cursor
 let &t_SI.="\e[6 q" "SI = INSERT mode
@@ -21,8 +22,9 @@ set noexpandtab "if switched on means it will insert spaces to length of tab
 set autoindent
 set smartindent
 
+" check NonText and SpecialKey highlight group to change colors for different lcs
 set list  " show whitespaces
-set listchars=tab:\│\ ,nbsp:⦸,extends:»,precedes:«,trail:•,eol:¬
+set listchars=tab:\│·\ ,nbsp:⦸,extends:»,precedes:«,trail:•,eol:¬
 " ,space:⋅  " not necessary
 "set listchars=nbsp:␣
 "set listchars+=tab:\\
@@ -351,6 +353,7 @@ augroup omnifuncs
 	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 	autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 	autocmd FileType c setlocal omnifunc=ccomplete#Complete
+	autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 augroup endif
 
 
@@ -372,7 +375,6 @@ autocmd FileType html,c,python,js,config,sh set number relativenumber
 autocmd FileType c,cpp,java set mps+==:;
 autocmd FileType python,ruby set expandtab softtabstop=4 shiftwidth=4 tabstop=4
 autocmd FileType yaml set expandtab softtabstop=2 shiftwidth=2 tabstop=2
-filetype plugin on
 autocmd VimEnter FileType markdown,txt set textwidth=0
 autocmd Filetype * setlocal formatoptions+=n
 autocmd FileType vim set foldmethod=marker foldmarker=<<<,>>> foldlevel=0

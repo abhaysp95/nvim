@@ -68,9 +68,11 @@ let g:ale_linters = {
 			\ 'java': ['javac'],
 			\ 'python': ['pylint'],
 			\ 'go': ['dlv'],
-			\ 'c': ['gdb'],
-			\ 'cpp': ['gdb'],
-			\ 'sh': ['bash']
+			\ 'c': ['ccls'],
+			\ 'cpp': ['ccls'],
+			\ 'sh': ['bash'],
+			\ 'ruby': ['rubocop'],
+			\ 'javascript': ['eslint']
 			\ }
 
 " ---- vim-lion -----"
@@ -125,11 +127,12 @@ let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}'], ['<', '>']]
 " Yggdroot/indentline
 """""""""""""""""""""""""""
 
-let g:indentLine_color_term = 239
+let g:indentLine_color_term = 238
+let g:indentLine_color_gui = '#a599e9'
 let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar = ' '
-let g:indentLine_char = '|'
-let g:indentLine_first_char = '|'
+let g:indentLine_leadingSpaceChar = '·'
+let g:indentLine_char = '│'
+let g:indentLine_first_char = '│' " ┃
 let g:indentLine_concealcursor = 'cv'
 let g:indentLine_conceallevel = 2
 let g:indentLine_bufTypeExclude = [ "help", "quickfix", "terminal", "prompt", "nofile" ]
@@ -167,6 +170,14 @@ let g:go_fmt_command = "gofmt"  " try, gofmt and gopls
 let g:go_auto_type_info = 0
 let g:go_def_mapping_enabled = 0
 let g:go_fmt_fail_silently = 1
+
+
+"""""""""""""""""""""""""
+"   szw/vim-maximizer   "
+"""""""""""""""""""""""""
+let g:maximizer_set_default_mapping = 0
+let g:maximizer_set_mapping_with_bang = 1
+nnoremap <leader>zm :MaximizerToggle!<cr>
 
 
 """""""""""""""""""""""""""

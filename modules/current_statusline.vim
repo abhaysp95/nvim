@@ -140,7 +140,7 @@ function! Current_Statusline()
 	set statusline+=%0*\%<%f                 " file path
 	set statusline+=%0*\ TL:%L                     " total line count
 	set statusline+=%0*\ %-3(%{FileSize()}%) " File size
-	"set statusline+=%0*\ %{LinterStatus()}      " ale linting
+	set statusline+=%0*\ %{LinterStatus()}      " ale linting
 	set statusline+=%0*\ %{StatusDiagnostic()}  " coc-diagnostic
 endfunction
 

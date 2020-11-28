@@ -7,6 +7,8 @@ let g:coc_global_extensions = [
 			\ 'coc-syntax',
 			\ 'coc-ultisnips',
 			\ 'coc-yank',
+			\ 'coc-marketplace',
+			\ 'coc-explorer',
 			\ 'coc-eslint',
 			\ 'coc-sh',
 			\ 'coc-json',
@@ -15,8 +17,7 @@ let g:coc_global_extensions = [
 			\ 'coc-lua',
 			\ 'coc-tsserver',
 			\ 'coc-java',
-			\ 'coc-marketplace',
-			\ 'coc-explorer'
+			\ 'coc-solargraph'
 			\ ]
 
 			"\ 'coc-terminal'

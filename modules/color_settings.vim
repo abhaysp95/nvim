@@ -1,5 +1,3 @@
-set t_Co=256
-
 " Set Proper Tabs
 if exists('+termguicolors')
 	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -158,7 +156,7 @@ let g:PaperColor_allow_bold = 1
 let g:PaperColor_allow_italic = 1
 
 " cormacrelf/vim-colors-github "
-let g:github_colors_soft = 1
+let g:github_colors_soft = 0
 let g:github_colors_extra_functions = 1
 
 " chuling/equinusocio_material "
@@ -174,7 +172,8 @@ let g:dracula_underline = 1
 let g:dracula_undercurl = 1
 let g:dracula_inverse = 0
 
-colorscheme ayu
+
+colorscheme iceberg
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
@@ -190,26 +189,37 @@ hi DiffDelete  guibg=background
 hi SignifySignAdd guibg=background
 hi SignifySignChange guibg=background
 hi SignifySignDelete guibg=background
-hi SpecialKey guifg=#ffffff guibg=#116611
-hi StatusLine guibg=255 guifg=foreground
+" hi SpecialKey guifg=#ffffff guibg=#116611
+" hi NonText guifg=#0d931b
+hi StatusLine guibg=background guifg=foreground
+hi StatusLineNC guifg=background guibg=#6b7089
 hi SignColumn guibg=background guifg=#2d3640
 hi FoldColumn guibg=background guifg=foreground
 hi StatusLine guibg=background gui=NONE
-hi Comment gui=NONE
+hi VertSplit guifg=foreground guibg=background
+hi Cursor guibg=foreground guifg=background
+" hi Comment gui=NONE
 
 " palenight's background
 " hi Normal guibg=#0d162c
 " hi Normal guibg=#070f22
 
 " ayu-dark
-hi Normal guibg=#0a0e14
-
+" hi Normal guibg=#0a0e14
 
 " off
 " hi Normal guibg=#080808
 
 " gruvbox-dark-custom
 " hi Normal guibg=#10151a
+
+" onedark/nord
+" hi Normal guibg=#2c303c
+" hi Normal guibg=#21242f
+" hi Normal guibg=#222431
+" hi Normal guibg=#24242E
+
+" hi Normal guibg=#050505
 
 
 if exists("g:loaded_webdevicons")

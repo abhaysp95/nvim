@@ -27,21 +27,23 @@ Plug 'cohama/lexima.vim'
 Plug 'tpope/vim-surround'
 
 " Theme / Interface
-Plug 'luochen1990/rainbow'
-Plug 'sainnhe/gruvbox-material'
-Plug 'arzg/vim-colors-xcode'
-Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'ghifarit53/tokyonight-vim'
-Plug 'patstockwell/vim-monokai-tasty'
-Plug 'Rigellute/shades-of-purple.vim'
-Plug 'embark-theme/vim'
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'chriskempson/base16-vim'
-Plug 'pbrisbin/vim-colors-off'
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'safv12/andromeda.vim'
-Plug 'ntk148v/vim-horizon'
-Plug 'chuling/equinusocio-material.vim'
+"Plug 'luochen1990/rainbow'
+"Plug 'sainnhe/gruvbox-material'
+"Plug 'arzg/vim-colors-xcode'
+"Plug 'bluz71/vim-nightfly-guicolors'
+"Plug 'ghifarit53/tokyonight-vim'
+Plug 'cocopon/iceberg.vim'
+"Plug 'patstockwell/vim-monokai-tasty'
+"Plug 'Rigellute/shades-of-purple.vim'
+"Plug 'embark-theme/vim'
+"Plug 'rafi/awesome-vim-colorschemes'
+"Plug 'chriskempson/base16-vim'
+"Plug 'pbrisbin/vim-colors-off'
+"Plug 'drewtempelmeyer/palenight.vim'
+"Plug 'safv12/andromeda.vim'
+"Plug 'ntk148v/vim-horizon'
+"Plug 'chuling/equinusocio-material.vim'
+"Plug 'flazz/vim-colorschemes'
 
 " icons
 Plug 'ryanoasis/vim-devicons'
@@ -86,6 +88,9 @@ Plug 'junegunn/fzf.vim'
 
 " vim-tmux navigator
 Plug 'christoomey/vim-tmux-navigator'
+
+" maximaization/restoration
+Plug 'szw/vim-maximizer'
 
 call plug#end()
 
