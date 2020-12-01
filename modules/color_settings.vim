@@ -158,6 +158,7 @@ let g:PaperColor_allow_italic = 1
 " cormacrelf/vim-colors-github "
 let g:github_colors_soft = 0
 let g:github_colors_extra_functions = 1
+let g:github_colors_block_diffmark = 1
 
 " chuling/equinusocio_material "
 let g:equinusocio_material_style = 'darker'
@@ -173,7 +174,7 @@ let g:dracula_undercurl = 1
 let g:dracula_inverse = 0
 
 
-colorscheme iceberg
+colorscheme nord
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
