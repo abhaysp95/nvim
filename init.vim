@@ -14,6 +14,9 @@ let maplocalleader = "\\"
 
 if has('win32')
 	source C:\Users\raytracer\_vimrc
+elseif exists("g:vscode")
+	source $HOME/.config/nvim/modules/settings.vim
+	source $HOME/.config/nvim/modules/keybindings.vim
 else
 	source $HOME/.config/nvim/modules/plugins.vim
 	source $HOME/.config/nvim/modules/plugin_settings.vim
@@ -24,7 +27,6 @@ else
 	source $HOME/.config/nvim/modules/current_statusline.vim
 	source $HOME/.config/nvim/modules/vim-startify.vim
 	source $HOME/.config/nvim/modules/color_settings.vim
-	luafile ~/.config/nvim/modules/plug-colorizer.lua
 
 	augroup autosourcing
 		autocmd!
