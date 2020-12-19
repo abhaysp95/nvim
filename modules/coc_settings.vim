@@ -17,7 +17,9 @@ let g:coc_global_extensions = [
 			\ 'coc-lua',
 			\ 'coc-tsserver',
 			\ 'coc-java',
-			\ 'coc-solargraph'
+			\ 'coc-solargraph',
+			\ 'coc-emoji',
+			\ 'coc-css'
 			\ ]
 
 			"\ 'coc-terminal'
@@ -25,14 +27,12 @@ let g:coc_global_extensions = [
 			"\ 'coc-vimlsp',
 			"\ 'coc-jedi',
 			"\ 'coc-pairs',
-			"\ 'coc-emoji',
 			"\ 'coc-pyls',
 			"\ 'coc-phpls',
 			"\ 'coc-prettier',
 			"\ 'coc-markmap',
 			"\ 'coc-html',
 			"\ 'coc-lua',
-			"\ 'coc-css',
 
 " some coc related key-bindings
 " Remap for format selected region
