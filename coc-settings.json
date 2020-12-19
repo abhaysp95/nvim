@@ -46,9 +46,7 @@
 	// current function update automatically
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
 	"coc.preferences.snippets.enable": true,
-	"coc.preferences.hoverTarget": "echo",
-
-	// "python"
+	"coc.preferences.hoverTarget": "float",
 
 	//diagnostics
 	"diagnostic.errorSign": "✗",
@@ -80,17 +78,26 @@
 	"snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snippets"],
 
 	// python config
+	"python.pythonPath": "python",
+	"python.venvPath": "",
 	"python.linting.enabled": true,
 	"python.jediEnabled": false,
 	// "python.jediPath": "/usr/lib/python3.8/site-packages",
 	"python.linting.pylintEnabled": true,
+	"python.formatting.provider": "black",
 	"python.formatting.blackPath": "~/.local/bin/black",
 	"python.linting.mypyEnabled": true,
-	"python.formatting.provider": "black",
 
 	// java config
+	"java.completion.enabled": true,
+	"java.referencesCodeLens.enabled": true,
+	"java.implementationsCodeLens.enabled": true,
 	"java.home": "/usr/lib/jvm/java-11-openjdk/",
 	"java.errors.incompleteClasspath.severity": "ignore",
+
+	// javascript
+	"javascript.referencesCodeLens.enable": true,
+	"javascript.suggest.completeFunctionCalls": true,
 
 	// explorer
 	"explorer.width": 30,
