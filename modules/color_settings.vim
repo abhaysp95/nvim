@@ -41,7 +41,7 @@ let g:gruvbox_italicize_strings='1'
 let g:gruvbox_improved_strings='0'
 let g:gruvbox_improved_warnings='1'
 "let g:gruvbox_contrast_light='hard'
-let g:gruvbox_contrast_dark='hard' " medium, soft
+let g:gruvbox_contrast_dark='medium' " hard, medium, soft
 let g:gruvbox_invert_indent_guides='1'
 let g:gruvbox_invert_selection='0'
 let g:gruvbox_invert_signs='0'
@@ -100,22 +100,34 @@ let g:deepspace_italics = 1
 " let g:neodark#backgroud = '#202020'
 let g:neodark#use_256color = 1
 
-" other colorschemes
+" drewtempelmeyer/palenight
 let g:palenight_terminal_italics=1
+
+" spacegray
 let g:spacegray_underline_search = 1
 let g:spacegray_italicize_comments = 1
 let g:spaceray_use_italics = 1
 let g:spacegray_low_contrast = 1
+
+" gotham-256
 let g:gotham_airline_empahsised_insert = 0
 
 " ayu-theme/ayu-vim "
-let ayucolor="dark"
+let ayucolor="mirage"
 
 " sonokai
 let g:sonokai_style = 'shusia'
 
 " edge
-let g:edge_style = 'neon'
+let g:edge_style = 'default' " default, aura, neon
+let g:edege_enable_italic = 1
+let g:edge_disable_italic_comment = 0
+let g:edge_cursor = 'green'
+let g:edge_transparent_background = 0
+let g:edge_menu_selection_background = 'green'
+let g:edge_diagnostic_line_highlight = 1
+let g:edge_current_word = 'grey background'
+let g:edge_better_performance = 1
 
 " tokyo-night colorscheme
 let g:tokyonight_style = 'night'  " night, storm
@@ -174,7 +186,7 @@ let g:dracula_undercurl = 1
 let g:dracula_inverse = 0
 
 
-colorscheme nord
+colorscheme edge
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
@@ -193,7 +205,7 @@ hi SignifySignDelete guibg=background
 " hi SpecialKey guifg=#ffffff guibg=#116611
 " hi NonText guifg=#0d931b
 hi StatusLine guibg=background guifg=foreground
-hi StatusLineNC guifg=background guibg=#6b7089
+hi StatusLineNC guibg=background guifg=#928374
 hi SignColumn guibg=background guifg=#2d3640
 hi FoldColumn guibg=background guifg=foreground
 hi StatusLine guibg=background gui=NONE
@@ -222,6 +234,8 @@ hi Cursor guibg=foreground guifg=background
 
 " hi Normal guibg=#050505
 
+" dracula
+" hi Normal guifg=#bbc5ff
 
 if exists("g:loaded_webdevicons")
 	call webdevicons#refresh()
