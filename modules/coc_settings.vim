@@ -39,6 +39,8 @@ let g:coc_global_extensions = [
 xmap <leader>v  <Plug>(coc-format-selected)
 nmap <leader>v  <Plug>(coc-format-selected)
 
+" Show all diagnostics
+nnoremap <silent> ,,a  :<C-u>CocList diagnostics<cr>
 " Use `lp` and `ln` for navigate diagnostics
 nmap <silent> <leader>lp <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>ln <Plug>(coc-diagnostic-next)
@@ -47,10 +49,10 @@ nmap <silent> <leader>ln <Plug>(coc-diagnostic-next)
 nmap <silent> <leader>ld <Plug>(coc-definiton)
 nmap <silent> <leader>lt <Plug>(coc-type-definiton)
 nmap <silent> <leader>li <Plug>(coc-implementation)
-nmap <silent> <leader>lf <Plug>(coc-references)
+nmap <silent> <leader>lr <Plug>(coc-references)
 
 " Remap for rename current word
-nmap <leader>lr <Plug>(coc-rename)
+nmap <leader>lR <Plug>(coc-rename)
 
 " Use K for show documentation in preview window
 nnoremap <silent> <leader>K :call <SID>show_documentation()<CR>
@@ -73,9 +75,6 @@ nmap <silent> <C-c> <Plug>(coc-range-select)
 xmap <silent> <C-c> <Plug>(coc-range-select)
 xmap <silent> <C-C> <Plug>(coc-range-select-backward)
 
-" Using CocList
-" Show all diagnostics
-nnoremap <silent> ,,a  :<C-u>CocList diagnostics<cr>
 " coc-action
 nnoremap <silent> ,,A :<C-u>CocAction<Cr>
 " Manage extensions
