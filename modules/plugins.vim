@@ -11,6 +11,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 " for html
 Plug 'mattn/emmet-vim'
 
@@ -35,13 +38,18 @@ Plug 'tpope/vim-surround'
 Plug 'cocopon/iceberg.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'cormacrelf/vim-colors-github'
+Plug 'gruvbox-community/gruvbox'
+Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'ayu-theme/ayu-vim'
+Plug 'sainnhe/edge'
+" Plug 'bluz71/vim-moonfly-colors'
 "Plug 'patstockwell/vim-monokai-tasty'
 "Plug 'Rigellute/shades-of-purple.vim'
 "Plug 'embark-theme/vim'
 "Plug 'rafi/awesome-vim-colorschemes'
-"Plug 'chriskempson/base16-vim'
+" Plug 'chriskempson/base16-vim'
 "Plug 'pbrisbin/vim-colors-off'
-"Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'safv12/andromeda.vim'
 "Plug 'ntk148v/vim-horizon'
 "Plug 'chuling/equinusocio-material.vim'
@@ -104,7 +112,6 @@ call plug#end()
 
 
 " Plug 'junegunn/rainbow_parentheses.vim'
-" Plug 'ayu-theme/ayu-vim'
 " Plug 'bagrat/vim-buffet'
 " Plug 'chriskempson/base16-vim'
 " Plug 'danilo-augusto/vim-afterglow'
@@ -124,17 +131,14 @@ call plug#end()
 " Plug 'romainl/Apprentice'
 " Plug 'lifepillar/vim-solarized8'
 " Plug 'jacoborus/tender.vim'
-" Plug 'bluz71/vim-moonfly-colors'
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'reedes/vim-colors-pencil'
 " Plug 'artanikin/vim-synthwave84'
 " Plug 'sainnhe/forest-night'
-" Plug 'sainnhe/edge'
 " Plug 'lisposter/vim-blackboard'
 " Plug 'huyvohcmc/atlas.vim'
 " Plug 'nightsense/snow'
 " Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
-" Plug 'gruvbox-community/gruvbox'
 " Plug 'coolabhays/nord-vim'
 " Plug 'w0ng/vim-hybrid'
 " Plug 'whatyouhide/vim-gotham'
@@ -152,7 +156,6 @@ call plug#end()
 " Plug 'tomasiser/vim-code-dark'
 " Plug 'srcery-colors/srcery-vim'
 " Plug 'haishanh/night-owl.vim'
-" Plug 'dracula/vim', {'as': 'dracula'}
 " Plug 'herrbischoff/cobalt2.vim'
 " Plug 'chuling/ci_dark'
 " Plug 'fxn/vim-monochrome'
