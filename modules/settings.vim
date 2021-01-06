@@ -379,6 +379,7 @@ autocmd VimEnter FileType markdown,txt set textwidth=0
 autocmd Filetype * setlocal formatoptions+=n
 autocmd FileType vim set foldmethod=marker foldmarker=<<<,>>> foldlevel=0
 autocmd FileType php set autoindent smartindent
+autocmd FileType hla set filetype=hla
 
 augroup noPipesStartify
 	if &buftype == "startify"
