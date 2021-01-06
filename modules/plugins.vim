@@ -7,6 +7,9 @@ Plug 'dense-analysis/ale'
 " intellisense
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" do cheating
+Plug 'dbeniamine/cheat.sh-vim'
+
 " snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'

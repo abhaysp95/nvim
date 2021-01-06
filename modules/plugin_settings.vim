@@ -204,3 +204,23 @@ nnoremap <leader>zm :MaximizerToggle!<cr>
 "let g:bullets_nested_checkboxes = 1
 "let g:bullets_checkbox_markers = ' .oOX'
 "let g:bullets_checkbox_partials_toggle = 1
+
+"""""""""""""""""""""""""""""""
+"   dbeniamine/cheat.sh-vim   "
+"""""""""""""""""""""""""""""""
+let g:CheatSheetReaderCmd = 'new"'
+let g:CheatSheetFt = 'markdown'
+let g:CheatSheetUrlGetter = 'curl --silent'
+let g:CheatSheetUrlGetterIdFlag = '-b'
+let g:CheatSheetBaseUrl = 'https://cht.sh'
+let g:CheatSheetUrlSettings = 'q'
+let g:CheatPager = 'less -R'
+let g:CheatSheetPagerStyle = 'rrt'
+let g:CheatSheetShowCommentsByDefault = 1
+let g:CheatSheetStayInOrigBuf = 1
+let g:CheatSheetBufferName = "_cheat"
+let g:CheatSheetDefaultSelection = "line"
+let g:CheatSheetDefaultMode = 0
+let g:CheatSheetIdPath = expand('~/.cht.sh/id')
+let g:CheatSheetSilent = 0
+let g:CheatDoNotReplaceKeywordPrg = 1
