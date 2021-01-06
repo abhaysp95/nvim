@@ -119,7 +119,7 @@ let ayucolor="mirage"
 let g:sonokai_style = 'shusia'
 
 " edge
-let g:edge_style = 'aura' " default, aura, neon
+let g:edge_style = 'neon' " default, aura, neon
 let g:edge_enable_italic = 1
 let g:edge_disable_italic_comment = 0
 let g:edge_cursor = 'green'
@@ -168,7 +168,7 @@ let g:PaperColor_allow_bold = 1
 let g:PaperColor_allow_italic = 1
 
 " cormacrelf/vim-colors-github "
-let g:github_colors_soft = 0
+let g:github_colors_soft = 1
 let g:github_colors_extra_functions = 1
 let g:github_colors_block_diffmark = 1
 
@@ -186,7 +186,7 @@ let g:dracula_undercurl = 1
 let g:dracula_inverse = 0
 
 
-colorscheme edge
+colorscheme nord
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
@@ -229,8 +229,8 @@ hi Cursor guibg=foreground guifg=background
 " onedark/nord
 " hi Normal guibg=#2c303c
 " hi Normal guibg=#21242f
-" hi Normal guibg=#222431
 " hi Normal guibg=#24242E
+hi Normal guibg=#1e2430
 
 " hi Normal guibg=#050505
 
