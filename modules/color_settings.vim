@@ -51,6 +51,10 @@ let g:gruvbox_color_column='bg1'
 let g:gruvbox_sign_column='bg0'
 "let g:gruvbox_guisp_fallback='fg'
 
+" few other options for gruvbox8
+let g:gruvbox_filetype_hi_groups=1
+let g:gruvbox_plugin_hi_groups=1
+
 " nord colorscheme settings"
 let g:nord_cursor_line_number_background = 0
 let g:nord_uniform_status_line = 0
@@ -186,7 +190,7 @@ let g:dracula_undercurl = 1
 let g:dracula_inverse = 0
 
 
-colorscheme nord
+colorscheme ci_dark
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
@@ -230,7 +234,7 @@ hi Cursor guibg=foreground guifg=background
 " hi Normal guibg=#2c303c
 " hi Normal guibg=#21242f
 " hi Normal guibg=#24242E
-hi Normal guibg=#1e2430
+" hi Normal guibg=#1e2430
 
 " hi Normal guibg=#050505
 

@@ -34,18 +34,23 @@ Plug 'tpope/vim-surround'
 
 " Theme / Interface
 "Plug 'luochen1990/rainbow'
-"Plug 'sainnhe/gruvbox-material'
 "Plug 'arzg/vim-colors-xcode'
 "Plug 'bluz71/vim-nightfly-guicolors'
 "Plug 'ghifarit53/tokyonight-vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'cormacrelf/vim-colors-github'
-Plug 'gruvbox-community/gruvbox'
-Plug 'dracula/vim', {'as': 'dracula'}
-Plug 'drewtempelmeyer/palenight.vim'
+"Plug 'gruvbox-community/gruvbox'
+Plug 'lifepillar/vim-gruvbox8'
+"Plug 'sainnhe/gruvbox-material'
+" cascadia, 0.75 font width
+"Plug 'srcery-colors/srcery-vim'
+Plug 'chuling/ci_dark'  " sf mono
+"Plug 'dracula/vim', {'as': 'dracula'}
+"Plug 'drewtempelmeyer/palenight.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'sainnhe/edge'
+"Plug 'Badacadabra/vim-archery'
 " Plug 'bluz71/vim-moonfly-colors'
 "Plug 'patstockwell/vim-monokai-tasty'
 "Plug 'Rigellute/shades-of-purple.vim'
@@ -157,13 +162,10 @@ call plug#end()
 " Plug 'cocopon/iceberg.vim'
 " Plug 'sainnhe/sonokai'
 " Plug 'tomasiser/vim-code-dark'
-" Plug 'srcery-colors/srcery-vim'
 " Plug 'haishanh/night-owl.vim'
 " Plug 'herrbischoff/cobalt2.vim'
-" Plug 'chuling/ci_dark'
 " Plug 'fxn/vim-monochrome'
 " Plug 'ajh17/Spacegray.vim'
-" Plug 'Badacadabra/vim-archery'
 
 " Plug 'metakirby5/codi.vim'
 " Plug 'takac/vim-hardtime'
