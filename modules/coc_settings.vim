@@ -40,7 +40,7 @@ xmap <leader>v  <Plug>(coc-format-selected)
 nmap <leader>v  <Plug>(coc-format-selected)
 
 " Show all diagnostics
-nnoremap <silent> ,,a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>la  :<C-u>CocList diagnostics<cr>
 " Use `lp` and `ln` for navigate diagnostics
 nmap <silent> <leader>lp <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>ln <Plug>(coc-diagnostic-next)
