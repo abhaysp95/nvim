@@ -22,7 +22,11 @@ Here, are the main ones:
 
 All of the Colorschemes mentioned here are the 🏆
 
-### Challenger Deep(Currently Using)
+### Edge
+Using [edge](https://github.com/sainnhe/edge)(aura) as main colorscheme. This theme is kinda mixup of `atom one` and `material`. This one works very well in dark as well as light environment and provides good syntax highlighting.
+[edge-aura](./sshots/edge-aura.png)
+
+### Challenger Deep(Used for few days)
 Switched to new [Challenger Deep](https://github.com/challenger-deep-theme/vim) colorscheme
 This colorscheme is super 🔥
 ![Challenger-Deep](sshots/challenger_deep.png)
@@ -43,16 +47,48 @@ Using [material](https://github.com/kaicataldo/material.vim) colorscheme.
 
 ## StatusLine(Current)
 
-Using manually setup statusline. Inspired by statusline of [Ahmed El Gabri](https://gabri.me/blog/diy-vim-statusline). Here are the samples:
+Using manually setup statusline. Inspired by statusline of [Ahmed El Gabri](https://gabri.me/blog/diy-vim-statusline).
 
-**Sample1**:
-![statusline1](sshots/cur_statusline1.png)
+### Features
 
-**Sample2:**
+starting from left to right
+
+**Left Portion:**
+
+* Shows modifiable and non-modifiable state with `M` and `NM`
+* Shows buffer number as `[1]`
+* Shows git brach and git diff as `master[-4 ~4]`
+* Shows line no. and column number as `50:1`
+* Shows percentage of how much you scrolled in buffer as `34%`
+* Shows _ascii_ and _hex value_ for character under cursor as `9:0x9`
+
+**Right Portion:**
+
+* Shows filetype as `[cpp]`
+* Shows filename relative to path as `../../somepath/somefile.cpp`
+* Shows total lines used in buffer as `TL:147`
+* Shows file size opened in buffer as `4KB`
+* Shows code linting status with help of ale for warning and error as `!0 x19`
+* Shows code diagnosis status with help of coc-diagnostics as symbol in most right corner
+
+`Note: coc supports the option to choose to use linting with ale or to use coc for it`
+
+Here are few samples of my statusline(new to old):
+
+**Sample1:**
+This is my current statusline style. No added bling, no background color, only the stuff which is necessary
+![statusline1](./sshots/cur_statusline1.png)
+
+Below are some old sample of statusline
+
+**Sample2**:
 ![statusline2](sshots/cur_statusline2.png)
 
 **Sample3:**
 ![statusline3](sshots/cur_statusline3.png)
+
+**Sample4:**
+![statusline4](sshots/cur_statusline4.png)
 
 
 ## File Exploring
