@@ -224,3 +224,26 @@ let g:CheatSheetDefaultMode = 0
 let g:CheatSheetIdPath = expand('~/.cht.sh/id')
 let g:CheatSheetSilent = 0
 let g:CheatDoNotReplaceKeywordPrg = 1
+
+"""""""""""""""""""""""
+"   vimwiki/vimwiki   "
+"""""""""""""""""""""""
+let g:vimwiki_list = [{'path': '~/.cache/vimwiki',
+			\ 'syntax': 'markdown',
+			\ 'ext': '.md'}]
+let g:vimwiki_ext2syntax = {'.md': 'markdown',
+			\ '.markdown': 'markdown',
+			\ '.mdown': 'markdown'}
+" make vimwiki markdown links as [text](text.md) instead of [text](text)
+let g:vimwiki_markdown_link_ext = 1
+
+"""""""""""""""""""""""
+"   tbabej/taskwiki   "
+"""""""""""""""""""""""
+let g:taskwiki_markup_syntax = 'markdown'
+
+"""""""""""""""""""""""""""""
+"   voldikss/vim-floaterm   "
+"""""""""""""""""""""""""""""
+let g:floaterm_keymap_new = '<leader>tn'
+let g:floaterm_keymap_toggle = '<leader>tl'
