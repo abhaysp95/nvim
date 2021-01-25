@@ -24,7 +24,7 @@ All of the Colorschemes mentioned here are the 🏆
 
 ### Edge
 Using [edge](https://github.com/sainnhe/edge)(aura) as main colorscheme. This theme is kinda mixup of `atom one` and `material`. This one works very well in dark as well as light environment and provides good syntax highlighting.
-[edge-aura](./sshots/edge-aura.png)
+![edge-aura](./sshots/edge-aura.png)
 
 ### Challenger Deep(Used for few days)
 Switched to new [Challenger Deep](https://github.com/challenger-deep-theme/vim) colorscheme
@@ -76,7 +76,9 @@ starting from left to right
 Here are few samples of my statusline(new to old):
 
 **Sample1:**
+
 This is my current statusline style. No added bling, no background color, only the stuff which is necessary
+
 ![statusline1](./sshots/cur_statusline1.png)
 
 Below are some old sample of statusline
