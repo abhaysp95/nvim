@@ -32,36 +32,18 @@ Plug 'cohama/lexima.vim'
 " surround
 Plug 'tpope/vim-surround'
 
+" floaterm
+Plug 'voldikss/vim-floaterm'
+
 " Theme / Interface
-"Plug 'luochen1990/rainbow'
-"Plug 'arzg/vim-colors-xcode'
-"Plug 'bluz71/vim-nightfly-guicolors'
-"Plug 'ghifarit53/tokyonight-vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'cormacrelf/vim-colors-github'
-"Plug 'gruvbox-community/gruvbox'
 Plug 'lifepillar/vim-gruvbox8'
-"Plug 'sainnhe/gruvbox-material'
-" cascadia, 0.75 font width
-"Plug 'srcery-colors/srcery-vim'
-Plug 'chuling/ci_dark'  " sf mono
-"Plug 'dracula/vim', {'as': 'dracula'}
-"Plug 'drewtempelmeyer/palenight.vim'
+Plug 'chuling/ci_dark'
 Plug 'ayu-theme/ayu-vim'
 Plug 'sainnhe/edge'
-"Plug 'Badacadabra/vim-archery'
-" Plug 'bluz71/vim-moonfly-colors'
-"Plug 'patstockwell/vim-monokai-tasty'
-"Plug 'Rigellute/shades-of-purple.vim'
-"Plug 'embark-theme/vim'
-"Plug 'rafi/awesome-vim-colorschemes'
-" Plug 'chriskempson/base16-vim'
-"Plug 'pbrisbin/vim-colors-off'
-"Plug 'safv12/andromeda.vim'
-"Plug 'ntk148v/vim-horizon'
-"Plug 'chuling/equinusocio-material.vim'
-"Plug 'flazz/vim-colorschemes'
+
 
 " icons
 Plug 'ryanoasis/vim-devicons'
@@ -109,6 +91,11 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " maximaization/restoration
 Plug 'szw/vim-maximizer'
+
+" vimwiki/markdown
+"Plug 'vimwiki/vimwiki'
+"Plug 'tbabej/taskwiki'
+"Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
@@ -166,6 +153,27 @@ call plug#end()
 " Plug 'herrbischoff/cobalt2.vim'
 " Plug 'fxn/vim-monochrome'
 " Plug 'ajh17/Spacegray.vim'
+"Plug 'luochen1990/rainbow'
+"Plug 'arzg/vim-colors-xcode'
+"Plug 'bluz71/vim-nightfly-guicolors'
+"Plug 'ghifarit53/tokyonight-vim'
+"Plug 'gruvbox-community/gruvbox'
+"Plug 'sainnhe/gruvbox-material'
+"Plug 'srcery-colors/srcery-vim'
+"Plug 'dracula/vim', {'as': 'dracula'}
+"Plug 'drewtempelmeyer/palenight.vim'
+"Plug 'Badacadabra/vim-archery'
+"Plug 'bluz71/vim-moonfly-colors'
+"Plug 'patstockwell/vim-monokai-tasty'
+"Plug 'Rigellute/shades-of-purple.vim'
+"Plug 'embark-theme/vim'
+"Plug 'rafi/awesome-vim-colorschemes'
+"Plug 'chriskempson/base16-vim'
+"Plug 'pbrisbin/vim-colors-off'
+"Plug 'safv12/andromeda.vim'
+"Plug 'ntk148v/vim-horizon'
+"Plug 'chuling/equinusocio-material.vim'
+"Plug 'flazz/vim-colorschemes'
 
 " Plug 'metakirby5/codi.vim'
 " Plug 'takac/vim-hardtime'
@@ -185,4 +193,3 @@ call plug#end()
 
 " Bullets
 "Plug 'dkarter/bullets.vim'
-
