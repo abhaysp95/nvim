@@ -244,16 +244,16 @@ inoremap <M-a>t <C-R>=InsertTimeStamp()<CR>
 
 " yank path
 function! YankPath()
-   let l:Path      = expand('%:p')
-   let l:Directory = expand('%:p:h')
-   let l:File      = expand('%:p:t')
-   let l:Paths = ["quit", l:Path, l:Directory, l:File]
-   let l:i=0
-   let l:i = confirm("Yank Path","&path\n&directory\n&filename")
-   if l:i != 0
-      let @+=l:Paths[l:i]
-      let @"=l:Paths[l:i]
-   endif
+	let l:Path      = expand('%:p')
+	let l:Directory = expand('%:p:h')
+	let l:File      = expand('%:p:t')
+	let l:Paths = ["quit", l:Path, l:Directory, l:File]
+	let l:i=0
+	let l:i = confirm("Yank Path","&path\n&directory\n&filename")
+	if l:i != 0
+		let @+=l:Paths[l:i]
+		let @"=l:Paths[l:i]
+	endif
 endfunction
 nnoremap <localleader>Y :call YankPath()<CR>
 
