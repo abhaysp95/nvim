@@ -146,7 +146,8 @@ set updatetime=300
 " shortmess settings
 set shortmess+=IOTWacot
 " always show signcolums
-set signcolumn=auto
+"set signcolumn=auto
+set signcolumn=number
 
 " searches down into subfolders
 " provides tab-completion for all file-related tasks
