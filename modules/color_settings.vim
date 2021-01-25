@@ -190,7 +190,7 @@ let g:dracula_undercurl = 1
 let g:dracula_inverse = 0
 
 
-colorscheme ci_dark
+colorscheme edge
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
