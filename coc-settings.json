@@ -47,6 +47,7 @@
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
 	"coc.preferences.snippets.enable": true,
 	"coc.preferences.hoverTarget": "float",
+	"coc.preferences.useQuickfixForLocations": true,
 
 	//diagnostics
 	"diagnostic.errorSign": "✗",

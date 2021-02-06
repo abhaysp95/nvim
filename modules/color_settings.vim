@@ -189,8 +189,10 @@ let g:dracula_underline = 1
 let g:dracula_undercurl = 1
 let g:dracula_inverse = 0
 
+" tomasiser/vim-code-dark "
+let g:codedark_conservative = 0
 
-colorscheme edge
+colorscheme codedark
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
@@ -208,8 +210,8 @@ hi SignifySignChange guibg=background
 hi SignifySignDelete guibg=background
 " hi SpecialKey guifg=#ffffff guibg=#116611
 " hi NonText guifg=#0d931b
-hi StatusLine guibg=background guifg=foreground
-hi StatusLineNC guibg=background guifg=#928374
+"hi StatusLine guibg=background guifg=foreground
+"hi StatusLineNC guibg=background guifg=#928374
 hi SignColumn guibg=background guifg=#2d3640
 hi FoldColumn guibg=background guifg=foreground
 hi StatusLine guibg=background gui=NONE
