@@ -8,7 +8,7 @@ Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " do cheating
-Plug 'dbeniamine/cheat.sh-vim'
+" Plug 'dbeniamine/cheat.sh-vim'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -43,14 +43,15 @@ Plug 'lifepillar/vim-gruvbox8'
 Plug 'chuling/ci_dark'
 Plug 'ayu-theme/ayu-vim'
 Plug 'sainnhe/edge'
-"Plug 'rakr/vim-one'
+Plug 'rakr/vim-one'
+Plug 'tomasiser/vim-code-dark'
+
 "Plug 'NLKNguyen/papercolor-theme'
 "Plug 'dikiaap/minimalist'
 "Plug 'nanotech/jellybeans.vim'
 "Plug 'KabbAmine/yowish.vim'
 "Plug 'sindresorhus/focus', {'rtp': 'vim'}
 "Plug 'kadekillary/skull-vim'
-Plug 'tomasiser/vim-code-dark'
 
 
 " icons

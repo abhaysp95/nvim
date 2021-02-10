@@ -111,13 +111,6 @@ let g:lf_map_keys=0
 nnoremap <leader>fl :vsplit \| Lf<CR>
 
 
-" junegunn/rainbow_parethesis
-"autocmd FileType * RainbowParentheses
-"augroup js_rainbow
-	"autocmd!
-	"autocmd FileType javascript RainbowParentheses
-"augroup end
-
 let g:rainbow#blacklist = [248, '#1f2233', '#464b5d']
 let g:rainbow#max_level = 16
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}'], ['<', '>']]
@@ -179,6 +172,31 @@ let g:maximizer_set_default_mapping = 0
 let g:maximizer_set_mapping_with_bang = 1
 nnoremap <leader>zm :MaximizerToggle!<cr>
 
+"""""""""""""""""""""""
+"   vimwiki/vimwiki   "
+"""""""""""""""""""""""
+let g:vimwiki_list = [{'path': '~/.cache/vimwiki',
+			\ 'syntax': 'markdown',
+			\ 'ext': '.md'}]
+let g:vimwiki_ext2syntax = {'.md': 'markdown',
+			\ '.markdown': 'markdown',
+			\ '.mdown': 'markdown'}
+" make vimwiki markdown links as [text](text.md) instead of [text](text)
+let g:vimwiki_markdown_link_ext = 1
+
+"""""""""""""""""""""""
+"   tbabej/taskwiki   "
+"""""""""""""""""""""""
+let g:taskwiki_markup_syntax = 'markdown'
+
+"""""""""""""""""""""""""""""
+"   voldikss/vim-floaterm   "
+"""""""""""""""""""""""""""""
+let g:floaterm_keymap_new = '<leader>tn'
+let g:floaterm_keymap_toggle = '<leader>tl'
+
+
+
 
 """""""""""""""""""""""""""
 "   dkarter/bullets.vim   "
@@ -208,42 +226,27 @@ nnoremap <leader>zm :MaximizerToggle!<cr>
 """""""""""""""""""""""""""""""
 "   dbeniamine/cheat.sh-vim   "
 """""""""""""""""""""""""""""""
-let g:CheatSheetReaderCmd = 'new"'
-let g:CheatSheetFt = 'markdown'
-let g:CheatSheetUrlGetter = 'curl --silent'
-let g:CheatSheetUrlGetterIdFlag = '-b'
-let g:CheatSheetBaseUrl = 'https://cht.sh'
-let g:CheatSheetUrlSettings = 'q'
-let g:CheatPager = 'less -R'
-let g:CheatSheetPagerStyle = 'rrt'
-let g:CheatSheetShowCommentsByDefault = 1
-let g:CheatSheetStayInOrigBuf = 1
-let g:CheatSheetBufferName = "_cheat"
-let g:CheatSheetDefaultSelection = "line"
-let g:CheatSheetDefaultMode = 0
-let g:CheatSheetIdPath = expand('~/.cht.sh/id')
-let g:CheatSheetSilent = 0
-let g:CheatDoNotReplaceKeywordPrg = 1
+"let g:CheatSheetReaderCmd = 'new"'
+"let g:CheatSheetFt = 'markdown'
+"let g:CheatSheetUrlGetter = 'curl --silent'
+"let g:CheatSheetUrlGetterIdFlag = '-b'
+"let g:CheatSheetBaseUrl = 'https://cht.sh'
+"let g:CheatSheetUrlSettings = 'q'
+"let g:CheatPager = 'less -R'
+"let g:CheatSheetPagerStyle = 'rrt'
+"let g:CheatSheetShowCommentsByDefault = 1
+"let g:CheatSheetStayInOrigBuf = 1
+"let g:CheatSheetBufferName = "_cheat"
+"let g:CheatSheetDefaultSelection = "line"
+"let g:CheatSheetDefaultMode = 0
+"let g:CheatSheetIdPath = expand('~/.cht.sh/id')
+"let g:CheatSheetSilent = 0
+"let g:CheatDoNotReplaceKeywordPrg = 1
 
-"""""""""""""""""""""""
-"   vimwiki/vimwiki   "
-"""""""""""""""""""""""
-let g:vimwiki_list = [{'path': '~/.cache/vimwiki',
-			\ 'syntax': 'markdown',
-			\ 'ext': '.md'}]
-let g:vimwiki_ext2syntax = {'.md': 'markdown',
-			\ '.markdown': 'markdown',
-			\ '.mdown': 'markdown'}
-" make vimwiki markdown links as [text](text.md) instead of [text](text)
-let g:vimwiki_markdown_link_ext = 1
+" junegunn/rainbow_parethesis
+"autocmd FileType * RainbowParentheses
+"augroup js_rainbow
+	"autocmd!
+	"autocmd FileType javascript RainbowParentheses
+"augroup end
 
-"""""""""""""""""""""""
-"   tbabej/taskwiki   "
-"""""""""""""""""""""""
-let g:taskwiki_markup_syntax = 'markdown'
-
-"""""""""""""""""""""""""""""
-"   voldikss/vim-floaterm   "
-"""""""""""""""""""""""""""""
-let g:floaterm_keymap_new = '<leader>tn'
-let g:floaterm_keymap_toggle = '<leader>tl'

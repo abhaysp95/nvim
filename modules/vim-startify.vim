@@ -66,5 +66,6 @@ let g:startify_bookmarks = [
 			\ { 'b': '~/.config/polybar/config'},
 			\ { 'r': '~/.config/rofi/config.rasi'},
 			\ { 's': '~/.config/sxhkd/sxhkdrc'},
-			\ { 'c': '~/.config/bspwm/bspwmrc'}
+			\ { 'c': '~/.config/bspwm/bspwmrc'},
+			\ { 't': '~/Documents/to_do' }
 			\ ]
