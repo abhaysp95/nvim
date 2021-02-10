@@ -117,13 +117,13 @@ let g:spacegray_low_contrast = 1
 let g:gotham_airline_empahsised_insert = 0
 
 " ayu-theme/ayu-vim "
-let ayucolor="mirage"
+let ayucolor="dark"
 
 " sonokai
 let g:sonokai_style = 'shusia'
 
 " edge
-let g:edge_style = 'neon' " default, aura, neon
+let g:edge_style = 'default' " default, aura, neon
 let g:edge_enable_italic = 1
 let g:edge_disable_italic_comment = 0
 let g:edge_cursor = 'green'
@@ -192,7 +192,7 @@ let g:dracula_inverse = 0
 " tomasiser/vim-code-dark "
 let g:codedark_conservative = 0
 
-colorscheme codedark
+colorscheme nord
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
@@ -233,6 +233,7 @@ hi Cursor guibg=foreground guifg=background
 " hi Normal guibg=#10151a
 
 " onedark/nord
+hi Normal guibg=#242831
 " hi Normal guibg=#2c303c
 " hi Normal guibg=#21242f
 " hi Normal guibg=#24242E
