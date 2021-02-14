@@ -57,8 +57,8 @@ let g:gruvbox_plugin_hi_groups=1
 
 " nord colorscheme settings"
 let g:nord_cursor_line_number_background = 0
-let g:nord_uniform_status_line = 0
-let g:nord_bold_vertical_split_line = 0
+let g:nord_uniform_status_line = 1
+let g:nord_bold_vertical_split_line = 1
 let g:nord_uniform_diff_background = 0
 let g:nord_bold = 1
 let g:nord_italic = 1
@@ -208,16 +208,16 @@ hi DiffDelete  guibg=background
 hi SignifySignAdd guibg=background
 hi SignifySignChange guibg=background
 hi SignifySignDelete guibg=background
-" hi SpecialKey guifg=#ffffff guibg=#116611
-" hi NonText guifg=#0d931b
-"hi StatusLine guibg=background guifg=foreground
-"hi StatusLineNC guibg=background guifg=#928374
 hi SignColumn guibg=background guifg=#2d3640
 hi FoldColumn guibg=background guifg=foreground
-hi StatusLine guibg=background gui=NONE
 hi VertSplit guifg=foreground guibg=background
 hi Cursor guibg=foreground guifg=background
 " hi Comment gui=NONE
+" hi StatusLine guibg=background gui=NONE
+" hi SpecialKey guifg=#ffffff guibg=#116611
+" hi NonText guifg=#0d931b
+" hi StatusLine guibg=background guifg=foreground
+" hi StatusLineNC guibg=background guifg=#928374
 
 " palenight's background
 " hi Normal guibg=#0d162c
