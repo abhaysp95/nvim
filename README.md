@@ -47,7 +47,7 @@ Using [material](https://github.com/kaicataldo/material.vim) colorscheme.
 
 ## StatusLine(Current)
 
-Using manually setup statusline. Inspired by statusline of [Ahmed El Gabri](https://gabri.me/blog/diy-vim-statusline).
+Using manually setup statusline.
 
 ### Features
 
@@ -77,21 +77,26 @@ Here are few samples of my statusline(new to old):
 
 **Sample1:**
 
-This is my current statusline style. No added bling, no background color, only the stuff which is necessary
+This is my current statusline style. No added bling, no background color, only the stuff which is necessary. Design is inspired by [lightline](https://github.com/itchyny/lightline.vim)'s design.
 
-![statusline1](./sshots/cur_statusline1.png)
+![statuline1](./sshots/cur_statusline1.png)
+
+**Sample2:**
+
+![statusline2](./sshots/cur_statusline2.png)
 
 Below are some old sample of statusline
 
-**Sample2**:
-![statusline2](sshots/cur_statusline2.png)
-
-**Sample3:**
-![statusline3](sshots/cur_statusline3.png)
+**Sample3**:
+![statusline2](sshots/cur_statusline3.png)
 
 **Sample4:**
 ![statusline4](sshots/cur_statusline4.png)
 
+**Sample5:**
+![statusline5](sshots/cur_statusline5.png)
+
+Initial design was somewhat inspired by statusline of [Ahmed El Gabri](https://gabri.me/blog/diy-vim-statusline).
 
 ## File Exploring
 
