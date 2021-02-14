@@ -2,6 +2,11 @@
 " let fgcolor=synIDattr(synIDtrans(hlID("Normal")), "fg", "gui")
 " let bgcolor=synIDattr(synIDtrans(hlID("Normal")), "bg", "gui")
 
+hi User1 ctermfg=46 ctermbg=0 guibg=#88c0d0 guifg=#3b4252
+hi User2 ctermfg=51 ctermbg=0 guibg=#4c566a guifg=#e5e9f0
+hi User3 ctermfg=165 ctermbg=0 guibg=#3b4252 guifg=#e5e9f0
+hi User4 ctermfg=202 ctermbg=0 guibg=Red guifg=Black
+
 "              :h mode() to see all modes
 let g:currentmode={
     \ 'n'      : 'Norm ',
@@ -53,15 +58,6 @@ function! ReadOnly()
 		return 'M'
 	endif
 endfunction
-function! GitInfo()
-	let git = fugitive#head()
-	if git != ''
-		return ''.fugitive#head()
-	else
-		return ''
-	endif
-endfunction
-"  שׂ
 
 " GIT STATUS -> VIM-SIGNIFY
 function! s:sy_stats_wrapper()
@@ -70,21 +66,46 @@ function! s:sy_stats_wrapper()
 	let stats = [added, removed, modified]  " reorder
 	let statline = ''
 
-  for i in range(3)
-	if stats[i] > 0
-	  let statline .= printf('%s%s ', symbols[i], stats[i])
-	endif
-  endfor
+	for i in range(3)
+		if stats[i] > 0
+			let statline .= printf('%s%s ', symbols[i], stats[i])
+		endif
+	endfor
 
-  if !empty(statline)
-	let statline = printf('[%s]', statline[:-2])
-endif
+	if !empty(statline)
+		let statline = printf('[%s] ', statline[:-2])
+	endif
 
 return statline
 endfunction
 
+function! GitInfo()
+	let git = fugitive#head()
+	if git != ''
+		return ' '.fugitive#head()
+	else
+		return ''
+	endif
+endfunction
+"  שׂ
+
 function! Git_Status()
-	return s:sy_stats_wrapper()
+	let stat = s:sy_stats_wrapper()
+	if stat != ''
+		return stat
+	else
+		return ' '
+	endif
+endfunction
+
+function! GitInfoStatus()
+	let gitinfo = GitInfo()
+	let gitstat = Git_Status()
+	if gitinfo != ''
+		return gitinfo.gitstat
+	else
+		return ''
+	endif
 endfunction
 
 " ALE_WARNING
@@ -125,23 +146,24 @@ function! Current_Statusline()
 	set laststatus=2
 	set statusline=
 	" set statusline+=%0*\ %{toupper(g:currentmode[mode()])} " Current mode
-	set statusline=%0*\ %{ReadOnly()}\ %w\%m    " readable or not and modifiable or not
-	set statusline+=%0*\[%n]                 " buffernr
-	set statusline+=%0*\ %{GitInfo()}        " Git Branch name
-	set statusline+=%0*\%{Git_Status()}         " vim - signify
-	set statusline+=%0*\ %l:%c\ %2p%%\       " Rownumber/total (%)
-	set statusline+=%0*\%b:0x%-3B               " value of character under cursor
+	set statusline=%1*\ %{ReadOnly()}\ %w\%m    " readable or not and modifiable or not
+	set statusline+=%1*\[%n]\                  " buffernr
+	"set statusline+=%2*\ %{GitInfo()}        " Git Branch name
+	"set statusline+=%2*\%{Git_Status()}         " vim - signify
+	set statusline+=%2*\%{GitInfoStatus()}
+	set statusline+=%3*\ %l:%c\ %2p%%\       " Rownumber/total (%)
+	set statusline+=%3*\%b:0x%-3B               " value of character under cursor
 	 " set statusline+=%8*\ %<%f                " file path
-	set statusline+=%0*\%#warningmsg#
-	set statusline+=%*
+	set statusline+=%3*
 	" set statusline+=\ %{TagbarStatusline()}
-	set statusline+=%0*\ %=                  " Space
-	set statusline+=%0*\ %y\                 " FileType
-	set statusline+=%0*\%<%f                 " file path
-	set statusline+=%0*\ TL:%L                     " total line count
-	set statusline+=%0*\ %-3(%{FileSize()}%) " File size
-	set statusline+=%0*\ %{LinterStatus()}      " ale linting
-	set statusline+=%0*\ %{StatusDiagnostic()}  " coc-diagnostic
+	set statusline+=%3*\ %=                  " Space
+ set statusline+=\ %{KnowStatus()}
+	set statusline+=%3*\ %y\ \|                 " FileType
+	set statusline+=%3*\ %<%t\                  " file path
+	set statusline+=%2*\ TL:%L\ \|                     " total line count
+	set statusline+=%2*\ %-3(%{FileSize()}%)\ \| " File size
+	"set statusline+=%2*\ %{LinterStatus()}      " ale linting
+	set statusline+=%2*\ %{StatusDiagnostic()}  " coc-diagnostic
 endfunction
 
 " toggle statusline
@@ -164,12 +186,6 @@ call Current_Statusline()
 " call ToggleHiddenAll()
 nnoremap <localleader>tb :call ToggleHiddenAll()<CR>
 
-hi User1 ctermfg=007 ctermbg=239 guibg=#4e4e4e guifg=#adadad
-hi User2 ctermfg=007 ctermbg=236 guibg=#303030 guifg=#adadad
-hi User3 ctermfg=236 ctermbg=236 guibg=#303030 guifg=#303030
-hi User4 ctermfg=239 ctermbg=239 guibg=#4e4e4e guifg=#4e4e4e
-
-" set statusline+=\ %{KnowStatus()}
 " set statusline+=\%{StatusDiagnostic()}                 " coc-status
 " set statusline+=\ \|
 " set statusline+=%{ChangeStatuslineColor()}               " Changing the statusline color
