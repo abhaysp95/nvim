@@ -192,10 +192,35 @@ let g:taskwiki_markup_syntax = 'markdown'
 """""""""""""""""""""""""""""
 "   voldikss/vim-floaterm   "
 """""""""""""""""""""""""""""
+let g:floaterm_position = 'bottom'
+let g:floaterm_width = 1.0
+let g:floaterm_height = 0.5
 let g:floaterm_keymap_new = '<leader>tn'
 let g:floaterm_keymap_toggle = '<leader>tl'
 
+"""""""""""""""""""""""""""""""""""""""
+"   antoinemadec/FixCursorHold.nvim   "
+"""""""""""""""""""""""""""""""""""""""
+let g:cursorhold_updatetime = 100
 
+"""""""""""""""""""""""""""""
+"   cdelledonne/vim-cmake   "
+"""""""""""""""""""""""""""""
+let g:cmake_command               = 'cmake'
+let g:cmake_default_config        = 'Debug'
+let g:cmake_generate_options      = []
+let g:cmake_build_options         = []
+let g:cmake_native_build_options  = []
+let g:cmake_console_size          = 15
+let g:cmake_console_position      = 'botright'
+let g:cmake_jump                  = 0
+let g:cmake_jump_on_completion    = 0
+let g:cmake_jump_on_error         = 1
+let g:cmake_link_compile_commands = 1
+let g:cmake_root_markers          = ['.git', '.svn']
+
+nnoremap <leader>cG :CMakeGenerate<CR>
+nnoremap <leader>cB :CMakeBuild<CR>
 
 
 """""""""""""""""""""""""""
