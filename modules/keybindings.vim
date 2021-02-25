@@ -270,3 +270,6 @@ function! ToggleSyntax()
 	endif
 endfunction
 nnoremap <localleader>as :call ToggleSyntax()<CR>
+
+" open lf in floaterm
+nnoremap <localleader>fl :FloatermNew lf<CR>
