@@ -2,10 +2,10 @@
 " let fgcolor=synIDattr(synIDtrans(hlID("Normal")), "fg", "gui")
 " let bgcolor=synIDattr(synIDtrans(hlID("Normal")), "bg", "gui")
 
-hi User1 ctermfg=46 ctermbg=0 guibg=#88c0d0 guifg=#3b4252
-hi User2 ctermfg=51 ctermbg=0 guibg=#4c566a guifg=#e5e9f0
-hi User3 ctermfg=165 ctermbg=0 guibg=#3b4252 guifg=#e5e9f0
-hi User4 ctermfg=202 ctermbg=0 guibg=Red guifg=Black
+hi User1 ctermfg=46 ctermbg=0 guibg=#6a7ec8 guifg=#232526
+hi User2 ctermfg=51 ctermbg=0 guibg=#232526 guifg=#ef5939
+hi User3 ctermfg=202 ctermbg=0 guibg=#232526 guifg=#f92672
+hi User4 ctermfg=165 ctermbg=0 guibg=#f92672 guifg=#232526
 
 "              :h mode() to see all modes
 let g:currentmode={
@@ -73,7 +73,7 @@ function! s:sy_stats_wrapper()
 	endfor
 
 	if !empty(statline)
-		let statline = printf('[%s] ', statline[:-2])
+		let statline = printf('[%s]', statline[:-2])
 	endif
 
 return statline
@@ -94,7 +94,7 @@ function! Git_Status()
 	if stat != ''
 		return stat
 	else
-		return ' '
+		return ''
 	endif
 endfunction
 
@@ -148,22 +148,20 @@ function! Current_Statusline()
 	" set statusline+=%0*\ %{toupper(g:currentmode[mode()])} " Current mode
 	set statusline=%1*\ %{ReadOnly()}\ %w\%m    " readable or not and modifiable or not
 	set statusline+=%1*\[%n]\                  " buffernr
-	"set statusline+=%2*\ %{GitInfo()}        " Git Branch name
-	"set statusline+=%2*\%{Git_Status()}         " vim - signify
 	set statusline+=%2*\%{GitInfoStatus()}
-	set statusline+=%3*\ %l:%c\ %2p%%\       " Rownumber/total (%)
-	set statusline+=%3*\%b:0x%-3B               " value of character under cursor
-	 " set statusline+=%8*\ %<%f                " file path
-	set statusline+=%3*
+	set statusline+=%2*\ %l:%c\       " Rownumber/total (%)
+	set statusline+=%2*\%b:0x%-3B               " value of character under cursor
+	set statusline+=%2*
 	" set statusline+=\ %{TagbarStatusline()}
-	set statusline+=%3*\ %=                  " Space
- set statusline+=\ %{KnowStatus()}
-	set statusline+=%3*\ %y\ \|                 " FileType
-	set statusline+=%3*\ %<%t\                  " file path
-	set statusline+=%2*\ TL:%L\ \|                     " total line count
-	set statusline+=%2*\ %-3(%{FileSize()}%)\ \| " File size
+	set statusline+=%2*\ %=                  " Space
+	set statusline+=\ %{KnowStatus()}
+	set statusline+=%2*\ %y\ \|                 " FileType
+	set statusline+=%2*\ %<%t\                  " file path
+	set statusline+=%4*\ %2p%%\ \|
+	set statusline+=%4*\ TL:%L\ \|                     " total line count
+	set statusline+=%4*\ %-3(%{FileSize()}%)\  " File size
 	"set statusline+=%2*\ %{LinterStatus()}      " ale linting
-	set statusline+=%2*\ %{StatusDiagnostic()}  " coc-diagnostic
+	set statusline+=%3*\ %{StatusDiagnostic()}  " coc-diagnostic
 endfunction
 
 " toggle statusline
