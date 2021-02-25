@@ -192,7 +192,10 @@ let g:dracula_inverse = 0
 " tomasiser/vim-code-dark "
 let g:codedark_conservative = 0
 
-colorscheme nord
+" tomasr/molokai "
+let g:molokai_original = 1
+
+colorscheme molokayo
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
@@ -212,6 +215,7 @@ hi SignColumn guibg=background guifg=#2d3640
 hi FoldColumn guibg=background guifg=foreground
 hi VertSplit guifg=foreground guibg=background
 hi Cursor guibg=foreground guifg=background
+hi CursorLine guibg=#232526
 " hi Comment gui=NONE
 " hi StatusLine guibg=background gui=NONE
 " hi SpecialKey guifg=#ffffff guibg=#116611
@@ -233,7 +237,7 @@ hi Cursor guibg=foreground guifg=background
 " hi Normal guibg=#10151a
 
 " onedark/nord
-hi Normal guibg=#242831
+"hi Normal guibg=#242831
 " hi Normal guibg=#2c303c
 " hi Normal guibg=#21242f
 " hi Normal guibg=#24242E
