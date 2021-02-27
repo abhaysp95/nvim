@@ -192,11 +192,11 @@ let g:taskwiki_markup_syntax = 'markdown'
 """""""""""""""""""""""""""""
 "   voldikss/vim-floaterm   "
 """""""""""""""""""""""""""""
-let g:floaterm_position = 'bottom'
-let g:floaterm_width = 1.0
-let g:floaterm_height = 0.5
-let g:floaterm_keymap_new = '<leader>tn'
-let g:floaterm_keymap_toggle = '<leader>tl'
+"let g:floaterm_position = 'bottom'
+"let g:floaterm_width = 1.0
+"let g:floaterm_height = 0.5
+"let g:floaterm_keymap_new = '<leader>tn'
+"let g:floaterm_keymap_toggle = '<leader>tl'
 
 """""""""""""""""""""""""""""""""""""""
 "   antoinemadec/FixCursorHold.nvim   "
