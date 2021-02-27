@@ -1,0 +1,5 @@
+vim.cmd("let g:floaterm_position = 'bottom'")
+vim.cmd("let g:floaterm_width = 1.0")
+vim.cmd("let g:floaterm_height = 0.5")
+vim.cmd("let g:floaterm_keymap_new = '<leader>tn'")
+vim.cmd("let g:floaterm_keymap_toggle = '<leader>tl'")
