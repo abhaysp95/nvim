@@ -1,5 +1,7 @@
-vim.cmd("let g:floaterm_position = 'bottom'")
-vim.cmd("let g:floaterm_width = 1.0")
-vim.cmd("let g:floaterm_height = 0.5")
+vim.g.floaterm_position = 'bottom'
+vim.g.floaterm_width = 1.0
+vim.g.floaterm_height = 0.5
+
+-- need to setup bind(for mapping)
 vim.cmd("let g:floaterm_keymap_new = '<leader>tn'")
 vim.cmd("let g:floaterm_keymap_toggle = '<leader>tl'")
