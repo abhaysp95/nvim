@@ -28,8 +28,6 @@ else
 	source $HOME/.config/nvim/modules/current_statusline.vim
 	source $HOME/.config/nvim/modules/vim-startify.vim
 
-	" this line was added as part of test from master
-
 	augroup autosourcing
 		autocmd!
 		autocmd BufWritePost ~/.config/nvim/init.vim,~/.config/nvim/modules/color_settings.vim source %
