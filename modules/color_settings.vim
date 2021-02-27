@@ -195,7 +195,7 @@ let g:codedark_conservative = 0
 " tomasr/molokai "
 let g:molokai_original = 1
 
-colorscheme molokayo
+"colorscheme molokayo
 
 hi Visual cterm=reverse ctermbg=NONE
 hi Comment cterm=italic gui=italic
