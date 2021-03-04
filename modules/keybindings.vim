@@ -259,17 +259,17 @@ nnoremap <localleader>Y :call YankPath()<CR>
 
 
 " toggle syntax highlighting on and off
-function! ToggleSyntax()
-	let cur_val = execute("set syntax")
-	if cur_val =~? '=[a-z]\+$'
-		set syntax=
-		echo "syntax turned off now"
-	else
-		syntax on
-		echo "syntax turned on now"
-	endif
-endfunction
-nnoremap <localleader>as :call ToggleSyntax()<CR>
+"function! ToggleSyntax()
+	"let cur_val = execute("set syntax")
+	"if cur_val =~? '=[a-z]\+$'
+		"set syntax=
+		"echo "syntax turned off now"
+	"else
+		"syntax on
+		"echo "syntax turned on now"
+	"endif
+"endfunction
+"nnoremap <localleader>as :call ToggleSyntax()<CR>
 
 " open lf in floaterm
 nnoremap <localleader>fl :FloatermNew lf<CR>

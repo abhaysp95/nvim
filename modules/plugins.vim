@@ -1,7 +1,7 @@
 "-------All-the-plugins-for-vim-and-nvim----------------------
 call plug#begin()
 " syntax and error detection
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 " , { 'on': 'ALEEnable' }
 
 " intellisense

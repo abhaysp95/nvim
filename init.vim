@@ -24,8 +24,8 @@ else
 	source $HOME/.config/nvim/modules/keybindings.vim
 	source $HOME/.config/nvim/modules/coc_settings.vim
 	source $HOME/.config/nvim/modules/fzf_conf.vim
-	source $HOME/.config/nvim/modules/color_settings.vim
 	lua require 'init'
+	source $HOME/.config/nvim/modules/color_settings.vim
 	source $HOME/.config/nvim/modules/current_statusline.vim
 	source $HOME/.config/nvim/modules/vim-startify.vim
 
