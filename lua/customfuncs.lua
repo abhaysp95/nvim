@@ -1,0 +1,13 @@
+-- still not working
+
+--function toggleSyntax()
+	--local cur_val = vim.cmd('set syntax')
+	--if string.match(cur_val, "syntax=[%w]+") then
+		--vim.cmd("set syntax=")
+		--print('syntax turned off now')
+	--else
+		--vim.cmd("syntax on")
+		--print('syntax turned on now')
+	--end
+--end
+--vim.cmd("nnoremap <localleader>as :call ToggleSyntax()<CR>")
