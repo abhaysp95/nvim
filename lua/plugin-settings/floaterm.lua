@@ -1,5 +1,5 @@
 vim.g.floaterm_position = 'bottom'
-vim.g.floaterm_width = 1.0
+vim.g.floaterm_width = 0.99
 vim.g.floaterm_height = 0.5
 
 -- need to setup bind(for mapping)
