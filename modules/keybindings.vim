@@ -178,7 +178,7 @@ map <leader>ce :setlocal formatoptions+=cro<CR>
 map <leader>S :!clear && shellcheck %<CR>
 
 " Open corresponding .pdf/.html or preview
-map <leader>p :!opout <c-r>%<CR><CR>
+" map <leader>p :!opout <c-r>%<CR><CR>
 
 " resize pane
 " disables arrow movement, resize splits instead but
