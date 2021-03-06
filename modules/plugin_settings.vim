@@ -223,6 +223,19 @@ nnoremap <leader>cG :CMakeGenerate<CR>
 nnoremap <leader>cB :CMakeBuild<CR>
 
 
+""""""""""""""""""""""""""""""""
+"   nvim-lua/completion-nvim   "
+""""""""""""""""""""""""""""""""
+autocmd BufEnter * lua require'completion'.on_attach()
+let g:completion_chain_complete_list = {
+			\ 'default': [
+			\    {'complete_items': ['lsp', 'tags', 'buffers']},
+			\  ]}
+let g:completion_enable_snippet = 'UltiSnips'
+let g:completion_enable_auto_hover = 1
+let g:completion_enable_auto_signature = 1
+let g:completion_matching_ignore_case = 1
+
 """""""""""""""""""""""""""
 "   dkarter/bullets.vim   "
 """""""""""""""""""""""""""
