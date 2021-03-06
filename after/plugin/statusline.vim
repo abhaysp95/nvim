@@ -130,7 +130,7 @@ function! StatusDiagnostic() abort
 	if get(info, 'error', 0)
 		call add(msgs, '✗ ' . info['error'])
 	elseif get(info, 'warning', 0)
-		call add(msgs, ' !' . infor['warning'])
+		call add(msgs, ' !' . info['warning'])
 	else
 		return ' '
 	endif
@@ -161,7 +161,7 @@ function! Current_Statusline()
 	set statusline+=%4*\ TL:%L\ \|                     " total line count
 	set statusline+=%4*\ %-3(%{FileSize()}%)\  " File size
 	"set statusline+=%2*\ %{LinterStatus()}      " ale linting
-	set statusline+=%3*\ %{StatusDiagnostic()}  " coc-diagnostic
+	"set statusline+=%3*\ %{StatusDiagnostic()}  " coc-diagnostic
 endfunction
 
 " toggle statusline
