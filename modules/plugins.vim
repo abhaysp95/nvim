@@ -1,14 +1,16 @@
 "-------All-the-plugins-for-vim-and-nvim----------------------
 call plug#begin()
-" syntax and error detection
-Plug 'dense-analysis/ale'
-" , { 'on': 'ALEEnable' }
 
-" intellisense
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" nvim lsp
+Plug 'neovim/nvim-lspconfig'
+Plug 'sumneko/lua-language-server'
+Plug 'tjdevries/nlua.nvim'
+Plug 'tjdevries/lsp_extensions.nvim'
 
-" do cheating
-" Plug 'dbeniamine/cheat.sh-vim'
+" completion
+Plug 'nvim-lua/completion-nvim'
+Plug 'steelsojka/completion-buffers'   "  <-- requires checking
+Plug 'kristijanhusak/completion-tags'  "  <-- requires checking
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -16,6 +18,14 @@ Plug 'honza/vim-snippets'
 
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+
+
+" telescope requirements...
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 " cmake
 Plug 'cdelledonne/vim-cmake'
@@ -42,6 +52,7 @@ Plug 'tpope/vim-surround'
 Plug 'voldikss/vim-floaterm'
 
 " Theme / Interface
+Plug 'phanviet/vim-monokai-pro'
 Plug 'tomasr/molokai'
 Plug 'fmoralesc/molokayo/'
 Plug 'romgrk/doom-one.vim'
@@ -83,20 +94,11 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 " file navigations
 Plug 'justinmk/vim-dirvish'
 
-" fuzzy file navigations
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
 " vim-tmux navigator
 Plug 'christoomey/vim-tmux-navigator'
 
 " maximaization/restoration
 Plug 'szw/vim-maximizer'
-
-" vimwiki/markdown
-"Plug 'vimwiki/vimwiki'
-"Plug 'tbabej/taskwiki'
-"Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
@@ -201,3 +203,24 @@ call plug#end()
 
 " Bullets
 "Plug 'dkarter/bullets.vim'
+
+" syntax and error detection
+" Plug 'dense-analysis/ale'
+" , { 'on': 'ALEEnable' }
+
+" intellisense
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
+" do cheating
+" Plug 'dbeniamine/cheat.sh-vim'
+
+" vimwiki/markdown
+"Plug 'vimwiki/vimwiki'
+"Plug 'tbabej/taskwiki'
+"Plug 'plasticboy/vim-markdown'
+
+
+" fuzzy file navigations
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'

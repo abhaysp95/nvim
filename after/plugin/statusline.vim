@@ -124,17 +124,17 @@ endfunction
 "  
 
 function! StatusDiagnostic() abort
-  let info = get(b:, 'coc_diagnostic_info', {})
-  if empty(info) | return ' ' | endif
-  let msgs = []
-  if get(info, 'error', 0)
-    call add(msgs, '✗ ' . info['error'])
-  endif
-  if get(info, 'warning', 0)
-    call add(msgs, ' !' . info['warning'])
-  endif
-  return join(msgs, ''). ''
- "  . get(g:, 'coc_status', '')
+	let info = get(b:, 'coc_diagnostic_info', {})
+	if empty(info) | return ' ' | endif
+	let msgs = []
+	if get(info, 'error', 0)
+		call add(msgs, '✗ ' . info['error'])
+	elseif get(info, 'warning', 0)
+		call add(msgs, ' !' . info['warning'])
+	else
+		return ' '
+	endif
+	return join(msgs, ''). ''
 endfunction
 
 function! KnowStatus() abort
@@ -161,7 +161,7 @@ function! Current_Statusline()
 	set statusline+=%4*\ TL:%L\ \|                     " total line count
 	set statusline+=%4*\ %-3(%{FileSize()}%)\  " File size
 	"set statusline+=%2*\ %{LinterStatus()}      " ale linting
-	set statusline+=%3*\ %{StatusDiagnostic()}  " coc-diagnostic
+	"set statusline+=%3*\ %{StatusDiagnostic()}  " coc-diagnostic
 endfunction
 
 " toggle statusline
