@@ -30,30 +30,70 @@ nnoremap <leader>ep :lua vim.lsp.diagnostic.goto_prev()<CR>
 "nnoremap [[<leader>am]], [[<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>]])
 "nnoremap [[<leader>aR]], [[<Cmd>lua require('jdtls').code_action(false, 'refactor')<CR>]])
 
-
-"nnoremap <leader>vsd :lua vim.lsp.util.show_line_diagnostics(); vim.lsp.util.show_line_diagnostics()<CR>
-"nnoremap <leader>vsd :lua vim.lsp.util.show_line_diagnostics()<CR>
-"nnoremap <leader>vn: lua vim.lsp.diagnostice.goto_next()<CR>
-
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
-autocmd Bufenter * lua require'completion'.on_attach()
 
 lua << EOF
+
+local diagnostic_handler = vim.lsp.with(
+	vim.lsp.diagnostic.on_publish_diagnostics, {
+		signs = {
+			serverity_limit = 'Warning',
+		},
+		underline = false,
+		update_in_insert = false,
+		virtual_text = {
+			spacing = 2,
+			serverity_limit = 'Warning',
+		},
+	}
+)
+
+-- Empty diagnostic handler
+local none_diagnostic_handler = function() end
+
+-- Diagnostics symbols for display in the sign column
+vim.cmd('sign define LspDiagnosticsSignError text=✗')
+vim.cmd('sign define LspDiagnosticsSignWarning text=!')
+vim.cmd('sign define LspDiagnosticsSignInformation text=•')
+vim.cmd('sign define LspDiagnosticsSignHint text=➤')
+
 local lspconfig = require'lspconfig'
 
-local on_attach = require'completion'.on_attach
-require'lspconfig'.bashls.setup{ on_attach=on_attach }
-require'lspconfig'.tsserver.setup{ on_attach=on_attach }
+-- local lsp_on_attach = require'completion'.on_attach
 
+local lsp_on_attach = function(client)
+	-- Update diagnostics when saving the current buffer to disk for the events
+	-- and time API(not yet available)
+	-- vim.cmd('autocmd BufWrite <buffer> lua DiagnosticTimer()')
+
+	-- Use incremental content ranges if the language server supports them. This
+	-- will be far more efficient than sending the full buffer for each 'didChange'
+	-- event(the default behavior)
+	if client.config.flags then
+		client.config.flags.allow_incremental_sync = true
+	end
+
+	-- Enable LSP omnifunc
+	vim.cmd('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
+	vim.cmd('setlocal ins-completion=v:lua.vim.lsp.ins-completion')
+
+	-- require'completion'.on_attach()
+
+	-- Indicate that LSP is ready
+	print('LSP is ready')
+end
+
+require'lspconfig'.bashls.setup{ on_attach=lsp_on_attach }
+require'lspconfig'.tsserver.setup{ on_attach=lsp_on_attach }
 
 require'lspconfig'.clangd.setup {
-	on_attach = on_attach,
+	on_attach = lsp_on_attach,
 	root_dir = function() return vim.loop.cwd() end
 }
 
 require'lspconfig'.cmake.setup {
-	on_attach = on_attach,
+	on_attach = lsp_on_attach,
 	cmd = { "cmake-language-server" };
 	filetypes = { "cmake" };
 	init_opitons = {
@@ -62,26 +102,20 @@ require'lspconfig'.cmake.setup {
 	root_dir = lspconfig.util.root_pattern(".git", "compile_commands.json", "build");
 }
 
-
-
 require'lspconfig'.jedi_language_server.setup{
-	on_attach = on_attach,
+	on_attach = lsp_on_attach,
 	cmd = { "jedi-language-server" },
 	filetypes = { "python" },
 }
 
 -- require'lspconfig'.pyls.setup{
--- 	on_attach = on_attach,
+-- 	on_attach = lsp_on_attach,
 -- 	cmd = { "pyls" },
 -- 	filetypes = { "python" },
 -- }
 
-
-
-
-
-require'lspconfig'.gopls.setup{ on_attach=on_attach }
-require'lspconfig'.rust_analyzer.setup{ on_attach=on_attach }
+require'lspconfig'.gopls.setup{ on_attach=lsp_on_attach }
+require'lspconfig'.rust_analyzer.setup{ on_attach=lsp_on_attach }
 
 EOF
 
