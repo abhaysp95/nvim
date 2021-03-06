@@ -76,9 +76,9 @@ local lsp_on_attach = function(client)
 
 	-- Enable LSP omnifunc
 	vim.cmd('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
-	vim.cmd('setlocal ins-completion=v:lua.vim.lsp.ins-completion')
+	-- vim.cmd('setlocal ins-completion=v:lua.vim.lsp.ins-completion')
 
-	-- require'completion'.on_attach()
+	require'completion'.on_attach()
 
 	-- Indicate that LSP is ready
 	print('LSP is ready')
