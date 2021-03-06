@@ -47,7 +47,8 @@ set autoread
 set backspace=indent,eol,start
 set clipboard+=unnamed,unnamedplus
 set complete+=kspell
-set completeopt=menuone,preview,longest
+"set completeopt=menuone,noinsert,preview,longest
+set completeopt=menuone,noinsert,longest
 set encoding=utf-8
 scriptencoding utf-8
 set hidden
