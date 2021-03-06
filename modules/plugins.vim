@@ -18,7 +18,6 @@ Plug 'honza/vim-snippets'
 
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/completion-treesitter'
 Plug 'nvim-treesitter/playground'
 
 
