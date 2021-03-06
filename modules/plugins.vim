@@ -13,10 +13,13 @@ Plug 'steelsojka/completion-buffers'   "  <-- requires checking
 Plug 'kristijanhusak/completion-tags'  "  <-- requires checking
 Plug 'nvim-treesitter/completion-treesitter'
 Plug 'albertoCaroM/completion-tmux'
+" Plug 'hrsh7th/nvim-compe'
 
 " snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+"Plug 'hrsh7th/vim-vsnip'
+"Plug 'hrsh7th/vim-vsnip-integ'
 
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -97,6 +100,8 @@ Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
 " file navigations
 Plug 'justinmk/vim-dirvish'
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-web-devicons'
 
 " vim-tmux navigator
 Plug 'christoomey/vim-tmux-navigator'
