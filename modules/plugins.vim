@@ -97,7 +97,8 @@ Plug 'justinmk/vim-dirvish'
 " vim-tmux navigator
 Plug 'christoomey/vim-tmux-navigator'
 
-" maximaization/restoration
+" degugging, maximaization/restoration
+Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 
 call plug#end()
