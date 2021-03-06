@@ -1,6 +1,9 @@
 " All the plugin settins other than theme related and coc
 
-" *Ultisnips configs
+"""""""""""""""""""""""""
+"   Ultisnips configs   "
+"""""""""""""""""""""""""
+
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-h>"
@@ -227,12 +230,15 @@ nnoremap <leader>cB :CMakeBuild<CR>
 autocmd BufEnter * lua require'completion'.on_attach()
 let g:completion_chain_complete_list = {
 			\ 'default': [
-			\    {'complete_items': ['lsp', 'tags', 'buffers']},
+			\    {'complete_items': ['lsp', 'tags', 'buffers', 'ts', 'tmux']},
 			\  ]}
 let g:completion_enable_snippet = 'UltiSnips'
 let g:completion_enable_auto_hover = 1
 let g:completion_enable_auto_signature = 1
 let g:completion_matching_ignore_case = 1
+let g:completion_auto_change_source = 1
+imap <c-j> <Plug>(completion_next_source)
+imap <c-k> <Plug>(completion_prev_source)
 
 """""""""""""""""""""""""""
 "   dkarter/bullets.vim   "

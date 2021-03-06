@@ -11,6 +11,8 @@ Plug 'tjdevries/lsp_extensions.nvim'
 Plug 'nvim-lua/completion-nvim'
 Plug 'steelsojka/completion-buffers'   "  <-- requires checking
 Plug 'kristijanhusak/completion-tags'  "  <-- requires checking
+Plug 'nvim-treesitter/completion-treesitter'
+Plug 'albertoCaroM/completion-tmux'
 
 " snippets
 Plug 'SirVer/ultisnips'
