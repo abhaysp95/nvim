@@ -189,14 +189,12 @@ let g:vimwiki_markdown_link_ext = 1
 """""""""""""""""""""""
 let g:taskwiki_markup_syntax = 'markdown'
 
-"""""""""""""""""""""""""""""
-"   voldikss/vim-floaterm   "
-"""""""""""""""""""""""""""""
-"let g:floaterm_position = 'bottom'
-"let g:floaterm_width = 1.0
-"let g:floaterm_height = 0.5
-"let g:floaterm_keymap_new = '<leader>tn'
-"let g:floaterm_keymap_toggle = '<leader>tl'
+"""""""""""""""""""""""""
+"   cohama/lexima.vim   "
+"""""""""""""""""""""""""
+let g:lexima_enable_basic_rules = 1
+let g:lexima_enable_newline_rules = 1
+let g:lexima_enable_endwise_rules = 1
 
 """""""""""""""""""""""""""""""""""""""
 "   antoinemadec/FixCursorHold.nvim   "
