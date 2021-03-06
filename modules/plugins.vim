@@ -22,7 +22,6 @@ Plug 'honza/vim-snippets'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
-
 " telescope requirements...
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -34,6 +33,9 @@ Plug 'cdelledonne/vim-cmake'
 if has("nvim")
 	Plug 'antoinemadec/FixCursorHold.nvim'
 endif
+
+" nvim-jdtls
+Plug 'mfussenegger/nvim-jdtls'
 
 " for html
 Plug 'mattn/emmet-vim'
