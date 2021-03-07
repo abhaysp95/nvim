@@ -50,7 +50,7 @@ Plug 'fatih/vim-go'
 Plug 'tpope/vim-repeat'
 
 " minimal autopairs
-Plug 'cohama/lexima.vim'
+Plug 'windwp/nvim-autopairs'
 
 " surround
 Plug 'tpope/vim-surround'
@@ -63,6 +63,7 @@ Plug 'phanviet/vim-monokai-pro'
 Plug 'tomasr/molokai'
 Plug 'fmoralesc/molokayo/'
 Plug 'romgrk/doom-one.vim'
+Plug 'ChristianChiarulli/nvcode-color-schemes.vim'
 
 " icons
 Plug 'ryanoasis/vim-devicons'
@@ -234,3 +235,6 @@ call plug#end()
 " fuzzy file navigations
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Plug 'junegunn/fzf.vim'
+
+" auto-pairs
+"Plug 'cohama/lexima.vim'  "  had to leave cause I can't make it work properly with nvim-completion
