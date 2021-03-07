@@ -195,27 +195,40 @@ let g:codedark_conservative = 0
 " tomasr/molokai "
 let g:molokai_original = 1
 
-"colorscheme molokayo
+" ChristianChiarulli/nvcode "
+let g:nvcode_termcolors = 256
 
-hi Visual cterm=reverse ctermbg=NONE
-hi Comment cterm=italic gui=italic
-hi htmlItalic gui=italic cterm=italic
-hi Todo gui=bold cterm=bold
-hi TabLine guifg=foreground guibg=242 gui=NONE
-hi TabLineSel guibg=#100e23 guifg=foreground gui=NONE
-hi TabLineFill guibg=255 guifg=foreground cterm=NONE gui=NONE
-hi LineNr guibg=background
+" changed color groups
 hi DiffAdd  guibg=background
 hi DiffChange  guibg=background
 hi DiffDelete  guibg=background
-hi SignifySignAdd guibg=background
-hi SignifySignChange guibg=background
-hi SignifySignDelete guibg=background
-hi SignColumn guibg=background guifg=#2d3640
-hi FoldColumn guibg=background guifg=foreground
-hi VertSplit guifg=foreground guibg=background
-hi Cursor guibg=foreground guifg=background
-hi CursorLine guibg=#232526
+hi SignifySignAdd guibg=background guifg=#4ec9b0
+hi SignifySignChange guibg=background guifg=#d7ba7d
+hi SignifySignDelete guibg=background guifg=#f44747
+
+
+if exists("g:loaded_webdevicons")
+	call webdevicons#refresh()
+endif
+
+syn sync fromstart
+set go=a
+
+
+
+"hi Visual cterm=reverse ctermbg=NONE
+"hi Comment cterm=italic gui=italic
+"hi htmlItalic gui=italic cterm=italic
+"hi Todo gui=bold cterm=bold
+"hi TabLine guifg=foreground guibg=242 gui=NONE
+"hi TabLineSel guibg=#100e23 guifg=foreground gui=NONE
+"hi TabLineFill guibg=255 guifg=foreground cterm=NONE gui=NONE
+"hi LineNr guibg=background
+"hi SignColumn guibg=background guifg=#2d3640
+"hi FoldColumn guibg=background guifg=foreground
+"hi VertSplit guifg=foreground guibg=background
+"hi Cursor guibg=foreground guifg=background
+"hi CursorLine guibg=#232526
 " hi Comment gui=NONE
 " hi StatusLine guibg=background gui=NONE
 " hi SpecialKey guifg=#ffffff guibg=#116611
@@ -247,10 +260,3 @@ hi CursorLine guibg=#232526
 
 " dracula
 " hi Normal guifg=#bbc5ff
-
-if exists("g:loaded_webdevicons")
-	call webdevicons#refresh()
-endif
-
-syn sync fromstart
-set go=a

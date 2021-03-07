@@ -1,1 +1,1 @@
-vim.cmd('colorscheme molokayo')
+vim.cmd('colorscheme nvcode')
