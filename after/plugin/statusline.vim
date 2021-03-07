@@ -2,10 +2,10 @@
 " let fgcolor=synIDattr(synIDtrans(hlID("Normal")), "fg", "gui")
 " let bgcolor=synIDattr(synIDtrans(hlID("Normal")), "bg", "gui")
 
-hi User1 ctermfg=46 ctermbg=0 guibg=#6a7ec8 guifg=#232526
-hi User2 ctermfg=51 ctermbg=0 guibg=#232526 guifg=#ef5939
-hi User3 ctermfg=202 ctermbg=0 guibg=#232526 guifg=#f92672
-hi User4 ctermfg=165 ctermbg=0 guibg=#f92672 guifg=#232526
+hi User1 ctermfg=46 ctermbg=0 guibg=#569cd6 guifg=#1e1e1e
+hi User2 ctermfg=51 ctermbg=0 guibg=#1e1e1e guifg=#f44747
+hi User3 ctermfg=202 ctermbg=0 guibg=#1e1e1e guifg=#d16969
+hi User4 ctermfg=165 ctermbg=0 guibg=#d16969 guifg=#1e1e1e
 
 "              :h mode() to see all modes
 let g:currentmode={
