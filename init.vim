@@ -18,6 +18,8 @@ elseif exists("g:vscode")
 	source $HOME/.config/nvim/modules/settings.vim
 	source $HOME/.config/nvim/modules/keybindings.vim
 else
+
+	" using coc"
 	source $HOME/.config/nvim/modules/plugins.vim
 	source $HOME/.config/nvim/modules/plugin_settings.vim
 	source $HOME/.config/nvim/modules/settings.vim
