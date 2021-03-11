@@ -87,9 +87,6 @@ nnoremap <silent> <leader>C :Gclog %<CR>
 nnoremap <silent> <leader>G :Gstatus<CR>
 
 
-" ----- majutsushi/tagbar ----- "
-nmap <F8> :TagbarToggle<CR>
-
 " ---- vim-signify ---------- "(inplace of gitgutter)
 nmap [g <plug>(signify-prev-hunk)
 nmap ]g <plug>(signify-next-hunk)
@@ -138,6 +135,8 @@ let g:indentLine_fileTypeExclude = [ "startify", "man" ]
 "  Tagbar  "
 """"""""""""
 let g:tagbar_sort = 0
+let g:tagbar_vertical = 30
+nmap <F8> :TagbarToggle<CR>
 
 
 """"""""""""""""""""""""""
