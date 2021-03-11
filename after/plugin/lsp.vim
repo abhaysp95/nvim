@@ -25,32 +25,35 @@ nnoremap <leader>en :lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <leader>ep :lua vim.lsp.diagnostic.goto_prev()<CR>
 
 "nnoremap [[<leader>ai]], [[<Cmd>lua require'jdtls'.organize_imports()<CR>]])
-"nnoremap [[<leader>av]], [[<Cmd>lua require('jdtls').extract_variable()<CR>]])
-"nnoremap [[<leader>av]], [[<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>]])
-"nnoremap [[<leader>am]], [[<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>]])
-"nnoremap [[<leader>aR]], [[<Cmd>lua require('jdtls').code_action(false, 'refactor')<CR>]])
+"nnoremap [[<leader>av]], [[<Cmd>lua "require('jdtls').extract_variable()<CR>]])
+"nnoremap [[<leader>av]], "[[<Esc><Cmd>lua require('jdtls').extract_variable(true)<CR>]])
+"nnoremap "[[<leader>am]], [[<Esc><Cmd>lua require('jdtls').extract_method(true)<CR>]])
+"nnoremap [[<leader>aR]], [[<Cmd>lua require('jdtls').code_action(false, "'refactor')<CR>]])
 
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
 
+" auto-formatting"
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+
 lua << EOF
 
 local diagnostic_handler = vim.lsp.with(
-	vim.lsp.diagnostic.on_publish_diagnostics, {
-		signs = {
+	vim.lsp.diagnostic.on_publish_diagnostics,
+	{ signs =
+		{
 			serverity_limit = 'Warning',
-		},
-		underline = false,
-		update_in_insert = false,
-		virtual_text = {
-			spacing = 2,
-			serverity_limit = 'Warning',
-		},
-	}
-)
+		};
+	underline = false,
+	update_in_insert = false,
+	virtual_text = {
+		spacing = 2, serverity_limit = 'Warning',
+	},
+})
 
--- Empty diagnostic handler
-local none_diagnostic_handler = function() end
+-- Empty diagnostic handler -- local none_diagnostic_handler = function() end
 
 -- Diagnostics symbols for display in the sign column
 vim.cmd('sign define LspDiagnosticsSignError text=✗')
@@ -60,14 +63,12 @@ vim.cmd('sign define LspDiagnosticsSignHint text=➤')
 
 local lspconfig = require'lspconfig'
 
--- local lsp_on_attach = require'completion'.on_attach
-
 local lsp_on_attach = function(client)
 	-- Update diagnostics when saving the current buffer to disk for the events
 	-- and time API(not yet available)
-	-- vim.cmd('autocmd BufWrite <buffer> lua DiagnosticTimer()')
+	vim.cmd('autocmd BufWrite <buffer> lua DiagnosticTimer()')
 
-	-- Use incremental content ranges if the language server supports them. This
+	-- Use incremental content ranges if the language server supports them.  This
 	-- will be far more efficient than sending the full buffer for each 'didChange'
 	-- event(the default behavior)
 	if client.config.flags then
@@ -78,39 +79,57 @@ local lsp_on_attach = function(client)
 	vim.cmd('setlocal omnifunc=v:lua.vim.lsp.omnifunc')
 	-- vim.cmd('setlocal ins-completion=v:lua.vim.lsp.ins-completion')
 
-	require'completion'.on_attach()
+	-- require'completion'.on_attach()
 
 	-- Indicate that LSP is ready
 	print('LSP is ready')
 end
 
--- npm install -g bash-language-server
-require'lspconfig'.bashls.setup{ on_attach=lsp_on_attach }
+-- snippet support
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true;
 
-require'lspconfig'.tsserver.setup{ on_attach=lsp_on_attach }
+-- requires snippet support to provide completion
+lspconfig.html.setup {
+	capabilities = capabilities,
+	on_attach = on_attach
+}
+
+-- npm install -g bash-language-server
+require'lspconfig'.bashls.setup{
+	on_attach = lsp_on_attach,
+	capabilities = capabilities
+}
+
+require'lspconfig'.tsserver.setup{
+	on_attach=lsp_on_attach,
+	capabilities = capabilities
+}
 
 -- install clangd on machine
 require'lspconfig'.clangd.setup {
 	on_attach = lsp_on_attach,
-	root_dir = function() return vim.loop.cwd() end
+	root_dir = function() return vim.loop.cwd() end,
+	capabilities = capabilities
 }
 
 -- install llvm on machine
-require'lspconfig'.cmake.setup {
-	on_attach = lsp_on_attach,
-	cmd = { "cmake-language-server" };
-	filetypes = { "cmake" };
-	init_opitons = {
-		buildDirectory = "build"
-	};
-	root_dir = lspconfig.util.root_pattern(".git", "compile_commands.json", "build");
-}
-
--- require'lspconfig'.jedi_language_server.setup{
+-- require'lspconfig'.cmake.setup {
 -- 	on_attach = lsp_on_attach,
--- 	cmd = { "jedi-language-server" },
--- 	filetypes = { "python" },
+-- 	cmd = { "cmake-language-server" };
+-- 	filetypes = { "cmake" };
+-- 	init_opitons = {
+-- 		buildDirectory = "build"
+-- 	};
+-- 	root_dir = lspconfig.util.root_pattern(".git", "compile_commands.json", "build");
 -- }
+
+require'lspconfig'.jedi_language_server.setup{
+	on_attach = lsp_on_attach,
+	cmd = { "jedi-language-server" },
+	filetypes = { "python" },
+	capabilities = capabilities
+}
 
 -- require'lspconfig'.pyls.setup{
 -- 	on_attach = lsp_on_attach,
@@ -118,18 +137,24 @@ require'lspconfig'.cmake.setup {
 -- 	filetypes = { "python" },
 -- }
 
-require'lspconfig'.pyright.setup { on_attach =  lsp_on_attach }
+require'lspconfig'.pyright.setup {
+	on_attach =  lsp_on_attach,
+	capabilities = capabilities
+}
 
-require'lspconfig'.gopls.setup { on_attach=lsp_on_attach }
-require'lspconfig'.rust_analyzer.setup { on_attach=lsp_on_attach }
+require'lspconfig'.gopls.setup {
+	on_attach=lsp_on_attach,
+	capabilities = capabilities
+}
+require'lspconfig'.rust_analyzer.setup {
+	on_attach=lsp_on_attach,
+	capabilities = capabilities
+}
 
 -- Enable(broadcasting) snippet capability for completion
-local html_snippet_capabilities = vim.lsp.protocol.make_client_capabilities()
-html_snippet_capabilities.textDocument.completion.completionItem.snippetSupport = true
-
 require'lspconfig'.html.setup {
 	on_attach = lsp_on_attach,
-	capabilities = html_snippet_capabilities,
+	capabilities = capabilities,
 	cmd = { "html-languageserver", "--stdio" };
 	filetypes = { "html" };
 	init_opitons = {
@@ -140,8 +165,6 @@ require'lspconfig'.html.setup {
 		};
 	};
 }
-
-
 
 -- commented options are defaults
 require('lspkind').init({
