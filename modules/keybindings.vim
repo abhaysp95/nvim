@@ -138,7 +138,7 @@ nnoremap <leader>tt :TagbarToggle<CR>
 nnoremap <leader>ut :UndotreeToggle<CR>
 
 " move in buffer
-nnoremap <S-Tab> :b#<CR>
+nnoremap <M-Tab> :b#<CR>
 
 " Some handy setting
 nnoremap gG gg0vG$

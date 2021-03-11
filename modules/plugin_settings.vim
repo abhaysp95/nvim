@@ -5,12 +5,12 @@
 """""""""""""""""""""""""
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-h>"
-let g:UltiSnipsJumpBackwardTrigger="<c-g>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-h>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-g>"
 
- "If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+"If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
 
 
 " -------------------- emmet plugin ---------------"
@@ -223,32 +223,101 @@ nnoremap <leader>cG :CMakeGenerate<CR>
 nnoremap <leader>cB :CMakeBuild<CR>
 
 
+""""""""""""""""""""""""
+"   norcalli/snippet   "
+""""""""""""""""""""""""
+" lua require'snippets'.use_suggested_mappings()
+" This variant will set up the mappings only for the *CURRENT* buffer.
+" lua require'snippets'.use_suggested_mappings(true)
+" There are only two keybindings specified by the suggested keymappings, which is <C-k> and <C-j>
+" They are exactly equivalent to:
+" <c-k> will either expand the current snippet at the word or try to jump to
+" the next position for the snippet.
+" inoremap <c-k> <cmd>lua return require'snippets'.expand_or_advance(1)<CR>
+" <c-j> will jump backwards to the previous field.
+" If you jump before the first field, it will cancel the snippet.
+" inoremap <c-j> <cmd>lua return require'snippets'.advance_snippet(-1)<CR>
+
+
+""""""""""""""""""""""""""
+"   hrsh7th/nvim-compe   "
+""""""""""""""""""""""""""
+" NOTE: Order is important. You can't lazy loading lexima.vim.
+"let g:lexima_no_default_rules = v:true
+"call lexima#set_default_rules()
+"inoremap <silent><expr> <C-Space> compe#complete()
+"inoremap <silent><expr> <CR>      compe#confirm(lexima#expand('<LT>CR>', 'i'))
+"inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+"inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+"inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+
+
+""""""""""""""""""""""""""
+"   hrsh7th/nvim-compe   "
+""""""""""""""""""""""""""
+" NOTE: You can use other key to expand snippet.
+
+" Expand
+imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+
+" Expand or jump
+imap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+smap <expr> <C-l>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+
+" Jump forward or backward
+imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'
+imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
+
+" Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
+" See https://github.com/hrsh7th/vim-vsnip/pull/50
+nmap       <localleader>s   <Plug>(vsnip-select-text)
+xmap       <localleader>s   <Plug>(vsnip-select-text)
+nmap       <localleader>S   <Plug>(vsnip-cut-text)
+xmap       <localleader>S   <Plug>(vsnip-cut-text)
+
+" If you want to use snippet for multiple filetypes, you can `g:vsnip_filetypes` for it.
+let g:vsnip_snippet_dirs = [ '~/.config/nvim/snippets' ]
+let g:vsnip_filetypes = {}
+let g:vsnip_filetypes.javascriptreact = ['javascript']
+let g:vsnip_filetypes.typescriptreact = ['typescript']
+
+
+
 """"""""""""""""""""""""""""""""
 "   nvim-lua/completion-nvim   "
 """"""""""""""""""""""""""""""""
-autocmd BufEnter * lua require'completion'.on_attach()
-let g:completion_enable_snippet = 'UltiSnips'
-let g:completion_enable_auto_hover = 1
-let g:completion_enable_auto_signature = 1
-let g:completion_matching_ignore_case = 1
-let g:completion_auto_change_source = 1
-let g:completion_chain_complete_list = {
-			\ 'default': [
-			\    { 'complete_items': ['lsp', 'snippet'] },
-			\    { 'complete_items': ['tags'] },
-			\    { 'complete_items': ['buffer'] },
-			\    { 'complete_items': ['ts'] },
-			\    { 'complete_items': ['tmux'] },
-			\    { 'complete_items': ['path'], 'triggered_only': [ '/' ] },
-			\  ],
-			\ 'string': [
-			\    { 'complete_items': ['path'], 'triggered_only': [ '/' ] },
-			\    { 'complete_items': ['buffers'] },
-			\    {'mode': 'file'},
-			\ ],
-			\ 'comment': []}
-imap <c-j> <Plug>(completion_next_source)
-imap <c-k> <Plug>(completion_prev_source)
+" autocmd BufEnter * lua require'completion'.on_attach()
+" let g:completion_enable_snippet = 'UltiSnips'
+" let g:completion_enable_auto_hover = 1
+" let g:completion_enable_auto_signature = 1
+" let g:completion_matching_ignore_case = 1
+" let g:completion_auto_change_source = 1
+" let g:completion_chain_complete_list = {
+" 			\ 'default': [
+" 			\    { 'complete_items': ['lsp', 'snippet'] },
+" 			\    { 'complete_items': ['tags'] },
+" 			\    { 'complete_items': ['buffer'] },
+" 			\    { 'complete_items': ['ts'] },
+" 			\    { 'complete_items': ['tmux'] },
+" 			\    { 'complete_items': ['path'], 'triggered_only': [ '/' ] },
+" 			\  ],
+" 			\ 'string': [
+" 			\    { 'complete_items': ['path'], 'triggered_only': [ '/' ] },
+" 			\    { 'complete_items': ['buffers'] },
+" 			\    {'mode': 'file'},
+" 			\ ],
+" 			\ 'comment': []}
+" imap <c-j> <Plug>(completion_next_source)
+" imap <c-k> <Plug>(completion_prev_source)
 "\    {'complete_items': ['lsp', 'tags', 'buffers', 'ts', 'tmux']},
 
 """"""""""""""""""""""""""""""""
