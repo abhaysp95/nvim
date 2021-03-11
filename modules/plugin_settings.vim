@@ -222,35 +222,6 @@ let g:cmake_root_markers          = ['.git', '.svn']
 nnoremap <leader>cG :CMakeGenerate<CR>
 nnoremap <leader>cB :CMakeBuild<CR>
 
-
-""""""""""""""""""""""""""""""""
-"   nvim-lua/completion-nvim   "
-""""""""""""""""""""""""""""""""
-" autocmd BufEnter * lua require'completion'.on_attach()
-"let g:completion_enable_snippet = 'UltiSnips'
-"let g:completion_enable_auto_hover = 1
-"let g:completion_enable_auto_signature = 1
-"let g:completion_matching_ignore_case = 1
-"let g:completion_auto_change_source = 1
-"let g:completion_chain_complete_list = {
-			"\ 'default': [
-			"\    { 'complete_items': ['lsp', 'snippet'] },
-			"\    { 'complete_items': ['tags'] },
-			"\    { 'complete_items': ['buffer'] },
-			"\    { 'complete_items': ['ts'] },
-			"\    { 'complete_items': ['tmux'] },
-			"\    { 'complete_items': ['path'], 'triggered_only': [ '/' ] },
-			"\  ],
-			"\ 'string': [
-			"\    { 'complete_items': ['path'], 'triggered_only': [ '/' ] },
-			"\    { 'complete_items': ['buffers'] },
-			"\    {'mode': 'file'},
-			"\ ],
-			"\ 'comment': []}
-"imap <c-j> <Plug>(completion_next_source)
-"imap <c-k> <Plug>(completion_prev_source)
-"\    {'complete_items': ['lsp', 'tags', 'buffers', 'ts', 'tmux']},
-
 """"""""""""""""""""""""""""""""
 "   kyazdani42/nvim-tree.lua   "
 """"""""""""""""""""""""""""""""
