@@ -6,6 +6,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'sumneko/lua-language-server'
 Plug 'tjdevries/nlua.nvim'
 Plug 'tjdevries/lsp_extensions.nvim'
+Plug 'onsails/lspkind-nvim'
 
 " completion
 Plug 'nvim-lua/completion-nvim'
