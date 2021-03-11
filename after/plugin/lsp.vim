@@ -53,7 +53,8 @@ local diagnostic_handler = vim.lsp.with(
 	},
 })
 
--- Empty diagnostic handler -- local none_diagnostic_handler = function() end
+-- Empty diagnostic handler
+-- local none_diagnostic_handler = function() end
 
 -- Diagnostics symbols for display in the sign column
 vim.cmd('sign define LspDiagnosticsSignError text=✗')
@@ -66,7 +67,7 @@ local lspconfig = require'lspconfig'
 local lsp_on_attach = function(client)
 	-- Update diagnostics when saving the current buffer to disk for the events
 	-- and time API(not yet available)
-	vim.cmd('autocmd BufWrite <buffer> lua DiagnosticTimer()')
+	-- vim.cmd('autocmd BufWrite <buffer> lua DiagnosticTimer()')
 
 	-- Use incremental content ranges if the language server supports them.  This
 	-- will be far more efficient than sending the full buffer for each 'didChange'
