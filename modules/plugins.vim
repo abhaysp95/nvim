@@ -9,18 +9,19 @@ Plug 'tjdevries/lsp_extensions.nvim'
 Plug 'onsails/lspkind-nvim'
 
 " completion
-Plug 'nvim-lua/completion-nvim'
-Plug 'steelsojka/completion-buffers'   "  <-- requires checking
-Plug 'kristijanhusak/completion-tags'  "  <-- requires checking
-Plug 'nvim-treesitter/completion-treesitter'
-Plug 'albertoCaroM/completion-tmux'
-" Plug 'hrsh7th/nvim-compe'
+"Plug 'nvim-lua/completion-nvim'
+"Plug 'steelsojka/completion-buffers'   "  <-- requires checking
+"Plug 'kristijanhusak/completion-tags'  "  <-- requires checking
+"Plug 'nvim-treesitter/completion-treesitter'
+"Plug 'albertoCaroM/completion-tmux'
+Plug 'hrsh7th/nvim-compe'
 
 " snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-"Plug 'hrsh7th/vim-vsnip'
-"Plug 'hrsh7th/vim-vsnip-integ'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+"Plug 'norcalli/snippets.nvim'
 
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -51,7 +52,7 @@ Plug 'fatih/vim-go'
 Plug 'tpope/vim-repeat'
 
 " minimal autopairs
-Plug 'windwp/nvim-autopairs'
+"Plug 'cohama/lexima.vim'  "  had to leave cause I can't make it work properly with nvim-completion
 
 " surround
 Plug 'tpope/vim-surround'
@@ -238,4 +239,4 @@ call plug#end()
 " Plug 'junegunn/fzf.vim'
 
 " auto-pairs
-"Plug 'cohama/lexima.vim'  "  had to leave cause I can't make it work properly with nvim-completion
+" Plug 'windwp/nvim-autopairs'
