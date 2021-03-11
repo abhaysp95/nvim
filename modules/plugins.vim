@@ -1,19 +1,23 @@
 "-------All-the-plugins-for-vim-and-nvim----------------------
 call plug#begin()
 
+
+" intellisense
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " nvim lsp
-Plug 'neovim/nvim-lspconfig'
-Plug 'sumneko/lua-language-server'
-Plug 'tjdevries/nlua.nvim'
-Plug 'tjdevries/lsp_extensions.nvim'
-Plug 'onsails/lspkind-nvim'
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'sumneko/lua-language-server'
+"Plug 'tjdevries/nlua.nvim'
+"Plug 'tjdevries/lsp_extensions.nvim'
+"Plug 'onsails/lspkind-nvim'
 
 " completion
-Plug 'nvim-lua/completion-nvim'
-Plug 'steelsojka/completion-buffers'   "  <-- requires checking
-Plug 'kristijanhusak/completion-tags'  "  <-- requires checking
-Plug 'nvim-treesitter/completion-treesitter'
-Plug 'albertoCaroM/completion-tmux'
+"Plug 'nvim-lua/completion-nvim'
+"Plug 'steelsojka/completion-buffers'   "  <-- requires checking
+"Plug 'kristijanhusak/completion-tags'  "  <-- requires checking
+"Plug 'nvim-treesitter/completion-treesitter'
+"Plug 'albertoCaroM/completion-tmux'
 " Plug 'hrsh7th/nvim-compe'
 
 " snippets
@@ -219,9 +223,6 @@ call plug#end()
 " syntax and error detection
 " Plug 'dense-analysis/ale'
 " , { 'on': 'ALEEnable' }
-
-" intellisense
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
 " do cheating
