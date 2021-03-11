@@ -84,14 +84,18 @@ local lsp_on_attach = function(client)
 	print('LSP is ready')
 end
 
+-- npm install -g bash-language-server
 require'lspconfig'.bashls.setup{ on_attach=lsp_on_attach }
+
 require'lspconfig'.tsserver.setup{ on_attach=lsp_on_attach }
 
+-- install clangd on machine
 require'lspconfig'.clangd.setup {
 	on_attach = lsp_on_attach,
 	root_dir = function() return vim.loop.cwd() end
 }
 
+-- install llvm on machine
 require'lspconfig'.cmake.setup {
 	on_attach = lsp_on_attach,
 	cmd = { "cmake-language-server" };
@@ -102,17 +106,19 @@ require'lspconfig'.cmake.setup {
 	root_dir = lspconfig.util.root_pattern(".git", "compile_commands.json", "build");
 }
 
-require'lspconfig'.jedi_language_server.setup{
-	on_attach = lsp_on_attach,
-	cmd = { "jedi-language-server" },
-	filetypes = { "python" },
-}
+-- require'lspconfig'.jedi_language_server.setup{
+-- 	on_attach = lsp_on_attach,
+-- 	cmd = { "jedi-language-server" },
+-- 	filetypes = { "python" },
+-- }
 
 -- require'lspconfig'.pyls.setup{
 -- 	on_attach = lsp_on_attach,
 -- 	cmd = { "pyls" },
 -- 	filetypes = { "python" },
 -- }
+
+require'lspconfig'.pyright.setup { on_attach =  lsp_on_attach }
 
 require'lspconfig'.gopls.setup { on_attach=lsp_on_attach }
 require'lspconfig'.rust_analyzer.setup { on_attach=lsp_on_attach }
@@ -134,6 +140,36 @@ require'lspconfig'.html.setup {
 		};
 	};
 }
+
+
+
+-- commented options are defaults
+require('lspkind').init({
+	with_text = false,
+	symbol_map = {
+		Text = '  ',
+		Method = '  ',
+		Function = '  ',
+		Constructor = '  ',
+		Variable = '[]',
+		Class = '  ',
+		Interface = ' 蘒',
+		Module = '  ',
+		Property = '  ',
+		Unit = ' 塞 ',
+		Value = '  ',
+		Enum = ' 練',
+		Keyword = '  ',
+		Snippet = '  ',
+		Color = '',
+		File = '',
+		Folder = ' ﱮ ',
+		EnumMember = '  ',
+		Constant = '  ',
+		Struct = '  '
+	},
+})
+
 
 EOF
 
