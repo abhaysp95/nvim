@@ -38,7 +38,7 @@ Plug 'fatih/vim-go'
 Plug 'tpope/vim-repeat'
 
 " minimal autopairs
-Plug 'cohama/lexima.vim'  "  had to leave cause I can't make it work properly with nvim-completion
+" Plug 'cohama/lexima.vim'  "  had to leave cause I can't make it work properly with nvim-completion
 
 " surround
 Plug 'tpope/vim-surround'
