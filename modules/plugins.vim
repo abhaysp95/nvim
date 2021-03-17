@@ -38,7 +38,7 @@ Plug 'fatih/vim-go'
 Plug 'tpope/vim-repeat'
 
 " minimal autopairs
-" Plug 'cohama/lexima.vim'  "  had to leave cause I can't make it work properly with nvim-completion
+Plug 'cohama/lexima.vim'  "  had to leave cause I can't make it work properly with nvim-completion
 
 " surround
 Plug 'tpope/vim-surround'
@@ -63,7 +63,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kovetskiy/sxhkd-vim'
 
 Plug 'mhinz/vim-grepper'
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'tommcdo/vim-lion'
 
 " shows diff signs in vim's signcolumn
