@@ -25,9 +25,6 @@ if has("nvim")
 	Plug 'antoinemadec/FixCursorHold.nvim'
 endif
 
-" nvim-jdtls
-Plug 'mfussenegger/nvim-jdtls'
-
 " for html
 Plug 'mattn/emmet-vim'
 

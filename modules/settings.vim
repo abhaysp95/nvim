@@ -389,13 +389,4 @@ augroup noPipesStartify
 	endif
 augroup end
 
-
-"""""""""""""""
-" lua modules "
-"""""""""""""""
-"require('plug-colorizer')
-command! Scratch lua require'tools'.makeScratch()
-lua require('plug-colorizer')
-lua require('treesitter-config')
-
 " vim:foldmethod=marker:foldlevel=0
