@@ -145,23 +145,23 @@ endfunction
 function! Current_Statusline()
 	set laststatus=2
 	set statusline=
-	" set statusline+=%0*\ %{toupper(g:currentmode[mode()])} " Current mode
-	set statusline=%1*\ %{ReadOnly()}\ %w\%m    " readable or not and modifiable or not
-	set statusline+=%1*\[%n]\                  " buffernr
-	set statusline+=%2*\%{GitInfoStatus()}
-	set statusline+=%2*\ %l:%c\       " Rownumber/total (%)
-	set statusline+=%2*\%b:0x%-3B               " value of character under cursor
-	set statusline+=%2*
+	" set statusline+=*\ %{toupper(g:currentmode[mode()])} " Current mode
+	set statusline=\ %{ReadOnly()}\ %w\%m    " readable or not and modifiable or not
+	set statusline+=\[%n]\                  " buffernr
+	set statusline+=\%{GitInfoStatus()}
+	set statusline+=\ %l:%c\       " Rownumber/total (%)
+	set statusline+=\%b:0x%-3B               " value of character under cursor
+	set statusline+=*
 	" set statusline+=\ %{TagbarStatusline()}
-	set statusline+=%2*\ %=                  " Space
+	set statusline+=\ %=                  " Space
 	set statusline+=\ %{KnowStatus()}
-	set statusline+=%2*\ %y\ \|                 " FileType
-	set statusline+=%2*\ %<%t\                  " file path
-	set statusline+=%4*\ %2p%%\ \|
-	set statusline+=%4*\ TL:%L\ \|                     " total line count
-	set statusline+=%4*\ %-3(%{FileSize()}%)\  " File size
-	"set statusline+=%2*\ %{LinterStatus()}      " ale linting
-	set statusline+=%3*\ %{StatusDiagnostic()}  " coc-diagnostic
+	set statusline+=\ %y\ \|                 " FileType
+	set statusline+=\ %<%t\                  " file path
+	set statusline+=\ %p%%\ \|
+	set statusline+=\ TL:%L\ \|                     " total line count
+	set statusline+=\ %-3(%{FileSize()}%)\  " File size
+	"set statusline+=*\ %{LinterStatus()}      " ale linting
+	set statusline+=\ %{StatusDiagnostic()}  " coc-diagnostic
 endfunction
 
 " toggle statusline
