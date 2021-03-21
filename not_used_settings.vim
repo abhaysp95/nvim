@@ -438,24 +438,6 @@
 " endfunction
 " >>>
 
-" Vim Hexokinase <<<
-" Reenable hexokinase on enter
-"autocmd VimEnter * HexokinaseTurnOn
-"let g:Hexokinase_refreshEvents = ['TextChanged', 'InsertLeave']
-"let g:Hexokinase_optInPatterns = [
-			"\	'full_hex',
-			"\	'triple_hex',
-			"\	'rgb',
-			"\	'rgba',
-			"\	'hsl',
-			"\	'hsla',
-			"\	'colour_names'
-			"\]
-"let g:Hexokinase_highlighters = ['backgroundfull']
-"let g:Hexokinase_ftDisabled = ['c', 'python', 'java']
-"nnoremap <localleader>h :HexokinaseToggle<CR>
-" >>>
-
 "autocmd VimEnter,ColorScheme * :hi IndentGuidesOdd guibg=#504945
 "autocmd VimEnter,ColorScheme * :hi IndentGuidesEven guibg=#7c6f64
 
