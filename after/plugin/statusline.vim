@@ -181,7 +181,7 @@ function! ToggleHiddenAll()
 	endif
 endfunction
 call Current_Statusline()
-" call ToggleHiddenAll()
+call ToggleHiddenAll()
 nnoremap <localleader>tb :call ToggleHiddenAll()<CR>
 
 " set statusline+=\%{StatusDiagnostic()}                 " coc-status
