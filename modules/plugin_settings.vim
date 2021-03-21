@@ -319,6 +319,25 @@ lua <<EOF
 	}
 EOF
 
+
+""""""""""""""""""""""
+"   Vim Hexokinase   "
+""""""""""""""""""""""
+autocmd VimEnter * HexokinaseTurnOn
+let g:Hexokinase_refreshEvents = ['TextChanged', 'InsertLeave']
+let g:Hexokinase_optInPatterns = [
+		   \	'full_hex',
+		   \	'triple_hex',
+		   \	'rgb',
+		   \	'rgba',
+		   \	'hsl',
+		   \	'hsla',
+		   \	'colour_names'
+		   \]
+let g:Hexokinase_highlighters = ['backgroundfull']
+let g:Hexokinase_ftDisabled = ['c', 'python', 'java']
+nnoremap <localleader>h :HexokinaseToggle<CR>
+
 """""""""""""""""""""""""""
 "   dkarter/bullets.vim   "
 """""""""""""""""""""""""""
