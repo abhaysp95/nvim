@@ -64,11 +64,12 @@ Plug 'mhinz/vim-grepper'
 Plug 'tommcdo/vim-lion'
 
 " shows diff signs in vim's signcolumn
-" Plug 'mhinz/vim-signify'
-" Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
 
 " display colors
-Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'norcalli/nvim-colorizer.lua'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " Modify * to also work with visual selections
 Plug 'nelstrom/vim-visual-star-search'
