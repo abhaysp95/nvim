@@ -10,8 +10,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/playground'
 
 " telescope requirements...
 Plug 'nvim-lua/popup.nvim'
@@ -64,8 +64,8 @@ Plug 'mhinz/vim-grepper'
 Plug 'tommcdo/vim-lion'
 
 " shows diff signs in vim's signcolumn
-Plug 'mhinz/vim-signify'
-Plug 'tpope/vim-fugitive'
+" Plug 'mhinz/vim-signify'
+" Plug 'tpope/vim-fugitive'
 
 " display colors
 Plug 'norcalli/nvim-colorizer.lua'

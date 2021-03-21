@@ -53,7 +53,7 @@ set encoding=utf-8
 scriptencoding utf-8
 set hidden
 set autowrite " saves file before switching buffer
-set termguicolors
+" set termguicolors
 set t_Co=256
 set nocompatible
 set omnifunc=syntaxcomplete#Complete
@@ -147,7 +147,7 @@ set updatetime=300
 " shortmess settings
 set shortmess+=IOTWacot
 " always show signcolums
-set signcolumn=auto
+" set signcolumn=auto
 " set signcolumn=number  " merges numbercolumn with signcolumn(not liking it)
 
 " searches down into subfolders
@@ -163,7 +163,7 @@ set showtabline=0
 "autocmd WinEnter *.* silent! loadview
 
 " fold settings <<<
-set foldcolumn=1
+" set foldcolumn=1
 set nofoldenable
 set foldlevel=1
 set foldlevelstart=1

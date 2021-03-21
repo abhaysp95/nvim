@@ -276,8 +276,6 @@ nnoremap <leader>nr :NvimTreeRefresh<CR>
 nnoremap <leader>nn :NvimTreeFindFile<CR>
 " NvimTreeOpen and NvimTreeClose are also available if you need them
 
-" set termguicolors " this variable must be enabled for colors to be applied properly
-
 " a list of groups can be found at `:help nvim_tree_highlight`
 " highlight NvimTreeFolderIcon guibg=blue
 
