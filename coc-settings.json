@@ -88,7 +88,7 @@
 	"diagnostic.infoSign": "",
 	"diagnostic.hintSign": "➤ ",
 	"diagnostic.displayByAle": false,
-	"diagnostic.messageTarget": "echo",
+	"diagnostic.messageTarget": "float",
 	"diagnostic.virtualTextCurrentLineOnly": true,
 
 	"suggest.triggerAfterInsertEnter":true,
@@ -99,10 +99,6 @@
 	"suggest.snippetIndicator": " ►",
 	"suggest.floatEnable": false,
 	"signature.target": "echo",
-
-	// html
-	"html.suggest.ionic": false,
-	"html.suggest.html5": true,
 
 	// list
 	"list.indicator": ">",
