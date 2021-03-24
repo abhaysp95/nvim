@@ -147,7 +147,7 @@ set updatetime=300
 " shortmess settings
 set shortmess+=IOTWacot
 " always show signcolums
-set signcolumn=no
+set signcolumn=auto
 " set signcolumn=number  " merges numbercolumn with signcolumn(not liking it)
 
 " searches down into subfolders

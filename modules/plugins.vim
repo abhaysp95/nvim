@@ -49,6 +49,7 @@ Plug 'tomasr/molokai'
 Plug 'fmoralesc/molokayo/'
 Plug 'romgrk/doom-one.vim'
 Plug 'ChristianChiarulli/nvcode-color-schemes.vim'
+Plug 'dylanaraps/wal.vim'
 
 " icons
 Plug 'ryanoasis/vim-devicons'
