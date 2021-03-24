@@ -79,7 +79,7 @@
 	// current function update automatically
 	"coc.preferences.currentFunctionSymbolAutoUpdate": true,
 	"coc.preferences.snippets.enable": true,
-	"coc.preferences.hoverTarget": "float",
+	"coc.preferences.hoverTarget": "echo",
 	"coc.preferences.useQuickfixForLocations": true,
 
 	//diagnostics
@@ -88,7 +88,7 @@
 	"diagnostic.infoSign": "",
 	"diagnostic.hintSign": "➤ ",
 	"diagnostic.displayByAle": false,
-	"diagnostic.messageTarget": "float",
+	"diagnostic.messageTarget": "echo",
 	"diagnostic.virtualTextCurrentLineOnly": true,
 
 	"suggest.triggerAfterInsertEnter":true,
@@ -99,6 +99,10 @@
 	"suggest.snippetIndicator": " ►",
 	"suggest.floatEnable": false,
 	"signature.target": "echo",
+
+	// html
+	"html.suggest.ionic": false,
+	"html.suggest.html5": true,
 
 	// list
 	"list.indicator": ">",

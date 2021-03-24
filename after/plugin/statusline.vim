@@ -2,6 +2,8 @@
 " let fgcolor=synIDattr(synIDtrans(hlID("Normal")), "fg", "gui")
 " let bgcolor=synIDattr(synIDtrans(hlID("Normal")), "bg", "gui")
 
+" TODO: get the colors from current environment instead of hard coding it
+
 hi User1 ctermfg=46 ctermbg=0 guibg=#569cd6 guifg=#1e1e1e
 hi User2 ctermfg=51 ctermbg=0 guibg=#1e1e1e guifg=#f44747
 hi User3 ctermfg=202 ctermbg=0 guibg=#1e1e1e guifg=#d16969
