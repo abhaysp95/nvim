@@ -1,11 +1,6 @@
 "-------All-the-plugins-for-vim-and-nvim----------------------
 call plug#begin()
 
-" snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-
 " telescope requirements...
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -62,7 +57,6 @@ Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 
 " display colors
-" Plug 'norcalli/nvim-colorizer.lua'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " Modify * to also work with visual selections
@@ -83,10 +77,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 
 " vim-tmux navigator
 Plug 'christoomey/vim-tmux-navigator'
-
-" degugging, maximaization/restoration
-Plug 'puremourning/vimspector'
-Plug 'szw/vim-maximizer'
 
 call plug#end()
 
