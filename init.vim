@@ -23,7 +23,6 @@ else
 	source $HOME/.config/nvim/modules/plugin_settings.vim
 	source $HOME/.config/nvim/modules/settings.vim
 	source $HOME/.config/nvim/modules/keybindings.vim
-	source $HOME/.config/nvim/modules/coc_settings.vim
 	lua require 'init'
 
 	augroup autosourcing

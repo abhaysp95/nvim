@@ -1,17 +1,10 @@
 "-------All-the-plugins-for-vim-and-nvim----------------------
 call plug#begin()
 
-
-" intellisense
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-" treesitter
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" Plug 'nvim-treesitter/playground'
 
 " telescope requirements...
 Plug 'nvim-lua/popup.nvim'
@@ -61,7 +54,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'kovetskiy/sxhkd-vim'
 
 Plug 'mhinz/vim-grepper'
-" Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 Plug 'tommcdo/vim-lion'
 
 " shows diff signs in vim's signcolumn
@@ -74,9 +67,6 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " Modify * to also work with visual selections
 Plug 'nelstrom/vim-visual-star-search'
-
-" Indent line
-Plug 'Yggdroot/indentLine'
 
 " Learn movement in vim the hard way
 
