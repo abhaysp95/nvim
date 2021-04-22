@@ -19,7 +19,8 @@ let g:coc_global_extensions = [
 			\ 'coc-java',
 			\ 'coc-solargraph',
 			\ 'coc-emoji',
-			\ 'coc-css'
+			\ 'coc-css',
+			\ 'coc-cmake'
 			\ ]
 
 			"\ 'coc-terminal'
