@@ -130,3 +130,7 @@ Overall, fzf makes everytypes of browsing awesome
 
 Using `rg` with combination of `fzf` which makes grepping insanly fast and awesome
 ![ripgrep](sshots/ripgrep.png)
+
+---
+
+Development under this repository is stopped. Visit [neovim-lua](https://github.com/coolabhays/neovim-lua.git) for new settings.
