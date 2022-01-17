@@ -133,4 +133,4 @@ Using `rg` with combination of `fzf` which makes grepping insanly fast and aweso
 
 ---
 
-Development under this repository is stopped. Visit [neovim-lua](https://github.com/coolabhays/neovim-lua.git) for new settings.
+#### Development under this repository is stopped. Visit [neovim-lua](https://github.com/coolabhays/neovim-lua.git) for new settings.
